@@ -19,5 +19,7 @@ target 'College Search' do
   pod 'Crashlytics'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
+  pod 'FirebaseUI/Storage'
+
 
 end

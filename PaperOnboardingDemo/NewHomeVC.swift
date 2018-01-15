@@ -12,11 +12,13 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 import FirebaseStorage
+import FirebaseStorageUI
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     var myArray: NSArray = []
     
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -96,23 +98,47 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
+            
         let cell = UITableViewCell()
         cell.textLabel!.text = "\(myArray[indexPath.row])"
+
+            //cell.imageView?.image = UIImage(named: "SU_New_BlockStree_2color")
             
-            // Get a reference to the storage service using the default Firebase App
-            let storage = Storage.storage()
+            let imageName = "\(myArray[indexPath.row])CollegeLogo.png"
+            let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
             
-            // Create a storage reference from our storage service
-            let storageRef = storage.reference()
+            imageURL.downloadURL(completion: { (url, error) in
+                
+                if error != nil {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                    
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    
+                    guard let imageData = UIImage(data: data!) else { return }
+                    
+                    DispatchQueue.main.async {
+                        cell.imageView?.image = imageData
+                                            }
+                    
+                }).resume()
+                
+            })
+
             
-            cell.imageView?.image = UIImage(named: "SU_New_BlockStree_2color")
-        return cell
+            return cell
             
     }
     
-    
-    
-    
-    
 }
- 
+
+
+
+
+
