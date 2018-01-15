@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mtn-Iu-N3E">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Light</string>
+            <string>Avenir-Medium</string>
+        </array>
+        <array key="Eveleth Clean Regular.otf">
+            <string>EvelethCleanRegular</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--First ViewVC View Controller-->
+        <scene sceneID="oH1-oI-8eZ">
+            <objects>
+                <viewController storyboardIdentifier="FirstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mtn-Iu-N3E" customClass="FirstViewVCViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B3F-Fg-DVC"/>
+                        <viewControllerLayoutGuide type="bottom" id="1KV-aH-QZx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBn-CD-mJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-Sx-H0X">
+                                <rect key="frame" x="150" y="318" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <segue destination="vHS-cu-BtE" kind="show" id="WYG-RQ-pLD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lw-Lv-dji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="470"/>
+        </scene>
+        <!--Login Page Controller-->
+        <scene sceneID="Xkj-ES-PBi">
+            <objects>
+                <viewController storyboardIdentifier="loginPageController" id="vHS-cu-BtE" customClass="loginPageController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IHt-I0-KHH"/>
+                        <viewControllerLayoutGuide type="bottom" id="60v-j9-kru"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S8r-yh-7qJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CollegeSearch Final" translatesAutoresizingMaskIntoConstraints="NO" id="VKD-N1-SM0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KqN-MJ-Blh">
+                                <rect key="frame" x="70" y="260" width="274" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL7-9T-x2X">
+                                <rect key="frame" x="36" y="334" width="303" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="vHS-cu-BtE" eventType="touchUpInside" id="5GN-H0-uLL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpU-34-64f">
+                                <rect key="frame" x="90" y="437" width="194" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="QVf-iN-pGP" kind="show" id="w9e-vw-dAM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuA-bB-17K">
+                                <rect key="frame" x="70" y="204" width="274" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu8-lD-lmL">
+                                <rect key="frame" x="36" y="389" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="87e-wz-EAz" kind="show" id="08Q-za-rZr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextFeild" destination="xuA-bB-17K" id="YKZ-iF-6VA"/>
+                        <outlet property="passwordTextFeild" destination="KqN-MJ-Blh" id="tRT-2x-M4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1V-wa-gfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="470.91454272863569"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="0Ws-ac-2gU">
+            <objects>
+                <viewController id="QVf-iN-pGP" customClass="ForgotPasswordViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FLH-nD-CIy"/>
+                        <viewControllerLayoutGuide type="bottom" id="2G7-RU-qDd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Qo-EG-0OQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CollegeSearch Password Reset -1" translatesAutoresizingMaskIntoConstraints="NO" id="aMZ-xg-EYv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZz-sC-BbW">
+                                <rect key="frame" x="66" y="351" width="270" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keo-CO-AB7">
+                                <rect key="frame" x="35" y="413" width="305" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="resetPasswordTapped:" destination="QVf-iN-pGP" eventType="touchUpInside" id="0ga-Ra-Wxz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN0-i7-mlm">
+                                <rect key="frame" x="23" y="32" width="53" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vHS-cu-BtE" kind="show" id="xKg-PX-MnU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextFeild" destination="TZz-sC-BbW" id="Tny-Y4-MXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5A2-Ph-GyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="1298"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="ieU-Em-vni">
+            <objects>
+                <viewController id="87e-wz-EAz" customClass="SignUpViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tTv-Z2-31Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="tgD-2x-Yjk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ES-Rf-TDR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CollegeSearch Register Page" translatesAutoresizingMaskIntoConstraints="NO" id="Q48-jK-PnL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NlK-2b-3RM">
+                                <rect key="frame" x="66" y="199" width="273" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niI-dD-j5j">
+                                <rect key="frame" x="66" y="260" width="273" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-f3-KHF">
+                                <rect key="frame" x="66" y="321" width="273" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJR-cw-0jz">
+                                <rect key="frame" x="66" y="382" width="273" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKg-rF-seW">
+                                <rect key="frame" x="36" y="462" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="87e-wz-EAz" eventType="touchUpInside" id="X6P-Oz-8i8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z89-6M-gDz">
+                                <rect key="frame" x="36" y="28" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vHS-cu-BtE" kind="show" id="DTC-Dp-E94"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextFeild" destination="YJR-cw-0jz" id="fGK-oL-t0z"/>
+                        <outlet property="emailTextFeild" destination="niI-dD-j5j" id="dYV-BA-CQN"/>
+                        <outlet property="nameTextFeild" destination="NlK-2b-3RM" id="uII-gc-fz7"/>
+                        <outlet property="passwordTextFeild" destination="h5a-f3-KHF" id="Hub-cA-qHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMb-Yh-7MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="-457"/>
+        </scene>
+        <!--Scores View Controller-->
+        <scene sceneID="Hla-v9-CSC">
+            <objects>
+                <viewController storyboardIdentifier="ScoresViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pPu-72-2AP" customClass="ScoresViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sa4-Ru-mcx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rgu-my-66j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="atC-Lh-d7X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Scores page" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-yE-ZLz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SAT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="650-jd-7eS">
+                                <rect key="frame" x="65" y="290" width="274" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weighted GPA Score" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-bb-Ej0">
+                                <rect key="frame" x="65" y="209" width="274" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-RF-2cc">
+                                <rect key="frame" x="36" y="456" width="303" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SubmitTapped:" destination="pPu-72-2AP" eventType="touchUpInside" id="37c-N8-cDD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ACT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytz-aC-IRM">
+                                <rect key="frame" x="65" y="370" width="274" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="or" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bn-C8-Aud">
+                                <rect key="frame" x="164" y="241" width="47" height="41"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="29"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evh-rV-1u0">
+                                <rect key="frame" x="16" y="28" width="57" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vHS-cu-BtE" kind="show" id="XcF-dy-3Xu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ACT_Score" destination="Ytz-aC-IRM" id="26v-kM-6Jg"/>
+                        <outlet property="GpaScore" destination="OI4-bb-Ej0" id="FTw-cs-d9n"/>
+                        <outlet property="SATscore" destination="650-jd-7eS" id="4k4-ho-gd2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mo-sR-bzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3464.8000000000002" y="-457.42128935532236"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="bfj-X7-kvP">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ItX-hE-tpt" customClass="HomeVC" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pcE-Y1-2hG"/>
+                        <viewControllerLayoutGuide type="bottom" id="sfF-UY-3t1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pRx-Qy-rxY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="College" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-2B-QWJ">
+                                <rect key="frame" x="0.0" y="-6" width="376" height="673"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igL-4y-ra1">
+                                <rect key="frame" x="0.0" y="262" width="376" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Setup Interests and Scores">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pPu-72-2AP" kind="show" id="qwa-7u-5LZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1M9-2n-N0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="470.01499250374815"/>
+        </scene>
+        <!--Your Colleges-->
+        <scene sceneID="B8s-vW-Sxf">
+            <objects>
+                <viewController storyboardIdentifier="NewHomeVC" id="PBr-MS-GKO" customClass="NewHomeVC" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lvv-TX-fg8"/>
+                        <viewControllerLayoutGuide type="bottom" id="kiM-zA-5bL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jtO-9I-iVi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vra-8P-Wfq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-yP-ApU" customClass="SlideMenu" customModule="College_Search" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="170" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-5N-t2T">
+                                        <rect key="frame" x="29" y="34" width="112" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="HYr-K1-hEu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
+                                        <state key="normal" title="Scores">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scoresTapped:" destination="PBr-MS-GKO" eventType="touchUpInside" id="ms2-BP-9RS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v88-vW-TNL">
+                                        <rect key="frame" x="15" y="90" width="141" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Jb3-33-038"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="uOx-Cx-hNp" kind="show" id="TWX-kp-9X8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd1-kL-ntB">
+                                        <rect key="frame" x="15" y="146" width="141" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="JY1-he-XsU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loggedOut:" destination="PBr-MS-GKO" eventType="touchUpInside" id="5gH-5n-aJp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="rKl-5N-t2T" firstAttribute="top" secondItem="vhD-yP-ApU" secondAttribute="top" constant="34" id="3Wo-Wh-kqv"/>
+                                    <constraint firstItem="Cd1-kL-ntB" firstAttribute="top" secondItem="v88-vW-TNL" secondAttribute="bottom" constant="8" id="8DG-zx-Tg5"/>
+                                    <constraint firstAttribute="trailing" secondItem="rKl-5N-t2T" secondAttribute="trailing" constant="29" id="B8Z-DA-Tug"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cd1-kL-ntB" secondAttribute="trailing" constant="14" id="Gy7-Dd-tF3"/>
+                                    <constraint firstItem="v88-vW-TNL" firstAttribute="top" secondItem="rKl-5N-t2T" secondAttribute="bottom" constant="8" id="Jud-wk-mv8"/>
+                                    <constraint firstAttribute="width" constant="170" id="NWL-mp-hno"/>
+                                    <constraint firstItem="Cd1-kL-ntB" firstAttribute="leading" secondItem="vhD-yP-ApU" secondAttribute="leading" constant="15" id="OsK-Le-u6p"/>
+                                    <constraint firstItem="rKl-5N-t2T" firstAttribute="leading" secondItem="vhD-yP-ApU" secondAttribute="leading" constant="29" id="QSf-O1-gud"/>
+                                    <constraint firstAttribute="trailing" secondItem="v88-vW-TNL" secondAttribute="trailing" constant="14" id="qqW-n5-zyb"/>
+                                    <constraint firstItem="v88-vW-TNL" firstAttribute="leading" secondItem="vhD-yP-ApU" secondAttribute="leading" constant="15" id="umK-ht-91q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vhD-yP-ApU" firstAttribute="top" secondItem="lvv-TX-fg8" secondAttribute="bottom" id="Brb-xb-xCO"/>
+                            <constraint firstItem="vhD-yP-ApU" firstAttribute="leading" secondItem="jtO-9I-iVi" secondAttribute="leading" constant="-180" id="Yr5-qo-yIb"/>
+                            <constraint firstItem="kiM-zA-5bL" firstAttribute="top" secondItem="vhD-yP-ApU" secondAttribute="bottom" id="gzu-Es-7Ra"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Colleges" id="4Z8-qH-qSD">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="if_General_Office_30_2530786-1" id="WvE-2y-YZS">
+                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="-652" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="openMenu:" destination="PBr-MS-GKO" id="bqi-Q6-23d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leadingConstraint" destination="Yr5-qo-yIb" id="IZ0-Nt-388"/>
+                        <outlet property="menuView" destination="vhD-yP-ApU" id="OSF-1f-moj"/>
+                        <outlet property="tableView" destination="Vra-8P-Wfq" id="rMO-TP-Ijf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPL-FF-5y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4965.6000000000004" y="470.01499250374815"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="93r-0d-hl1">
+            <objects>
+                <viewController id="uOx-Cx-hNp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8NX-q8-eKb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdi-WF-exd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4RS-Dr-iSA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SETTINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu4-ev-ikq">
+                                <rect key="frame" x="118" y="312" width="139" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hcr-g2-Od3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6023.1999999999998" y="470.91454272863569"/>
+        </scene>
+        <!--New HomeVC Navigation-->
+        <scene sceneID="Xn1-TJ-jkc">
+            <objects>
+                <navigationController storyboardIdentifier="NewHomeVCNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="guJ-B2-or3" customClass="NewHomeVCNavigation" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2c4-a3-ZXH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PBr-MS-GKO" kind="relationship" relationship="rootViewController" id="DET-py-ZxF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgZ-Xb-VeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3986" y="470"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="College" width="375" height="667"/>
+        <image name="CollegeSearch Final" width="899" height="1600"/>
+        <image name="CollegeSearch Password Reset -1" width="899" height="1600"/>
+        <image name="CollegeSearch Register Page" width="899" height="1600"/>
+        <image name="Scores page" width="899" height="1600"/>
+        <image name="if_General_Office_30_2530786-1" width="30" height="21"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XcF-dy-3Xu"/>
+    </inferredMetricsTieBreakers>
+</document>
