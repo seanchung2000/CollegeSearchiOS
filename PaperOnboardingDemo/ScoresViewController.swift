@@ -20,7 +20,7 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
     var docRef: DocumentReference!
 //    let defaultStore = Firestore.firestore()
     //var gpaRef = CollectionReference.self
-    var unique2: Array<Any> = []
+    var unique2: NSArray = []
 
     
     @IBOutlet weak var GpaScore: UITextField!
@@ -102,7 +102,8 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         //NewHomeVCNavigation.collgeMatches = self.unique2
         self.present(NewHomeVCNavigation, animated: true, completion: nil)
         if let controller = NewHomeVCNavigation.viewControllers.first as? NewHomeVC {
-            controller.myArray = self.unique2 as NSArray
+            //controller.myArray = self.unique2 as NSArray
+            myArray = self.unique2
         }
     }
     
@@ -159,7 +160,7 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
     
     func AddArrays() -> Array<Any> {
         let unique = Array(Set(gpaColleges + satColleges))
-       self.unique2 = unique
+        self.unique2 = unique as NSArray
         self.presentNewHomeVC()
         return unique
     }

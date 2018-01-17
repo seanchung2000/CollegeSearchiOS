@@ -14,11 +14,13 @@ import Firebase
 import FirebaseStorage
 import FirebaseStorageUI
 
+var myArray: NSArray = []
+var myIndex: Int = 0
+
+
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
-    var myArray: NSArray = []
-    
-
+  
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -134,6 +136,11 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
             
             return cell
             
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
 }

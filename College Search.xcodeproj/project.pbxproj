@@ -16,6 +16,7 @@
 		23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */; };
 		23A462191FEEAE6C0009C9E7 /* NewHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A462181FEEAE6C0009C9E7 /* NewHomeVC.swift */; };
 		23AD794C2002C374001AC31C /* Eveleth Clean Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23AD794B2002C374001AC31C /* Eveleth Clean Regular.otf */; };
+		23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */; };
 		23E911321F04919A00B6D818 /* loginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E911311F04919A00B6D818 /* loginPageController.swift */; };
 		23E911361F049C1300B6D818 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E911351F049C1300B6D818 /* HomeVC.swift */; };
 		23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E911371F0528B800B6D818 /* SignUpViewController.swift */; };
@@ -55,6 +56,7 @@
 		23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeVCNavigation.swift; sourceTree = "<group>"; };
 		23A462181FEEAE6C0009C9E7 /* NewHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHomeVC.swift; sourceTree = "<group>"; };
 		23AD794B2002C374001AC31C /* Eveleth Clean Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eveleth Clean Regular.otf"; sourceTree = "<group>"; };
+		23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
 		23E911311F04919A00B6D818 /* loginPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPageController.swift; sourceTree = "<group>"; };
 		23E911351F049C1300B6D818 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		23E911371F0528B800B6D818 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */,
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
+				23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */,
 				84A773A51CCE545200EF4EB0 /* ViewController.swift */,
 				23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */,
 				2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */,
+				23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */,
 				84A773A41CCE545200EF4EB0 /* AppDelegate.swift in Sources */,
 				23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */,
 				23E911361F049C1300B6D818 /* HomeVC.swift in Sources */,
