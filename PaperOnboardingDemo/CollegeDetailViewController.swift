@@ -12,6 +12,13 @@ class CollegeDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var averageGpa: UILabel!
+    
+    @IBOutlet weak var averageSat: UILabel!
+    
+    @IBOutlet weak var averaeAct: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
