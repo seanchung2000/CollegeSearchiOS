@@ -21,7 +21,7 @@ class NewHomeVCNavigation: UINavigationController {
 
         UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Rectangle 4")!)
         
-        
+
     }
 
 }
