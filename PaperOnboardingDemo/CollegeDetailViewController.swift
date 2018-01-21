@@ -38,7 +38,7 @@ class CollegeDetailViewController: UIViewController {
             
             return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
         }
-      //  self.view.backgroundColor = getRandomColor()
+       self.view.backgroundColor = getRandomColor()
 
         
         titleLabel.text = myArray[myIndex] as? String
