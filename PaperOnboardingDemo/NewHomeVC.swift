@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 import FirebaseStorage
-import FirebaseStorageUI
+//import FirebaseStorageUI
 
 var myArray: NSArray = []
 var myIndex: Int = 0
@@ -37,7 +37,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         print(myArray)
 
         
-        
+
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
