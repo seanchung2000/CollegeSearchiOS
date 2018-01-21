@@ -101,10 +101,29 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             
+            
+            func getRandomColor() -> UIColor{
+                
+var randomRed:CGFloat = CGFloat(drand48())
+                
+var randomGreen:CGFloat = CGFloat(drand48())
+                
+var randomBlue:CGFloat = CGFloat(drand48())
+                
+return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+                
+}
+            
         let cell = UITableViewCell()
         cell.textLabel!.text = "\(myArray[indexPath.row])"
+        cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
+        cell.textLabel?.textColor = UIColor.white
+        cell.backgroundColor = getRandomColor()
+            
+            let clearView = UIView()
+            clearView.backgroundColor = UIColor.clear // Whatever color you like
+            UITableViewCell.appearance().selectedBackgroundView = clearView
 
-            //cell.imageView?.image = UIImage(named: "SU_New_BlockStree_2color")
             
             let imageName = "\(myArray[indexPath.row])CollegeLogo.png"
             let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
@@ -127,13 +146,14 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
                     
                     DispatchQueue.main.async {
                         cell.imageView?.image = imageData
+
                                             }
                     
                 }).resume()
                 
             })
 
-            
+
             return cell
             
     }

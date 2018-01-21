@@ -30,21 +30,55 @@ class CollegeDetailViewController: UIViewController {
 
         titleLabel.text = myArray[myIndex] as? String
         
+        averageGpa.text = "Average GPA:"
+        averageSat.text = "Average SAT Score:"
+        averaeAct.text = "Average ACT Score"
+        
         let db = Firestore.firestore()
         
-        let docRef = db
+        let gpaRef = db
             .collection("Colleges").document("\(myArray[myIndex] as! String)")
-            .collection("CollegeData").document("Average GPA")
-        docRef.getDocument { (document, error) in
-            if let document = document {
-                print("Document data: \(document.data())")
-                //document.data = self.averageGpa.text
-            } else {
-                print("Document does not exist")
-            }
+            .collection("GPA")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.averageGpa.text = "Average GPA: \(document.documentID)"
+                    }
+                }
         }
+        
 
+    let satRef = db
+        .collection("Colleges").document("\(myArray[myIndex] as! String)")
+        .collection("SAT")
+        .getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.averageSat.text = "Average SAT: \(document.documentID)"
+                }
+            }
     }
 
 
+
+let actRef = db
+    .collection("Colleges").document("\(myArray[myIndex] as! String)")
+    .collection("ACT")
+    .getDocuments() { (querySnapshot, err) in
+        if let err = err {
+            print("Error getting documents: \(err)")
+        } else {
+            for document in querySnapshot!.documents {
+                self.averaeAct.text = "Average ACT: \(document.documentID)"
+            }
+        }
 }
+
+}
+
+}
+
