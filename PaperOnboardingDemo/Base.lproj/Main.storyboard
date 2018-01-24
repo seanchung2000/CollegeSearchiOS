@@ -501,7 +501,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="26" name="EvelethCleanRegular"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -515,7 +515,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="EvelethCleanRegular"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -528,7 +528,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="EvelethCleanRegular"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -541,7 +541,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="EvelethCleanRegular"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
