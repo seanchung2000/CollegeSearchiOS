@@ -633,7 +633,6 @@
         <image name="if_General_Office_30_2530786-1" width="30" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w9e-vw-dAM"/>
-        <segue reference="xKg-PX-MnU"/>
+        <segue reference="DTC-Dp-E94"/>
     </inferredMetricsTieBreakers>
 </document>
