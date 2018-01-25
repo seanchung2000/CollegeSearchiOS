@@ -23,11 +23,15 @@ class CollegeDetailViewController: UIViewController {
     
     @IBOutlet weak var averaeAct: UILabel!
     
+  
     var docRef: DocumentReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
         func getRandomColor() -> UIColor{
             
             var randomRed:CGFloat = CGFloat(drand48())
@@ -37,7 +41,10 @@ class CollegeDetailViewController: UIViewController {
             var randomBlue:CGFloat = CGFloat(drand48())
             
             return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+            
+            
         }
+        
        self.view.backgroundColor = getRandomColor()
 
         
@@ -93,5 +100,25 @@ let actRef = db
 
 }
 
+    @IBAction func websiteButton(_ sender: Any) {
+        let db = Firestore.firestore()
+        let websiteRef = db
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Website")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        UIApplication.shared.open(URL(string: "https://\(document.documentID)")! as URL, options: [:], completionHandler: nil)
+                    }
+                }
+        }
+        
+        
+    
+    
+    
+    }
 }
 

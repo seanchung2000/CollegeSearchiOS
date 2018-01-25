@@ -501,7 +501,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <font key="NSFont" size="26" name="EvelethCleanRegular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -515,7 +515,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSFont" size="17" name="EvelethCleanRegular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -528,7 +528,7 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSFont" size="17" name="EvelethCleanRegular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -541,12 +541,35 @@
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSFont" size="17" name="EvelethCleanRegular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="Vl5-gR-JsP">
+                                <rect key="frame" x="49" y="522" width="106" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="jNL-NG-SPD">
+                                <rect key="frame" x="190" y="522" width="106" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-JG-FTk">
+                                <rect key="frame" x="49" y="522" width="106" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Website"/>
+                                <connections>
+                                    <action selector="websiteButton:" destination="P3v-qX-aEt" eventType="touchUpInside" id="mwc-yW-2xw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-aH-B9G">
+                                <rect key="frame" x="190" y="522" width="106" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Email"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -612,6 +635,7 @@
         <image name="CollegeSearch Final" width="899" height="1600"/>
         <image name="CollegeSearch Password Reset -1" width="899" height="1600"/>
         <image name="CollegeSearch Register Page" width="899" height="1600"/>
+        <image name="Rectangle 2" width="318" height="171"/>
         <image name="Scores page" width="899" height="1600"/>
         <image name="if_General_Office_30_2530786-1" width="30" height="21"/>
     </resources>
