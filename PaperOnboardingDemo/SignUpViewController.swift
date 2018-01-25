@@ -46,32 +46,24 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmPasswordTextFeild.delegate = self
         
         nameTextFeild.delegate = self
-        
         nameTextFeild .tag = 0
-        
         nameTextFeild.returnKeyType = UIReturnKeyType.next
         
-        confirmPasswordTextFeild.returnKeyType = UIReturnKeyType.done
-        
-        confirmPasswordTextFeild.tag = 0
-        
         emailTextFeild.delegate = self
-        
-        emailTextFeild.tag = 0
-        
+        emailTextFeild.tag = 1
         emailTextFeild.returnKeyType = UIReturnKeyType.next
         
         passwordTextFeild.delegate = self
-        
-        passwordTextFeild.tag = 1
-        
-        
+        passwordTextFeild.tag = 2
         passwordTextFeild.returnKeyType = UIReturnKeyType.next
-
-
+        
+        
+        confirmPasswordTextFeild.delegate = self
+        confirmPasswordTextFeild.tag = 3
+        confirmPasswordTextFeild.returnKeyType = UIReturnKeyType.done
+        
         // Do any additional setup after loading the view.
     }
 
