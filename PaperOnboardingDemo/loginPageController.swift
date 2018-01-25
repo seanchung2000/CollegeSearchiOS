@@ -184,7 +184,7 @@ class loginPageController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
     
     }))
     
-    self.present(alert, animated: true, completion: nil)
+    self.present(alert, animated: false, completion: nil)
     
     }
     
