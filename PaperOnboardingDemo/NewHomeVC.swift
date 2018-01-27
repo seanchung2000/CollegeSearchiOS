@@ -17,6 +17,19 @@ import FirebaseStorage
 var myArray: NSArray = []
 var myIndex: Int = 0
 
+class CollegeTableViewCell: UITableViewCell {
+    
+    static let identifier = "CollegeTableViewCell"
+    
+    weak var dataTask: URLSessionDataTask?
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        dataTask?.cancel()
+        imageView?.image = nil
+    }
+    
+}
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -30,6 +43,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     
     var menuShowing = false
+    
+    var imageCache = [String:UIImage]()
     
     
     override func viewDidLoad() {
@@ -102,20 +117,25 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         -> UITableViewCell {
             
             
+            var cell: CollegeTableViewCell! = tableView.dequeueReusableCell(withIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
+            if cell == nil {
+                 cell =  CollegeTableViewCell(style: .default, reuseIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
+            }
+            
             func getRandomColor() -> UIColor{
                 
-var randomRed:CGFloat = CGFloat(drand48())
+                var randomRed:CGFloat = CGFloat(drand48())
                 
-var randomGreen:CGFloat = CGFloat(drand48())
+                var randomGreen:CGFloat = CGFloat(drand48())
                 
-var randomBlue:CGFloat = CGFloat(drand48())
+                var randomBlue:CGFloat = CGFloat(drand48())
                 
-return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-                
+                return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
 }
             
-        let cell = UITableViewCell()
-        cell.textLabel!.text = "\(myArray[indexPath.row])"
+        //let cell = UITableViewCell()
+        let schoolKey = "\(myArray[indexPath.row])"
+        cell.textLabel!.text = schoolKey
         cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = getRandomColor()
@@ -124,34 +144,40 @@ return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
             clearView.backgroundColor = UIColor.clear // Whatever color you like
             UITableViewCell.appearance().selectedBackgroundView = clearView
 
-            
-            let imageName = "\(myArray[indexPath.row])CollegeLogo.png"
-            let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
-            
-            imageURL.downloadURL(completion: { (url, error) in
+            if let image = imageCache[schoolKey] {
+                cell.imageView?.image = image
+            } else {
+                let imageName = "\(myArray[indexPath.row])CollegeLogo.png"
+                let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
                 
-                if error != nil {
-                    print(error?.localizedDescription)
-                    return
-                }
-                
-                URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                imageURL.downloadURL(completion: { (url, error) in
                     
                     if error != nil {
-                        print(error)
+                        print(error?.localizedDescription)
                         return
                     }
                     
-                    guard let imageData = UIImage(data: data!) else { return }
+                    cell.dataTask = URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
+                        guard let strongSelf = self else { return }
+                        if error != nil {
+                            print(error)
+                            return
+                        }
+                        
+                        guard let imageData = UIImage(data: data!) else { return }
+                        
+                        DispatchQueue.main.async {
+                            cell.imageView?.image = imageData
+                            cell.setNeedsLayout()
+                            strongSelf.imageCache[schoolKey] = imageData
+                        }
+                        
+                    })
+                    cell.dataTask?.resume()
                     
-                    DispatchQueue.main.async {
-                        cell.imageView?.image = imageData
-
-                                            }
-                    
-                }).resume()
-                
-            })
+                })
+            }
+            
 
 
             return cell
