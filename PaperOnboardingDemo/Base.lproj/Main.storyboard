@@ -37,10 +37,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-Sx-H0X">
-                                <rect key="frame" x="150" y="318" width="39" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CollegeSearch@44" translatesAutoresizingMaskIntoConstraints="NO" id="JaR-Qk-eKI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NEXT"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-Sx-H0X">
+                                <rect key="frame" x="118" y="557" width="138" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="vHS-cu-BtE" kind="show" id="WYG-RQ-pLD"/>
                                 </connections>
@@ -51,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lw-Lv-dji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="470"/>
+            <point key="canvasLocation" x="463.19999999999999" y="469.1154422788606"/>
         </scene>
         <!--Login Page Controller-->
         <scene sceneID="Xkj-ES-PBi">
@@ -628,11 +631,12 @@
         <image name="CollegeSearch Final" width="899" height="1600"/>
         <image name="CollegeSearch Password Reset -1" width="899" height="1600"/>
         <image name="CollegeSearch Register Page" width="899" height="1600"/>
+        <image name="CollegeSearch@44" width="1125" height="2001"/>
         <image name="Rectangle 2" width="318" height="171"/>
         <image name="Scores page" width="899" height="1600"/>
         <image name="if_General_Office_30_2530786-1" width="30" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DTC-Dp-E94"/>
+        <segue reference="WYG-RQ-pLD"/>
     </inferredMetricsTieBreakers>
 </document>
