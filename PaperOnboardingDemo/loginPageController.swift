@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import FBSDKLoginKit
+//import FBSDKLoginKit
 import FirebaseAuth
 import Firebase
 import GoogleSignIn
 
-class loginPageController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate, UITextFieldDelegate {
+class loginPageController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate {
 
 
     
@@ -40,7 +40,7 @@ class loginPageController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
         
         
 
-        setupFacebookButtons()
+       //setupFacebookButtons()
         
         //google Login Button
         //let googleButton = GIDSignInButton()
@@ -59,7 +59,7 @@ class loginPageController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
         
     }
     
-    fileprivate func setupFacebookButtons() {
+   /* fileprivate func setupFacebookButtons() {
       let loginButton = FBSDKLoginButton()
        // view.addSubview(loginButton)
         //frame's are obselete, please use constraints instead because its 2016 after all
@@ -77,9 +77,9 @@ class loginPageController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
         view.addSubview(customFBButton)
         
         customFBButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
-    }
+    }*/
     
-    @objc func handleCustomFBLogin() {
+   /* @objc func handleCustomFBLogin() {
         FBSDKLoginManager().logIn(withReadPermissions: ["email"], from: self) { (result, err) in
             if err != nil {
                 print("Custom FB Login failed:", err)
@@ -126,7 +126,7 @@ class loginPageController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
             }
             print(result ?? "")
         }
-    }
+    }*/
     
     @objc func handleCustomGoogleSign() {
         GIDSignIn.sharedInstance().signIn()
