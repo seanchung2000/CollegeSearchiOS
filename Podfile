@@ -8,7 +8,7 @@ target 'College Search' do
 
   # Pods for PaperOnboardingDemo
 
-  pod 'Firebase/Core'
+  #pod 'Firebase/Core'
   pod 'Firebase/Storage'	
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'

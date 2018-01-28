@@ -151,6 +151,9 @@ class loginPageController: UIViewController, GIDSignInUIDelegate, UITextFieldDel
                     }
                     self.presentLoggedInScreen()
                     print("success")
+                    Answers.logSignUp(withMethod: "Manual",
+                                                success: true,
+                                                customAttributes: [:])
                     
                 })
         }
