@@ -20,6 +20,6 @@ target 'College Search' do
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'FirebaseUI/Storage'
-
+  pod 'SVProgressHUD'
 
 end

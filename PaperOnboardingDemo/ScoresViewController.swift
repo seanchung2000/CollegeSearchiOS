@@ -11,7 +11,8 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 import FirebaseFirestore
-
+import Foundation
+import SVProgressHUD
 
 class ScoresViewController: UIViewController, UITextFieldDelegate {
     var satColleges = [String]()
@@ -56,7 +57,10 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         GpaScore.resignFirstResponder()
         return(true)
     }
+    
     @IBAction func SubmitTapped(_ sender: Any) {
+        SVProgressHUD.show(withStatus: "Finding Matches")
+        
         print("Submit Tapped")
         let Sattext = SATscore.text
         let Acttext = ACT_Score.text
@@ -66,9 +70,11 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         let Acttext2 = Acttext
         let CombinedScores = Sattext! + Acttext!
         if GpaScore.text == "" {
+            SVProgressHUD.dismiss()
             self.createAlert(titleText: "Error", messageText: "No Weighted GPA Entered")
         }
         else if CombinedScores == "" {
+            SVProgressHUD.dismiss()
             self.createAlert(titleText: "Error", messageText: "No SAT nor ACT Score Entered")
         }
         else{
@@ -84,6 +90,7 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
             
         }
         
+
     }
     
     func createAlert (titleText : String , messageText: String) {
@@ -115,7 +122,7 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         let db = Firestore.firestore()
         let gpaRef = db.collection("Colleges")
         let query1 = gpaRef
-            .whereField("Average GPA", isLessThanOrEqualTo: gpa)
+            .whereField("Average GPA", isLessThanOrEqualTo : gpa)
             .getDocuments() { (querySnapshot, err) in
                 
                 // Async call needs completion handler

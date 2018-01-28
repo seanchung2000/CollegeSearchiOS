@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import SVProgressHUD
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -20,6 +21,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmPasswordTextFeild: UITextField!
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
+        SVProgressHUD.show(withStatus: "Signing You Up")
         
         if let email = emailTextFeild.text, let password = passwordTextFeild.text{
             
@@ -28,7 +30,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             Auth.auth().createUser(withEmail: email, password: password, completion: { user, error in
                 
                 if let firebaseError = error {
+                    SVProgressHUD.dismiss()
                     print(firebaseError.localizedDescription)
+                     self.createAlert(titleText: "Error", messageText: "\(firebaseError.localizedDescription)")
                     return
                 }
                 self.presentLoggedInScreen()
@@ -36,6 +40,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             })
         }
             else {
+                SVProgressHUD.dismiss()
                 print("passwords do not match")
                 self.createAlert(titleText: "Error", messageText: "Passwords do not match.")
                 
