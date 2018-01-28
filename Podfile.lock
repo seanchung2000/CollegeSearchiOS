@@ -20,22 +20,22 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.30.0):
     - FBSDKCoreKit (~> 4.30.0)
-  - Firebase/Auth (4.8.1):
+  - Firebase/Auth (4.8.2):
     - Firebase/Core
     - FirebaseAuth (= 4.4.2)
-  - Firebase/Core (4.8.1):
-    - FirebaseAnalytics (= 4.0.7)
+  - Firebase/Core (4.8.2):
+    - FirebaseAnalytics (= 4.0.9)
     - FirebaseCore (= 4.0.14)
-  - Firebase/Database (4.8.1):
+  - Firebase/Database (4.8.2):
     - Firebase/Core
     - FirebaseDatabase (= 4.1.4)
-  - Firebase/Firestore (4.8.1):
+  - Firebase/Firestore (4.8.2):
     - Firebase/Core
     - FirebaseFirestore (= 0.10.0)
-  - Firebase/Storage (4.8.1):
+  - Firebase/Storage (4.8.2):
     - Firebase/Core
     - FirebaseStorage (= 2.1.2)
-  - FirebaseAnalytics (4.0.7):
+  - FirebaseAnalytics (4.0.9):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
@@ -116,6 +116,7 @@ PODS:
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
   - Crashlytics
@@ -124,12 +125,12 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - Firebase/Auth
-  - Firebase/Core
   - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
   - FirebaseUI/Storage
   - GoogleSignIn
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -139,8 +140,8 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
   FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
   FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
-  Firebase: 2721056b8885eef90233b03f37be64358d35d262
-  FirebaseAnalytics: 617afa8c26b57a0c3f11361b248bc9e17bfd8dfd
+  Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
+  FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: bd2738c5c1e92b108ba5f7f7335908097a4e50bb
   FirebaseCore: 2e0b98fb2d64ca8140136beff15772bdd14d2dd7
   FirebaseDatabase: de4446507ccd3257fca37d16f40e1540324571fd
@@ -160,7 +161,8 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: f2b2fdf3d424d569472ebbbee392b354193d54ea
+PODFILE CHECKSUM: d19bca2f8dd39af6611eb15b4c534f2428b46528
 
 COCOAPODS: 1.2.0

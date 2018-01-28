@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     // Override point for customization after application launch.
     UIApplication.shared.statusBarStyle = .lightContent
-    //Fabric.with([Crashlytics.self])
+    Fabric.with([Crashlytics.self])
     FirebaseApp.configure()
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
     GIDSignIn.sharedInstance().delegate = self
