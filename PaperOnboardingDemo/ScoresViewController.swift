@@ -12,6 +12,7 @@ import FirebaseDatabase
 import Firebase
 import FirebaseFirestore
 import Foundation
+import Crashlytics
 import SVProgressHUD
 
 class ScoresViewController: UIViewController, UITextFieldDelegate {
@@ -60,7 +61,8 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func SubmitTapped(_ sender: Any) {
         SVProgressHUD.show(withStatus: "Finding Matches")
-        
+        Answers.logCustomEvent(withName: "Scores Submitted",
+                                       customAttributes: [:])
         print("Submit Tapped")
         let Sattext = SATscore.text
         let Acttext = ACT_Score.text
