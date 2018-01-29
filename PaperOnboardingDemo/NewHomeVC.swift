@@ -13,6 +13,7 @@ import FirebaseDatabase
 import Firebase
 import FirebaseStorage
 //import FirebaseStorageUI
+//for sean
 
 var myArray: NSArray = []
 var myIndex: Int = 0
