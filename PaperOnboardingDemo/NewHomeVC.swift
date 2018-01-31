@@ -50,6 +50,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        leadingConstraint.constant = -180
+
         print(myArray)
 
         

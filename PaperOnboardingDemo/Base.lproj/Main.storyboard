@@ -46,7 +46,7 @@
                                     <segue destination="vHS-cu-BtE" kind="show" id="WYG-RQ-pLD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="nVK-2Z-m0i">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="nVK-2Z-m0i">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-SQ-TJV">
@@ -411,7 +411,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="Q48-jK-PnL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NlK-2b-3RM">
                                 <rect key="frame" x="49" y="232" width="289.66666666666669" height="41"/>
@@ -557,7 +557,7 @@
                             <constraint firstItem="ICe-BT-pNw" firstAttribute="centerX" secondItem="OeV-xt-vtU" secondAttribute="centerX" id="vf6-f8-Ox1"/>
                             <constraint firstItem="NlK-2b-3RM" firstAttribute="bottom" secondItem="OeV-xt-vtU" secondAttribute="bottom" id="vj5-9N-vKG"/>
                             <constraint firstItem="rKg-rF-seW" firstAttribute="leading" secondItem="Qiy-ps-tgr" secondAttribute="leading" id="y08-mR-U3V"/>
-                            <constraint firstItem="Q48-jK-PnL" firstAttribute="bottom" secondItem="tgD-2x-Yjk" secondAttribute="top" id="z9P-gi-gKi"/>
+                            <constraint firstItem="Q48-jK-PnL" firstAttribute="bottom" secondItem="tgD-2x-Yjk" secondAttribute="top" constant="34" id="z9P-gi-gKi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -569,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMb-Yh-7MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2159.4202898550725" y="-484.23913043478262"/>
+            <point key="canvasLocation" x="2159.1999999999998" y="-484.72906403940891"/>
         </scene>
         <!--Scores View Controller-->
         <scene sceneID="Hla-v9-CSC">
@@ -775,7 +775,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-yP-ApU" customClass="SlideMenu" customModule="College_Search" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-yP-ApU" customClass="SlideMenu" customModule="College_Search" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="170" height="960"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-5N-t2T">
@@ -835,9 +835,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vhD-yP-ApU" firstAttribute="top" secondItem="lvv-TX-fg8" secondAttribute="bottom" id="Brb-xb-xCO"/>
-                            <constraint firstItem="vhD-yP-ApU" firstAttribute="leading" secondItem="jtO-9I-iVi" secondAttribute="leading" constant="-180" id="Yr5-qo-yIb"/>
-                            <constraint firstItem="kiM-zA-5bL" firstAttribute="top" secondItem="vhD-yP-ApU" secondAttribute="bottom" id="gzu-Es-7Ra"/>
+                            <constraint firstItem="vhD-yP-ApU" firstAttribute="top" secondItem="lvv-TX-fg8" secondAttribute="bottom" constant="-24" id="Brb-xb-xCO"/>
+                            <constraint firstItem="vhD-yP-ApU" firstAttribute="leading" secondItem="jtO-9I-iVi" secondAttribute="leading" id="Yr5-qo-yIb"/>
+                            <constraint firstItem="kiM-zA-5bL" firstAttribute="top" secondItem="vhD-yP-ApU" secondAttribute="bottom" constant="-246" id="gzu-Es-7Ra"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Colleges" id="4Z8-qH-qSD">
@@ -1113,7 +1113,6 @@
     </scenes>
     <resources>
         <image name="ApplyButton" width="417" height="123"/>
-        <image name="Background" width="1125" height="2001"/>
         <image name="Background2" width="1125" height="2001"/>
         <image name="Banks" width="512" height="512"/>
         <image name="Beta" width="234" height="81"/>
@@ -1143,7 +1142,7 @@
         <image name="law-1" width="228" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XcF-dy-3Xu"/>
+        <segue reference="WYG-RQ-pLD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
