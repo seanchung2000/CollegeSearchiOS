@@ -133,8 +133,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
                 
                 return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
 }
+
             
-        //let cell = UITableViewCell()
             
             
             func hexStringToUIColor (hex:String) -> UIColor {
@@ -164,8 +164,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         let schoolKey = "\(myArray[indexPath.row])"
         cell.textLabel!.text = schoolKey
         cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
-        cell.textLabel?.textColor = UIColor.gray
-        cell.backgroundColor = UIColor.white
+        cell.textLabel?.textColor = UIColor.white
+        cell.backgroundColor = getRandomColor()
             
             let clearView = UIView()
             clearView.backgroundColor = UIColor.clear // Whatever color you like
