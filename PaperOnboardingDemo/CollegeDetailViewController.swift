@@ -154,12 +154,12 @@ let actRef = db
     }
     
     @IBAction func planAVisit(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://bigfuture.collegeboard.org/find-colleges/campus-visit-guide")! as URL, options: [:], completionHandler: nil)
     }
     
     
     @IBAction func apply(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "http://www.commonapp.org/")! as URL, options: [:], completionHandler: nil)
     }
     
 }
