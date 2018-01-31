@@ -11,17 +11,27 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 import FirebaseFirestore
+import FirebaseStorage
+
 
 
 class CollegeDetailViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+  /*  @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var averageGpa: UILabel!
     
     @IBOutlet weak var averageSat: UILabel!
     
-    @IBOutlet weak var averaeAct: UILabel!
+    @IBOutlet weak var averaeAct: UILabel!*/
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var collegeImage: UIImageView!
+    @IBOutlet weak var collegeDescription: UITextView!
+    @IBOutlet weak var averageGpa: UILabel!
+    @IBOutlet weak var averageSat: UILabel!
+    @IBOutlet weak var averageAct: UILabel!
+    
     
   
     var docRef: DocumentReference!
@@ -29,30 +39,43 @@ class CollegeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
-        func getRandomColor() -> UIColor{
-            
-            var randomRed:CGFloat = CGFloat(drand48())
-            
-            var randomGreen:CGFloat = CGFloat(drand48())
-            
-            var randomBlue:CGFloat = CGFloat(drand48())
-            
-            return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-            
-            
-        }
-        
-       self.view.backgroundColor = getRandomColor()
 
         
         titleLabel.text = myArray[myIndex] as? String
         
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
-        averaeAct.text = "Average ACT Score"
+        averageAct.text = "Average ACT Score"
+        
+        
+        let imageName = "\(myArray[myIndex])2.png"
+        let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
+        
+        imageURL.downloadURL(completion: { (url, error) in
+            
+            if error != nil {
+                print(error?.localizedDescription)
+                return
+            }
+            
+            URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
+                guard let strongSelf = self else { return }
+                if error != nil {
+                    print(error)
+                    return
+                }
+                
+                guard let imageData = UIImage(data: data!) else { return }
+                
+                DispatchQueue.main.async {
+                    self?.collegeImage.image = imageData
+                }
+                
+            }).resume()
+            
+        })
+
+        
         
         let db = Firestore.firestore()
         
@@ -93,13 +116,27 @@ let actRef = db
             print("Error getting documents: \(err)")
         } else {
             for document in querySnapshot!.documents {
-                self.averaeAct.text = "Average ACT: \(document.documentID)"
+                self.averageAct.text = "Average ACT: \(document.documentID)"
             }
         }
 }
+        
+        let descriptionRef = db
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Description")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.collegeDescription.text = "\(document.documentID)"
+                    }
+                }
+        }
 
 }
 
+    
     @IBAction func websiteButton(_ sender: Any) {
         let db = Firestore.firestore()
         let websiteRef = db
@@ -114,11 +151,15 @@ let actRef = db
                     }
                 }
         }
-        
-        
-    
-    
-    
     }
+    
+    @IBAction func planAVisit(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func apply(_ sender: Any) {
+        
+    }
+    
 }
-
