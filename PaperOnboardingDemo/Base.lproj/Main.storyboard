@@ -1060,7 +1060,6 @@
         <image name="law-1" width="228" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w9e-vw-dAM"/>
         <segue reference="xKg-PX-MnU"/>
     </inferredMetricsTieBreakers>
 </document>
