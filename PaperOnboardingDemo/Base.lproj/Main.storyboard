@@ -879,12 +879,12 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="WJ5-ny-cPT">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="937"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szq-fo-XcT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szq-fo-XcT">
                                                 <rect key="frame" x="8" y="8" width="359" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="RSG-gZ-DMh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="30"/>
+                                                <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -895,12 +895,11 @@
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-rb-M3x">
-                                                <rect key="frame" x="8" y="293" width="359" height="186"/>
+                                                <rect key="frame" x="8" y="293" width="359" height="206"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="186" id="84c-up-IMb"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="186" id="8hU-Gq-oNb"/>
-                                                    <constraint firstAttribute="width" constant="359" id="tVP-Ad-cCL"/>
+                                                    <constraint firstAttribute="height" constant="206" id="B1N-0T-ILG"/>
+                                                    <constraint firstAttribute="width" constant="359" id="ZfO-ZU-ftN"/>
                                                 </constraints>
                                                 <string key="text">A medium-sized, 4-year, private university and liberal arts college. This coed college is located in a small city in a suburban setting and is primarily a residential campus. It offers bachelor's, master's and doctoral degrees.
 </string>
@@ -961,12 +960,11 @@
                                         <constraints>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="top" secondItem="Krg-7i-6ie" secondAttribute="top" id="5yz-q1-PMz"/>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="leading" secondItem="Thr-SF-Wy4" secondAttribute="leading" id="8DF-vw-pmx"/>
-                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="centerX" secondItem="pme-TL-mDs" secondAttribute="centerX" id="8SX-TB-VfL"/>
-                                            <constraint firstItem="kU5-6a-9z7" firstAttribute="top" secondItem="u7f-rb-M3x" secondAttribute="bottom" constant="28" id="Az5-Te-hrV"/>
+                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="trailing" secondItem="Szq-fo-XcT" secondAttribute="trailing" id="8jx-oC-wLe"/>
                                             <constraint firstItem="vXt-Du-dpz" firstAttribute="leading" secondItem="Krg-7i-6ie" secondAttribute="trailing" constant="-139" id="DZC-2H-J2k"/>
-                                            <constraint firstItem="kU5-6a-9z7" firstAttribute="centerX" secondItem="u7f-rb-M3x" secondAttribute="centerX" id="E1U-kC-EOh"/>
                                             <constraint firstItem="WJ5-ny-cPT" firstAttribute="top" secondItem="pme-TL-mDs" secondAttribute="top" id="F4s-4y-LxW"/>
                                             <constraint firstItem="ufL-NT-Xff" firstAttribute="leading" secondItem="WJ5-ny-cPT" secondAttribute="leading" id="GPU-uS-Oyy"/>
+                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="top" secondItem="ufL-NT-Xff" secondAttribute="bottom" constant="16" id="HSd-N4-ndu"/>
                                             <constraint firstItem="Szq-fo-XcT" firstAttribute="centerX" secondItem="ufL-NT-Xff" secondAttribute="centerX" id="NzB-Vu-k14"/>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="trailing" secondItem="Thr-SF-Wy4" secondAttribute="trailing" id="QWn-jD-0LS"/>
                                             <constraint firstItem="Szq-fo-XcT" firstAttribute="centerX" secondItem="WJ5-ny-cPT" secondAttribute="centerX" id="RqN-Yp-p8P"/>
@@ -977,16 +975,16 @@
                                             <constraint firstItem="vXt-Du-dpz" firstAttribute="top" secondItem="Krg-7i-6ie" secondAttribute="bottom" constant="-41" id="YsM-jL-bgZ"/>
                                             <constraint firstAttribute="bottom" secondItem="WJ5-ny-cPT" secondAttribute="bottom" constant="63" id="Z8M-SG-ONO"/>
                                             <constraint firstAttribute="bottom" secondItem="rli-y7-kWv" secondAttribute="bottom" constant="122" id="ZXd-kQ-Jbk"/>
+                                            <constraint firstItem="kU5-6a-9z7" firstAttribute="top" secondItem="u7f-rb-M3x" secondAttribute="bottom" constant="8" symbolic="YES" id="aDU-Ws-N62"/>
+                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="centerX" secondItem="kU5-6a-9z7" secondAttribute="centerX" id="all-VC-WfJ"/>
                                             <constraint firstItem="Szq-fo-XcT" firstAttribute="leading" secondItem="pme-TL-mDs" secondAttribute="leadingMargin" id="co2-i2-7KS"/>
                                             <constraint firstItem="rli-y7-kWv" firstAttribute="top" secondItem="Krg-7i-6ie" secondAttribute="bottom" constant="43" id="ejC-DX-18h"/>
-                                            <constraint firstItem="Szq-fo-XcT" firstAttribute="trailing" secondItem="u7f-rb-M3x" secondAttribute="trailing" id="fkn-Yk-GVw"/>
                                             <constraint firstItem="ufL-NT-Xff" firstAttribute="leading" secondItem="pme-TL-mDs" secondAttribute="leading" id="gLz-uc-FQL"/>
-                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="top" secondItem="ufL-NT-Xff" secondAttribute="bottom" constant="16" id="hnt-aM-hid"/>
                                             <constraint firstItem="Thr-SF-Wy4" firstAttribute="top" secondItem="ZS4-cu-pix" secondAttribute="bottom" constant="-41" id="iE4-XB-gOY"/>
                                             <constraint firstItem="ufL-NT-Xff" firstAttribute="centerX" secondItem="pme-TL-mDs" secondAttribute="centerX" id="j8i-xD-lsK"/>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="top" secondItem="Thr-SF-Wy4" secondAttribute="top" id="mbh-wH-2Qj"/>
                                             <constraint firstItem="Krg-7i-6ie" firstAttribute="leading" secondItem="ZS4-cu-pix" secondAttribute="trailing" constant="36" id="qpF-ur-1oI"/>
-                                            <constraint firstItem="Szq-fo-XcT" firstAttribute="leading" secondItem="u7f-rb-M3x" secondAttribute="leading" id="rFe-9G-Wd4"/>
+                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="leading" secondItem="Szq-fo-XcT" secondAttribute="leading" id="u3H-yi-7OK"/>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="bottom" secondItem="Thr-SF-Wy4" secondAttribute="bottom" id="vc0-j6-CAQ"/>
                                             <constraint firstItem="Szq-fo-XcT" firstAttribute="top" secondItem="pme-TL-mDs" secondAttribute="topMargin" id="vyO-r2-mjH"/>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="leading" secondItem="pme-TL-mDs" secondAttribute="leading" constant="28" id="xc1-aj-jHf"/>
@@ -1145,4 +1143,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="xKg-PX-MnU"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
