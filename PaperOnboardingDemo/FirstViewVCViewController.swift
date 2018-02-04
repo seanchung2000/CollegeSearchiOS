@@ -13,13 +13,6 @@ class FirstViewVCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            }
-    
-    
-      override func viewDidAppear(_ animated: Bool) {
-        if Auth.auth().currentUser != nil {
-            showHomePage()
-        }
     }
     
     func showHomePage() {
@@ -28,5 +21,9 @@ class FirstViewVCViewController: UIViewController {
         self.present(HomeVC, animated: false, completion: nil)
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+       if Auth.auth().currentUser != nil {
+            showHomePage()
+        }
+    }
 }

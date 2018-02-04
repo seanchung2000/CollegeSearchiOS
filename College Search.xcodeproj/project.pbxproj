@@ -11,6 +11,7 @@
 		231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */; };
 		232882421F044F5B00732946 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232882411F044F5B00732946 /* GoogleService-Info.plist */; };
 		2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */; };
+		237661662026B2E100D1519C /* gpaCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237661652026B2E100D1519C /* gpaCalcViewController.swift */; };
 		23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */; };
 		23840FD51FF7EAED00515722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23840FD31FF7EAED00515722 /* Main.storyboard */; };
 		23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */; };
@@ -51,6 +52,7 @@
 		231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		232882411F044F5B00732946 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		237661652026B2E100D1519C /* gpaCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = gpaCalcViewController.swift; path = "/Users/THEBOSS/Developer/GITHUB COLLEGE SEARCH/CollegeSearch/PaperOnboardingDemo/gpaCalcViewController.swift"; sourceTree = "<absolute>"; };
 		23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewVCViewController.swift; sourceTree = "<group>"; };
 		23840FD41FF7EAED00515722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeVCNavigation.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				84A773A31CCE545200EF4EB0 /* AppDelegate.swift */,
 				23A462181FEEAE6C0009C9E7 /* NewHomeVC.swift */,
 				23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */,
+				237661652026B2E100D1519C /* gpaCalcViewController.swift */,
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
 				23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */,
@@ -350,6 +353,7 @@
 				09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */,
 				23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */,
 				23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */,
+				237661662026B2E100D1519C /* gpaCalcViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
 				2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */,

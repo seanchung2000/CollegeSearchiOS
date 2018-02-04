@@ -16,37 +16,19 @@ import FirebaseStorage
 
 
 class CollegeDetailViewController: UIViewController {
-
-  /*  @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var averageGpa: UILabel!
-    
-    @IBOutlet weak var averageSat: UILabel!
-    
-    @IBOutlet weak var averaeAct: UILabel!*/
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collegeImage: UIImageView!
     @IBOutlet weak var collegeDescription: UITextView!
     @IBOutlet weak var averageGpa: UILabel!
     @IBOutlet weak var averageSat: UILabel!
     @IBOutlet weak var averageAct: UILabel!
-    
-    
-  
     var docRef: DocumentReference!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-        
         titleLabel.text = myArray[myIndex] as? String
-        
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score"
-        
         
         let imageName = "\(myArray[myIndex])2.png"
         let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
