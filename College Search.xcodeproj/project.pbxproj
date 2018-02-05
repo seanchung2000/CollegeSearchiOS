@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */; };
+		230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */; };
 		231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */; };
 		232882421F044F5B00732946 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232882411F044F5B00732946 /* GoogleService-Info.plist */; };
 		2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegesTableView.swift; sourceTree = "<group>"; };
 		20CE6CF75E65BF9F1C049A70 /* Pods-College Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.release.xcconfig"; sourceTree = "<group>"; };
+		230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstGPAcalcClassScreenViewController.swift; sourceTree = "<group>"; };
 		231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		232882411F044F5B00732946 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		84A773A21CCE545200EF4EB0 /* PaperOnboardingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */,
 				09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */,
 				23E911431F05EC5B00B6D818 /* PaperOnboardingDemo.entitlements */,
 				84A773A31CCE545200EF4EB0 /* AppDelegate.swift */,
@@ -347,6 +350,7 @@
 			files = (
 				84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */,
 				23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */,
+				230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */,
 				84A773A41CCE545200EF4EB0 /* AppDelegate.swift in Sources */,
 				23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */,
 				23E911361F049C1300B6D818 /* HomeVC.swift in Sources */,
