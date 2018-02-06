@@ -1211,16 +1211,14 @@ of your classes.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="College" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-2B-QWJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="College" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-2B-QWJ">
                                 <rect key="frame" x="0.0" y="-6" width="376" height="818"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="Ud4-QW-uO3">
-                                <rect key="frame" x="67" y="386" width="240" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="Ud4-QW-uO3">
+                                <rect key="frame" x="60" y="379" width="256" height="54"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igL-4y-ra1">
-                                <rect key="frame" x="82" y="386" width="211" height="40"/>
+                                <rect key="frame" x="83" y="391" width="211" height="31"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <state key="normal" title="Tell Us Your Scores">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1232,8 +1230,17 @@ of your classes.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="igL-4y-ra1" firstAttribute="centerY" secondItem="pRx-Qy-rxY" secondAttribute="centerY" id="byG-Mh-jcN"/>
-                            <constraint firstItem="igL-4y-ra1" firstAttribute="centerX" secondItem="pRx-Qy-rxY" secondAttribute="centerX" id="ehj-7B-Jwv"/>
+                            <constraint firstItem="Ud4-QW-uO3" firstAttribute="top" secondItem="pcE-Y1-2hG" secondAttribute="bottom" constant="335" id="00a-4x-OGo"/>
+                            <constraint firstItem="igL-4y-ra1" firstAttribute="centerX" secondItem="SDH-2B-QWJ" secondAttribute="centerX" id="8LJ-F4-o5P"/>
+                            <constraint firstItem="Ud4-QW-uO3" firstAttribute="leading" secondItem="pRx-Qy-rxY" secondAttribute="leadingMargin" constant="44" id="8tn-jw-MZW"/>
+                            <constraint firstItem="igL-4y-ra1" firstAttribute="centerY" secondItem="pRx-Qy-rxY" secondAttribute="centerY" id="An2-Jn-nbm"/>
+                            <constraint firstItem="Ud4-QW-uO3" firstAttribute="centerX" secondItem="pRx-Qy-rxY" secondAttribute="centerX" id="Eis-oC-f4H"/>
+                            <constraint firstItem="Ud4-QW-uO3" firstAttribute="centerY" secondItem="igL-4y-ra1" secondAttribute="centerY" id="F5E-nR-Gt2"/>
+                            <constraint firstItem="SDH-2B-QWJ" firstAttribute="top" secondItem="pRx-Qy-rxY" secondAttribute="topMargin" constant="-50" id="Fpp-P2-gek"/>
+                            <constraint firstItem="igL-4y-ra1" firstAttribute="leading" secondItem="pRx-Qy-rxY" secondAttribute="leadingMargin" constant="67" id="QW7-d5-xqS"/>
+                            <constraint firstItem="igL-4y-ra1" firstAttribute="top" secondItem="pcE-Y1-2hG" secondAttribute="bottom" constant="347" id="XsJ-zE-LWH"/>
+                            <constraint firstItem="SDH-2B-QWJ" firstAttribute="leading" secondItem="pRx-Qy-rxY" secondAttribute="leading" id="a8M-yx-uDk"/>
+                            <constraint firstAttribute="bottom" secondItem="SDH-2B-QWJ" secondAttribute="bottom" id="mcu-nl-6rG"/>
                         </constraints>
                     </view>
                 </viewController>
