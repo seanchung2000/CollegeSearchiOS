@@ -10,10 +10,20 @@ import UIKit
 
 class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDelegate,  UIPickerViewDataSource {
 
-    @IBOutlet weak var gradeInClass: UITextField!
-    var grades = ["+A", "A", "-A", "+B", "B", "-B", "+C", "C", "-C", "+D", "D", "-D", "F"]
-    var picker = UIPickerView()
+    var gradesPicker = true
     
+    @IBOutlet weak var gradeInClass: UITextField!
+    @IBOutlet weak var className: UITextField!
+    @IBOutlet weak var typeOfClass: UITextField!
+    @IBAction func gradeInClassTapped(_ sender: Any) {
+         gradesPicker = true
+    }
+    @IBAction func typeOfClass(_ sender: Any) {
+         gradesPicker = false
+    }
+    var grades = ["+A", "A", "-A", "+B", "B", "-B", "+C", "C", "-C", "+D", "D", "-D", "F"]
+    var classTypes = ["AP", "Honors", "DE", "None of the above"]
+    var picker = UIPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.showsSelectionIndicator = true
@@ -34,7 +44,8 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
         
         gradeInClass.inputView = picker
         gradeInClass.inputAccessoryView = toolBar
-
+        typeOfClass.inputView = picker
+        typeOfClass.inputAccessoryView = toolBar
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -42,20 +53,34 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return grades.count
+        if(gradesPicker){
+            return grades.count
+        } else {
+            return classTypes.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        gradeInClass.text = grades[row]
+        if(gradesPicker){
+            gradeInClass.text = grades[row]
+        } else {
+            typeOfClass.text = classTypes[row]
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return grades[row]
+        if(gradesPicker){
+            return grades[row]
+        } else {
+            return classTypes[row]
+        }
     }
     @objc func donePicker() {
-        
-        gradeInClass.resignFirstResponder()
-        
+        if(gradesPicker){
+            gradeInClass.resignFirstResponder()
+        } else {
+            typeOfClass.resignFirstResponder()
+        }
     }
 
 }
