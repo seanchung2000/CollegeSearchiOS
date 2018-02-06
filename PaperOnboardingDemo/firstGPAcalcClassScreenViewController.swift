@@ -55,7 +55,7 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(gradesPicker){
             return grades.count
-        } else {
+         } else {
             return classTypes.count
         }
     }
@@ -84,3 +84,4 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
     }
 
 }
+
