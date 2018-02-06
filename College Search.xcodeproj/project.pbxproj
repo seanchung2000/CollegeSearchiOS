@@ -10,6 +10,7 @@
 		09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */; };
 		230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */; };
 		230CA4D12029259D009E0538 /* gradeInClassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4D02029259D009E0538 /* gradeInClassTextField.swift */; };
+		230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */; };
 		231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */; };
 		232882421F044F5B00732946 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232882411F044F5B00732946 /* GoogleService-Info.plist */; };
 		2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */; };
@@ -53,6 +54,7 @@
 		20CE6CF75E65BF9F1C049A70 /* Pods-College Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.release.xcconfig"; sourceTree = "<group>"; };
 		230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstGPAcalcClassScreenViewController.swift; sourceTree = "<group>"; };
 		230CA4D02029259D009E0538 /* gradeInClassTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeInClassTextField.swift; sourceTree = "<group>"; };
+		230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGPACalcScreenViewController.swift; sourceTree = "<group>"; };
 		231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		232882411F044F5B00732946 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				23E911391F052BC600B6D818 /* ForgotPasswordViewController.swift */,
 				23E911371F0528B800B6D818 /* SignUpViewController.swift */,
 				84A773AA1CCE545200EF4EB0 /* Assets.xcassets */,
+				230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */,
 				84A773AC1CCE545200EF4EB0 /* LaunchScreen.storyboard */,
 				84A773AF1CCE545200EF4EB0 /* Info.plist */,
 				232882411F044F5B00732946 /* GoogleService-Info.plist */,
@@ -363,6 +366,7 @@
 				237661662026B2E100D1519C /* gpaCalcViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
+				230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */,
 				2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */,
 				23E911321F04919A00B6D818 /* loginPageController.swift in Sources */,
 				23A462191FEEAE6C0009C9E7 /* NewHomeVC.swift in Sources */,
