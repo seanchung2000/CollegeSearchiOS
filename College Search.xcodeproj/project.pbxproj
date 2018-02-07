@@ -25,6 +25,7 @@
 		23E911361F049C1300B6D818 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E911351F049C1300B6D818 /* HomeVC.swift */; };
 		23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E911371F0528B800B6D818 /* SignUpViewController.swift */; };
 		23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E911391F052BC600B6D818 /* ForgotPasswordViewController.swift */; };
+		23EC17F6202BAE9800DFED65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */; };
 		84A773A41CCE545200EF4EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A773A31CCE545200EF4EB0 /* AppDelegate.swift */; };
 		84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A773A51CCE545200EF4EB0 /* ViewController.swift */; };
 		84A773AB1CCE545200EF4EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A773AA1CCE545200EF4EB0 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		23E911371F0528B800B6D818 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		23E911391F052BC600B6D818 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		23E911431F05EC5B00B6D818 /* PaperOnboardingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PaperOnboardingDemo.entitlements; sourceTree = "<group>"; };
+		23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3099F97CFAF2AC7AB8447104 /* Pods-PaperOnboardingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemo/Pods-PaperOnboardingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		335A14757E623808DBF8B461 /* Pods-PaperOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboarding.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboarding/Pods-PaperOnboarding.release.xcconfig"; sourceTree = "<group>"; };
 		4ED4D039BEB403B2D913F195 /* Pods_College_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_College_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				237661652026B2E100D1519C /* gpaCalcViewController.swift */,
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
+				23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */,
 				230CA4D02029259D009E0538 /* gradeInClassTextField.swift */,
 				23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */,
 				84A773A51CCE545200EF4EB0 /* ViewController.swift */,
@@ -371,6 +374,7 @@
 				23E911321F04919A00B6D818 /* loginPageController.swift in Sources */,
 				23A462191FEEAE6C0009C9E7 /* NewHomeVC.swift in Sources */,
 				230CA4D12029259D009E0538 /* gradeInClassTextField.swift in Sources */,
+				23EC17F6202BAE9800DFED65 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

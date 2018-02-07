@@ -85,6 +85,11 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     }
     
     
+    @IBAction func feedbackTapped(_ sender: Any) {
+        Answers.logCustomEvent(withName: "Feedback Pressed",
+                               customAttributes: [:])
+        UIApplication.shared.open(URL(string: "https://interadaptive.com/feedback")! as URL, options: [:], completionHandler: nil)
+    }
     
     
     
