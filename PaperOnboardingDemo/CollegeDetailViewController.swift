@@ -153,6 +153,8 @@ let actRef = db
                 } else {
                     for document in querySnapshot!.documents {
                         self.acceptanceRateLabel.text = "\(document.documentID)%"
+                      //  var ratedouble: Double = document.documentID as! Double
+                      //  print(ratedouble)
                       self.acceptanceRateGraph.animate(fromAngle: 0, toAngle: 95, duration: 2, completion: nil)
                     }
                 }
