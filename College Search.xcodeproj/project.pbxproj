@@ -13,6 +13,7 @@
 		230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */; };
 		231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */; };
 		232882421F044F5B00732946 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232882411F044F5B00732946 /* GoogleService-Info.plist */; };
+		23366031202DE6050066B844 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23366030202DE6050066B844 /* KDCircularProgress.swift */; };
 		2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */; };
 		237661662026B2E100D1519C /* gpaCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237661652026B2E100D1519C /* gpaCalcViewController.swift */; };
 		23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */; };
@@ -58,6 +59,7 @@
 		230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGPACalcScreenViewController.swift; sourceTree = "<group>"; };
 		231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		232882411F044F5B00732946 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23366030202DE6050066B844 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KDCircularProgress.swift; path = "../../../../Downloads/KDCircularProgress-master/KDCircularProgress/KDCircularProgress.swift"; sourceTree = "<group>"; };
 		2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
 		237661652026B2E100D1519C /* gpaCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = gpaCalcViewController.swift; path = "/Users/THEBOSS/Developer/GITHUB COLLEGE SEARCH/CollegeSearch/PaperOnboardingDemo/gpaCalcViewController.swift"; sourceTree = "<absolute>"; };
 		23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewVCViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
 				23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */,
+				23366030202DE6050066B844 /* KDCircularProgress.swift */,
 				230CA4D02029259D009E0538 /* gradeInClassTextField.swift */,
 				23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */,
 				84A773A51CCE545200EF4EB0 /* ViewController.swift */,
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23366031202DE6050066B844 /* KDCircularProgress.swift in Sources */,
 				84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */,
 				23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */,
 				230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */,

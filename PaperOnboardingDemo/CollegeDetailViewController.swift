@@ -22,6 +22,10 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet weak var averageGpa: UILabel!
     @IBOutlet weak var averageSat: UILabel!
     @IBOutlet weak var averageAct: UILabel!
+    @IBOutlet weak var averageTuituon: UILabel!
+    @IBOutlet weak var averageFinancialAid: UILabel!
+    @IBOutlet weak var acceptanceRateGraph: KDCircularProgress!
+    @IBOutlet weak var acceptanceRateLabel: UILabel!
     var docRef: DocumentReference!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,7 @@ class CollegeDetailViewController: UIViewController {
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score"
-        
+       // acceptanceRateGraph.angle = 0
         let imageName = "\(myArray[myIndex])2.png"
         let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
         
@@ -112,6 +116,44 @@ let actRef = db
                 } else {
                     for document in querySnapshot!.documents {
                         self.collegeDescription.text = "\(document.documentID)"
+                    }
+                }
+        }
+        let tuitionRef = db
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Tuition")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.averageTuituon.text = "Average Tuition:\(document.documentID)"
+                    }
+                }
+        }
+        let financialRef = db
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Financial")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.averageFinancialAid.text = "Average Financial Aid:\(document.documentID)"
+                    }
+                }
+        }
+        
+        let rateRef = db
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Rate")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.acceptanceRateLabel.text = "\(document.documentID)%"
+                      self.acceptanceRateGraph.animate(fromAngle: 0, toAngle: 95, duration: 2, completion: nil)
                     }
                 }
         }
