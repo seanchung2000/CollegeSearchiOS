@@ -1150,7 +1150,7 @@ of your classes.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vHS-cu-BtE" kind="show" id="XcF-dy-3Xu"/>
+                                    <segue destination="ItX-hE-tpt" kind="show" id="bpy-Ih-usw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-J4-gqd">
@@ -1968,7 +1968,8 @@ of your classes.</string>
         <image name="thatsOkayIcon" width="294" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XcF-dy-3Xu"/>
+        <segue reference="bpy-Ih-usw"/>
+        <segue reference="DTC-Dp-E94"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
