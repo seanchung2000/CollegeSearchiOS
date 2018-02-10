@@ -1160,7 +1160,7 @@ of your classes.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scores" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-UX-KX8">
-                                <rect key="frame" x="130" y="119" width="146" height="57"/>
+                                <rect key="frame" x="114" y="119" width="146" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="7dX-Hy-Rc1"/>
                                     <constraint firstAttribute="height" constant="57" id="JNH-QM-Jal"/>
@@ -1193,7 +1193,7 @@ of your classes.</string>
                             <constraint firstItem="Ytz-aC-IRM" firstAttribute="top" secondItem="650-jd-7eS" secondAttribute="bottom" constant="38" id="Z5e-1A-xnB"/>
                             <constraint firstItem="OI4-bb-Ej0" firstAttribute="trailing" secondItem="650-jd-7eS" secondAttribute="trailing" id="ZR1-X7-Qjo"/>
                             <constraint firstItem="1Xo-kd-pFr" firstAttribute="centerX" secondItem="atC-Lh-d7X" secondAttribute="centerX" id="cwJ-5O-Yli"/>
-                            <constraint firstItem="gsW-UX-KX8" firstAttribute="leading" secondItem="atC-Lh-d7X" secondAttribute="leadingMargin" constant="114" id="ev0-mT-edc"/>
+                            <constraint firstItem="gsW-UX-KX8" firstAttribute="leading" secondItem="atC-Lh-d7X" secondAttribute="leadingMargin" constant="98" id="ev0-mT-edc"/>
                             <constraint firstAttribute="bottom" secondItem="VqP-XQ-Cqd" secondAttribute="bottom" id="fSe-eH-NMN"/>
                             <constraint firstItem="Ytz-aC-IRM" firstAttribute="bottom" secondItem="1Xo-kd-pFr" secondAttribute="bottom" id="h5d-yX-Dfr"/>
                             <constraint firstItem="hfF-RF-2cc" firstAttribute="top" secondItem="bH8-jK-mcJ" secondAttribute="top" id="hmi-J3-8kS"/>

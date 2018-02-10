@@ -127,7 +127,7 @@ let actRef = db
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        self.averageTuituon.text = "Average Tuition:\(document.documentID)"
+                        self.averageTuituon.text = "Average Tuition: $\(document.documentID)"
                     }
                 }
         }
@@ -139,7 +139,7 @@ let actRef = db
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        self.averageFinancialAid.text = "Average Financial Aid:\(document.documentID)"
+                        self.averageFinancialAid.text = "Average Financial Aid: $\(document.documentID)"
                     }
                 }
         }
@@ -155,7 +155,11 @@ let actRef = db
                         self.acceptanceRateLabel.text = "\(document.documentID)%"
                       //  var ratedouble: Double = document.documentID as! Double
                       //  print(ratedouble)
-                      self.acceptanceRateGraph.animate(fromAngle: 0, toAngle: 95, duration: 2, completion: nil)
+                        if let rate = Double(document.documentID) {
+                            print(rate)
+                            var degreeRate: Double = (360 * rate)/100
+                            self.acceptanceRateGraph.animate(fromAngle: 0, toAngle: degreeRate, duration: 2.5, completion: nil)
+                        }
                     }
                 }
         }

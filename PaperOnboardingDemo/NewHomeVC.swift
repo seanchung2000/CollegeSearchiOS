@@ -3,8 +3,7 @@
 //  PaperOnboardingDemo
 //
 //  Created by Kunwar Sahni on 12/23/17.
-//  Copyright © 2017 Alex K. All rights reserved.
-// TESTING FROM XCODE 2.0
+//  Copyright © 2017 Kunwar Sahni All rights reserved.
 
 import Foundation
 import UIKit
@@ -13,12 +12,15 @@ import FirebaseDatabase
 import Firebase
 import FirebaseStorage
 
-var myArray: NSArray = []
+var myArray: NSArray = ["2"]
+
 var myIndex: Int = 0
+
 
 class CollegeTableViewCell: UITableViewCell {
     
     static let identifier = "CollegeTableViewCell"
+
     
     weak var dataTask: URLSessionDataTask?
     
@@ -30,10 +32,8 @@ class CollegeTableViewCell: UITableViewCell {
     
 }
 
-class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-
-  
-    
+class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
@@ -46,12 +46,10 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     var imageCache = [String:UIImage]()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         leadingConstraint.constant = -180
-
-        print(myArray)
-
         
 
         self.tableView.dataSource = self
@@ -64,6 +62,9 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
     }
+    
+
+
     @IBAction func loggedOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
@@ -148,6 +149,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
             let clearView = UIView()
             clearView.backgroundColor = UIColor.clear // Whatever color you like
             UITableViewCell.appearance().selectedBackgroundView = clearView
+        
 
             if let image = imageCache[schoolKey] {
                 cell.imageView?.image = image
@@ -188,7 +190,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
             return cell
             
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         performSegue(withIdentifier: "segue", sender: self)
