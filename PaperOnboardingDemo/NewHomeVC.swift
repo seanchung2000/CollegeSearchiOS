@@ -32,7 +32,21 @@ class CollegeTableViewCell: UITableViewCell {
     
 }
 
-class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADNativeAppInstallAdLoaderDelegate, GADNativeContentAdLoaderDelegate {
+    /// The ad unit ID from the AdMob UI.
+    let adUnitID = "ca-app-pub-8784727441633405/5374362219"
+    
+    /// The number of native ads to load.
+    let numAdsToLoad = 5
+    
+    /// The native ads.
+    var nativeAds = [GADNativeAd]()
+    
+    /// The ad loader that loads the native ads.
+    var adLoader: GADAdLoader!
+    
+    /// The number of completed ad loads (success or failures).
+    var numAdLoadCallbacks = 0
    
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,8 +64,14 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         leadingConstraint.constant = -180
-        
-
+        // Prepare the ad loader and start loading ads.
+        adLoader = GADAdLoader(adUnitID: adUnitID,
+                               rootViewController: self,
+                               adTypes: [GADAdLoaderAdType.nativeAppInstall,
+                                         GADAdLoaderAdType.nativeContent],
+                               options: nil)
+        adLoader.delegate = self
+        preloadNextAd()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -63,8 +83,52 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = UIColor.blue
     }
     
-
-
+    func preloadNextAd() {
+        if numAdLoadCallbacks < numAdsToLoad {
+            adLoader.load(GADRequest())
+        } else {
+            //enableMenuButton()
+        }
+    }
+    func adLoader(_ adLoader: GADAdLoader,
+                  didFailToReceiveAdWithError error: GADRequestError) {
+        print("\(adLoader) failed with error: \(error.localizedDescription)")
+        
+        // Increment the number of ad load callbacks.
+        numAdLoadCallbacks += 1
+        
+        // Load the next native ad.
+        preloadNextAd()
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader,
+                  didReceive nativeAppInstallAd: GADNativeAppInstallAd) {
+        print("Received native app install ad: \(nativeAppInstallAd)")
+        
+        // Increment the number of ad load callbacks.
+        numAdLoadCallbacks += 1
+        
+        // Add the native ad to the list of native ads.
+        nativeAds.append(nativeAppInstallAd)
+        
+        // Load the next native ad.
+        preloadNextAd()
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader,
+                  didReceive nativeContentAd: GADNativeContentAd) {
+        print("Received native content ad: \(nativeContentAd)")
+        
+        // Increment the number of ad load callbacks.
+        numAdLoadCallbacks += 1
+        
+        // Add the native ad to the list of native ads.
+        nativeAds.append(nativeContentAd)
+        
+        // Load the next native ad.
+        preloadNextAd()
+    }
+    
     @IBAction func loggedOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
