@@ -32,8 +32,10 @@ class CollegeDetailViewController: UIViewController {
         titleLabel.text = myArray[myIndex] as? String
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
-        averageAct.text = "Average ACT Score"
-       // acceptanceRateGraph.angle = 0
+        averageAct.text = "Average ACT Score:"
+        averageTuituon.text = "Average Tuituon:"
+        averageFinancialAid.text = "Average Financial Aid:"
+        getCollegeData()
         let imageName = "\(myArray[myIndex])2.png"
         let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
         
@@ -61,7 +63,9 @@ class CollegeDetailViewController: UIViewController {
             
         })
 
-        
+    }
+  
+    func getCollegeData() {
         
         let db = Firestore.firestore()
         
@@ -140,6 +144,7 @@ let actRef = db
                 } else {
                     for document in querySnapshot!.documents {
                         self.averageFinancialAid.text = "Average Financial Aid: $\(document.documentID)"
+                        print("HELLLLLOOOOO")
                     }
                 }
         }

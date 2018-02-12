@@ -15,7 +15,6 @@
 		232882421F044F5B00732946 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232882411F044F5B00732946 /* GoogleService-Info.plist */; };
 		23366033202E33960066B844 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23366032202E33960066B844 /* KDCircularProgress.swift */; };
 		2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */; };
-		237661662026B2E100D1519C /* gpaCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237661652026B2E100D1519C /* gpaCalcViewController.swift */; };
 		23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */; };
 		23840FD51FF7EAED00515722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23840FD31FF7EAED00515722 /* Main.storyboard */; };
 		23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */; };
@@ -35,6 +34,7 @@
 		84C7E5FA1CCE59B200C9F001 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F51CCE59B200C9F001 /* Nunito-Light.ttf */; };
 		84C7E5FC1CCE59B200C9F001 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F61CCE59B200C9F001 /* Nunito-Regular.ttf */; };
 		84C7E5FE1CCE59B200C9F001 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */; };
+		97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D9694220310A14003F50E4 /* gpaCalcViewController.swift */; };
 		DA059992DA841D98DBFB64FD /* Pods_College_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED4D039BEB403B2D913F195 /* Pods_College_Search.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,6 @@
 		232882411F044F5B00732946 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23366032202E33960066B844 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
-		237661652026B2E100D1519C /* gpaCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = gpaCalcViewController.swift; path = "/Users/THEBOSS/Developer/GITHUB COLLEGE SEARCH/CollegeSearch/PaperOnboardingDemo/gpaCalcViewController.swift"; sourceTree = "<absolute>"; };
 		23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewVCViewController.swift; sourceTree = "<group>"; };
 		23840FD41FF7EAED00515722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeVCNavigation.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		84C7E5F61CCE59B200C9F001 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		87D4EE4480D0D0E5D9D405DC /* Pods-College Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.debug.xcconfig"; sourceTree = "<group>"; };
+		97D9694220310A14003F50E4 /* gpaCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpaCalcViewController.swift; sourceTree = "<group>"; };
 		C9121BA71756DFCDBB4D1B42 /* Pods-PaperOnboardingDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemoTests/Pods-PaperOnboardingDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D48BB294E30861B30D2F5710 /* Pods-PaperOnboardingDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemoTests/Pods-PaperOnboardingDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8D8A0FBAC51B6BC9967E017 /* Pods-PaperOnboardingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemo/Pods-PaperOnboardingDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				84A773A31CCE545200EF4EB0 /* AppDelegate.swift */,
 				23A462181FEEAE6C0009C9E7 /* NewHomeVC.swift */,
 				23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */,
-				237661652026B2E100D1519C /* gpaCalcViewController.swift */,
+				97D9694220310A14003F50E4 /* gpaCalcViewController.swift */,
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
 				23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */,
@@ -287,9 +287,44 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-College Search/Pods-College Search-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,9 +364,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-College Search/Pods-College Search-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,13 +382,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-College Search-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -370,8 +411,8 @@
 				09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */,
 				23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */,
 				23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */,
-				237661662026B2E100D1519C /* gpaCalcViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
+				97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */,
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
 				230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */,
 				2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */,

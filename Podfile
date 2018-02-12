@@ -22,5 +22,6 @@ target 'College Search' do
   pod 'FirebaseUI/Storage'
   pod 'SVProgressHUD'
   pod 'Firebase/Messaging'
+  pod 'Firebase/AdMob'
 
 end
