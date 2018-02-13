@@ -16,7 +16,7 @@ class NewHomeVCNavigation: UINavigationController {
         super.viewDidLoad()
         let navigationTitleFont = UIFont(name: "Eveleth", size: 20)!
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: navigationTitleFont, NSAttributedStringKey.foregroundColor : UIColor.white]
-        UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Rectangle 4")!)
+       // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Rectangle 4")!)
     }
 
 }

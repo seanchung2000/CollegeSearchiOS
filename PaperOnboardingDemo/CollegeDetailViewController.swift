@@ -12,15 +12,17 @@ import FirebaseDatabase
 import Firebase
 import FirebaseFirestore
 import FirebaseStorage
+import GoogleMobileAds
 //Ads Work
 
 
-class CollegeDetailViewController: UIViewController {
+class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collegeImage: UIImageView!
     @IBOutlet weak var collegeDescription: UITextView!
     @IBOutlet weak var averageGpa: UILabel!
     @IBOutlet weak var averageSat: UILabel!
+    @IBOutlet weak var myBanner: GADBannerView!
     @IBOutlet weak var averageAct: UILabel!
     @IBOutlet weak var averageTuituon: UILabel!
     @IBOutlet weak var averageFinancialAid: UILabel!
@@ -33,6 +35,14 @@ class CollegeDetailViewController: UIViewController {
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score:"
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        myBanner.adUnitID = "ca-app-pub-8784727441633405/5374362219"
+        myBanner.rootViewController = self
+        myBanner.delegate = self
+        
+        myBanner.load(request)
         //averageTuituon.text = "Average Tuituon:"
         //averageFinancialAid.text = "Average Financial Aid:"
         DispatchQueue.main.async {
