@@ -33,9 +33,11 @@ class CollegeDetailViewController: UIViewController {
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score:"
-        averageTuituon.text = "Average Tuituon:"
-        averageFinancialAid.text = "Average Financial Aid:"
-        getCollegeData()
+        //averageTuituon.text = "Average Tuituon:"
+        //averageFinancialAid.text = "Average Financial Aid:"
+        DispatchQueue.main.async {
+            self.getCollegeData()
+        }
         let imageName = "\(myArray[myIndex])2.png"
         let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
         
@@ -66,9 +68,22 @@ class CollegeDetailViewController: UIViewController {
     }
   
     func getCollegeData() {
-        
         let db = Firestore.firestore()
-        
+        let financialRef = db
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Financial")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    print("HELLLLLOOOOO2")
+
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.averageFinancialAid.text = "Average Financial Aid: $\(document.documentID)"
+                        print("HELLLLLOOOOO")
+                    }
+                }
+        }
         let gpaRef = db
             .collection("Colleges").document("\(myArray[myIndex] as! String)")
             .collection("GPA")
@@ -135,19 +150,7 @@ let actRef = db
                     }
                 }
         }
-        let financialRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
-            .collection("Financial")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.averageFinancialAid.text = "Average Financial Aid: $\(document.documentID)"
-                        print("HELLLLLOOOOO")
-                    }
-                }
-        }
+        
         
         let rateRef = db
             .collection("Colleges").document("\(myArray[myIndex] as! String)")
@@ -167,8 +170,7 @@ let actRef = db
                         }
                     }
                 }
-        }
-
+            }
 }
 
     

@@ -13,7 +13,7 @@ import Firebase
 import FirebaseStorage
 
 var myArray: NSArray = ["2"]
-
+var array2 =  [AnyObject]()
 var myIndex: Int = 0
 
 
@@ -74,10 +74,13 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         preloadNextAd()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
         tableView.backgroundView = UIImageView(image: UIImage(named: "College"))
        // cell.backgroundView = [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell_normal.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
-        
+        print("Number of Schools = \(myArray.count)")
+        tableView.register(UINib(nibName: "NativeAppInstallAdCell", bundle: nil),
+                           forCellReuseIdentifier: "NativeAppInstallAdCell")
+        tableView.register(UINib(nibName: "NativeContentAdCell", bundle: nil),
+                           forCellReuseIdentifier: "NativeContentAdCell")
         
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
@@ -186,8 +189,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
-            
-            
+
+                
             var cell: CollegeTableViewCell! = tableView.dequeueReusableCell(withIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
             if cell == nil {
                  cell =  CollegeTableViewCell(style: .default, reuseIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
@@ -204,7 +207,6 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
                 return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
 }
         let schoolKey = "\(myArray[indexPath.row])"
-        print("Number of Schools = \(myArray.count)")
         cell.textLabel!.text = schoolKey
         cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
         cell.textLabel?.textColor = UIColor.white
@@ -252,7 +254,6 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
 
 
             return cell
-            
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
