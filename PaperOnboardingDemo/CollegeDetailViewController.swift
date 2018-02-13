@@ -37,7 +37,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
         averageAct.text = "Average ACT Score:"
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+        //request.testDevices = [kGADSimulatorID]
         myBanner.adUnitID = "ca-app-pub-8784727441633405/5374362219"
         myBanner.rootViewController = self
         myBanner.delegate = self
