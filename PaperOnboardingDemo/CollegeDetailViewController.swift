@@ -12,7 +12,7 @@ import FirebaseDatabase
 import Firebase
 import FirebaseFirestore
 import FirebaseStorage
-
+//Ads Work
 
 
 class CollegeDetailViewController: UIViewController {
