@@ -1496,10 +1496,9 @@ of your classes.</string>
                                                     <action selector="planAVisit:" destination="P3v-qX-aEt" eventType="touchUpInside" id="WhF-bZ-RYB"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average tuition:                        $26,000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3na-Yx-vWb">
-                                                <rect key="frame" x="-8" y="712" width="390" height="106"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average tuition:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3na-Yx-vWb">
+                                                <rect key="frame" x="-28.5" y="712" width="431" height="106"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="390" id="YEE-V7-pA0"/>
                                                     <constraint firstAttribute="height" constant="106" id="k9u-Rg-FYa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="25"/>
@@ -1560,8 +1559,8 @@ of your classes.</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average financial aid:                        $26,000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evn-qy-cLL">
-                                                <rect key="frame" x="1" y="817.5" width="374" height="59.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average financial aid:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evn-qy-cLL">
+                                                <rect key="frame" x="1" y="847" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="374" id="V36-Qb-gcr"/>
                                                 </constraints>
@@ -1586,7 +1585,6 @@ of your classes.</string>
                                             <constraint firstItem="UGa-sT-qJ7" firstAttribute="top" secondItem="Evn-qy-cLL" secondAttribute="bottom" constant="37" id="6xo-qd-d2q"/>
                                             <constraint firstItem="Evn-qy-cLL" firstAttribute="centerX" secondItem="pme-TL-mDs" secondAttribute="centerX" id="70k-J9-ziU"/>
                                             <constraint firstItem="ZS4-cu-pix" firstAttribute="leading" secondItem="Thr-SF-Wy4" secondAttribute="leading" id="8DF-vw-pmx"/>
-                                            <constraint firstItem="u7f-rb-M3x" firstAttribute="trailing" secondItem="Szq-fo-XcT" secondAttribute="trailing" id="8jx-oC-wLe"/>
                                             <constraint firstItem="UGa-sT-qJ7" firstAttribute="centerX" secondItem="pme-TL-mDs" secondAttribute="centerX" constant="-3" id="CYe-LO-I6y"/>
                                             <constraint firstItem="UGa-sT-qJ7" firstAttribute="leading" secondItem="pme-TL-mDs" secondAttribute="leading" constant="88" id="CtX-sh-mSF"/>
                                             <constraint firstItem="vXt-Du-dpz" firstAttribute="leading" secondItem="Krg-7i-6ie" secondAttribute="trailing" constant="-139" id="DZC-2H-J2k"/>
@@ -1606,6 +1604,7 @@ of your classes.</string>
                                             <constraint firstItem="Szq-fo-XcT" firstAttribute="leading" secondItem="pme-TL-mDs" secondAttribute="leadingMargin" id="co2-i2-7KS"/>
                                             <constraint firstItem="qOb-vQ-geo" firstAttribute="top" secondItem="UGa-sT-qJ7" secondAttribute="bottom" constant="8" symbolic="YES" id="edZ-Yz-Fcs"/>
                                             <constraint firstItem="rli-y7-kWv" firstAttribute="top" secondItem="Krg-7i-6ie" secondAttribute="bottom" constant="43" id="ejC-DX-18h"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vXt-Du-dpz" secondAttribute="trailing" constant="20" symbolic="YES" id="fZh-Z7-O05"/>
                                             <constraint firstItem="ufL-NT-Xff" firstAttribute="leading" secondItem="pme-TL-mDs" secondAttribute="leading" id="gLz-uc-FQL"/>
                                             <constraint firstItem="Thr-SF-Wy4" firstAttribute="top" secondItem="ZS4-cu-pix" secondAttribute="bottom" constant="-41" id="iE4-XB-gOY"/>
                                             <constraint firstItem="ufL-NT-Xff" firstAttribute="centerX" secondItem="pme-TL-mDs" secondAttribute="centerX" id="j8i-xD-lsK"/>
@@ -1632,7 +1631,7 @@ of your classes.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average ACT: 26" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sq-r5-5Ka">
-                                        <rect key="frame" x="68" y="656" width="239" height="66"/>
+                                        <rect key="frame" x="68" y="656" width="243" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="mVb-c1-TmA"/>
                                         </constraints>
@@ -1653,7 +1652,6 @@ of your classes.</string>
                                 <constraints>
                                     <constraint firstItem="fRc-Zt-6nh" firstAttribute="top" secondItem="rli-y7-kWv" secondAttribute="bottom" constant="-41" id="0pD-Lg-7qe"/>
                                     <constraint firstAttribute="trailing" secondItem="pme-TL-mDs" secondAttribute="trailing" id="8x5-AL-dnT"/>
-                                    <constraint firstItem="3Sq-r5-5Ka" firstAttribute="trailing" secondItem="5mN-fB-tVr" secondAttribute="trailing" id="9Cf-Rw-P2S"/>
                                     <constraint firstAttribute="bottom" secondItem="fRc-Zt-6nh" secondAttribute="bottom" constant="45" id="E31-Kh-tyl"/>
                                     <constraint firstItem="5mN-fB-tVr" firstAttribute="leading" secondItem="hiZ-gu-YGS" secondAttribute="leading" constant="68" id="J2f-y2-TEq"/>
                                     <constraint firstItem="pme-TL-mDs" firstAttribute="top" secondItem="hiZ-gu-YGS" secondAttribute="top" id="JCt-fB-Wg0"/>
