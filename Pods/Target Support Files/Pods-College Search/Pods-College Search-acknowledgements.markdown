@@ -961,7 +961,7 @@ Copyright 2017 Google
 
 ## GoogleSignIn
 
-Copyright 2017 Google
+Copyright 2018 Google
 
 ## GoogleToolboxForMac
 
@@ -1241,7 +1241,7 @@ THE SOFTWARE.
 
 ## SVProgressHUD
 
-Copyright (c) 2011-2017 Sam Vermette, Tobias Tiemerding and contributors.
+Copyright (c) 2011-2018 Sam Vermette, Tobias Tiemerding and contributors.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
