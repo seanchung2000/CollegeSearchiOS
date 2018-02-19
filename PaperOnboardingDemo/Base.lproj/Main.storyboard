@@ -1074,7 +1074,7 @@ of your classes.</string>
             </objects>
             <point key="canvasLocation" x="2388" y="-460"/>
         </scene>
-        <!--Scores View Controller-->
+        <!--Your Scores-->
         <scene sceneID="Hla-v9-CSC">
             <objects>
                 <viewController storyboardIdentifier="ScoresViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pPu-72-2AP" customClass="ScoresViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
@@ -1083,59 +1083,59 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="Rgu-my-66j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="atC-Lh-d7X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-XQ-Cqd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SAT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="650-jd-7eS">
-                                <rect key="frame" x="59" y="401" width="280" height="41"/>
+                                <rect key="frame" x="59" y="264" width="280" height="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weighted GPA Score" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-bb-Ej0">
-                                <rect key="frame" x="59" y="319" width="280" height="41"/>
+                                <rect key="frame" x="59" y="182" width="280" height="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ACT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytz-aC-IRM">
-                                <rect key="frame" x="59" y="480" width="280" height="41"/>
+                                <rect key="frame" x="59" y="343" width="280" height="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="law-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-sh-n3t">
-                                <rect key="frame" x="73.666666666666686" y="159" width="228" height="63"/>
+                                <rect key="frame" x="73.666666666666686" y="22" width="228" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="7EI-nH-XCo"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-hu-Mmp">
-                                <rect key="frame" x="36" y="319" width="303" height="41"/>
+                                <rect key="frame" x="36" y="182" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="csi-5G-SyU"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="Mts-SI-Wl6">
-                                <rect key="frame" x="36" y="401" width="303" height="41"/>
+                                <rect key="frame" x="36" y="264" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="3pw-MV-OZk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="1Xo-kd-pFr">
-                                <rect key="frame" x="36" y="480" width="303" height="41"/>
+                                <rect key="frame" x="36" y="343" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="L7j-z6-D93"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Submit Button" translatesAutoresizingMaskIntoConstraints="NO" id="bH8-jK-mcJ">
-                                <rect key="frame" x="36" y="570" width="303" height="41"/>
+                                <rect key="frame" x="36" y="433" width="303" height="41"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-RF-2cc">
-                                <rect key="frame" x="36" y="570" width="303" height="41"/>
+                                <rect key="frame" x="36" y="433" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="b1n-1s-zvQ"/>
                                 </constraints>
@@ -1155,13 +1155,13 @@ of your classes.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-J4-gqd">
-                                <rect key="frame" x="170.66666666666666" y="444" width="34" height="39"/>
+                                <rect key="frame" x="170.66666666666666" y="307" width="34" height="39"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scores" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-UX-KX8">
-                                <rect key="frame" x="114" y="230" width="146" height="57"/>
+                                <rect key="frame" x="114" y="93" width="146" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="7dX-Hy-Rc1"/>
                                     <constraint firstAttribute="height" constant="57" id="JNH-QM-Jal"/>
@@ -1210,6 +1210,7 @@ of your classes.</string>
                             <constraint firstItem="VqP-XQ-Cqd" firstAttribute="leading" secondItem="atC-Lh-d7X" secondAttribute="leading" id="zMw-CQ-nja"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Your Scores" image="connectivity-bar-7" selectedImage="connectivity-bar-7" id="EtS-Kz-S02"/>
                     <connections>
                         <outlet property="ACT_Score" destination="Ytz-aC-IRM" id="26v-kM-6Jg"/>
                         <outlet property="GpaScore" destination="OI4-bb-Ej0" id="FTw-cs-d9n"/>
@@ -1229,17 +1230,17 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="sfF-UY-3t1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pRx-Qy-rxY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="College" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-2B-QWJ">
-                                <rect key="frame" x="0.0" y="-6" width="375" height="818"/>
+                                <rect key="frame" x="0.0" y="-50" width="375" height="774"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="Ud4-QW-uO3">
-                                <rect key="frame" x="60" y="296" width="255" height="123"/>
+                                <rect key="frame" x="60" y="252" width="255" height="123"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igL-4y-ra1">
-                                <rect key="frame" x="82" y="337" width="211" height="40"/>
+                                <rect key="frame" x="82" y="293" width="211" height="40"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <state key="normal" title="Tell Us Your Scores">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1266,7 +1267,7 @@ of your classes.</string>
             </objects>
             <point key="canvasLocation" x="2384.8000000000002" y="468.4729064039409"/>
         </scene>
-        <!--Your Colleges-->
+        <!--New HomeVC-->
         <scene sceneID="B8s-vW-Sxf">
             <objects>
                 <viewController storyboardIdentifier="NewHomeVC" id="PBr-MS-GKO" customClass="NewHomeVC" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
@@ -1275,11 +1276,11 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="kiM-zA-5bL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jtO-9I-iVi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vra-8P-Wfq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="748"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1294,107 +1295,19 @@ of your classes.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-yP-ApU" customClass="SlideMenu" customModule="College_Search" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="170" height="960"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-5N-t2T">
-                                        <rect key="frame" x="29" y="34" width="112" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="HYr-K1-hEu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
-                                        <state key="normal" title="Scores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="scoresTapped:" destination="PBr-MS-GKO" eventType="touchUpInside" id="ms2-BP-9RS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v88-vW-TNL">
-                                        <rect key="frame" x="15" y="90" width="141" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="Jb3-33-038"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
-                                        <state key="normal" title="Settings">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="uOx-Cx-hNp" kind="show" id="TWX-kp-9X8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd1-kL-ntB">
-                                        <rect key="frame" x="15" y="146" width="141" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="JY1-he-XsU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
-                                        <state key="normal" title="Logout">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loggedOut:" destination="PBr-MS-GKO" eventType="touchUpInside" id="5gH-5n-aJp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1N-Hm-XGV">
-                                        <rect key="frame" x="15" y="202" width="141" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="3bI-4x-T6I"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="22"/>
-                                        <state key="normal" title="FEEDBACK">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="feedbackTapped:" destination="PBr-MS-GKO" eventType="touchUpInside" id="3G5-qL-MX6"/>
-                                            <action selector="loggedOut:" destination="PBr-MS-GKO" eventType="touchUpInside" id="uaa-mW-DyF"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="rKl-5N-t2T" firstAttribute="top" secondItem="vhD-yP-ApU" secondAttribute="top" constant="34" id="3Wo-Wh-kqv"/>
-                                    <constraint firstItem="Cd1-kL-ntB" firstAttribute="top" secondItem="v88-vW-TNL" secondAttribute="bottom" constant="8" id="8DG-zx-Tg5"/>
-                                    <constraint firstAttribute="trailing" secondItem="rKl-5N-t2T" secondAttribute="trailing" constant="29" id="B8Z-DA-Tug"/>
-                                    <constraint firstItem="l1N-Hm-XGV" firstAttribute="leading" secondItem="Cd1-kL-ntB" secondAttribute="leading" id="FEj-YZ-GUn"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cd1-kL-ntB" secondAttribute="trailing" constant="14" id="Gy7-Dd-tF3"/>
-                                    <constraint firstItem="v88-vW-TNL" firstAttribute="top" secondItem="rKl-5N-t2T" secondAttribute="bottom" constant="8" id="Jud-wk-mv8"/>
-                                    <constraint firstItem="l1N-Hm-XGV" firstAttribute="top" secondItem="Cd1-kL-ntB" secondAttribute="bottom" constant="8" symbolic="YES" id="N1N-i6-pOw"/>
-                                    <constraint firstAttribute="width" constant="170" id="NWL-mp-hno"/>
-                                    <constraint firstItem="Cd1-kL-ntB" firstAttribute="leading" secondItem="vhD-yP-ApU" secondAttribute="leading" constant="15" id="OsK-Le-u6p"/>
-                                    <constraint firstItem="rKl-5N-t2T" firstAttribute="leading" secondItem="vhD-yP-ApU" secondAttribute="leading" constant="29" id="QSf-O1-gud"/>
-                                    <constraint firstItem="l1N-Hm-XGV" firstAttribute="trailing" secondItem="Cd1-kL-ntB" secondAttribute="trailing" id="bYD-Ls-uwp"/>
-                                    <constraint firstAttribute="trailing" secondItem="v88-vW-TNL" secondAttribute="trailing" constant="14" id="qqW-n5-zyb"/>
-                                    <constraint firstItem="v88-vW-TNL" firstAttribute="leading" secondItem="vhD-yP-ApU" secondAttribute="leading" constant="15" id="umK-ht-91q"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="vhD-yP-ApU" firstAttribute="top" secondItem="lvv-TX-fg8" secondAttribute="bottom" constant="-24" id="Brb-xb-xCO"/>
-                            <constraint firstItem="vhD-yP-ApU" firstAttribute="leading" secondItem="jtO-9I-iVi" secondAttribute="leading" id="Yr5-qo-yIb"/>
-                            <constraint firstItem="kiM-zA-5bL" firstAttribute="top" secondItem="vhD-yP-ApU" secondAttribute="bottom" constant="-246" id="gzu-Es-7Ra"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Colleges" id="4Z8-qH-qSD">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="if_General_Office_30_2530786-1" id="WvE-2y-YZS">
-                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="-652" maxX="0.0" maxY="0.0"/>
-                            <color key="tintColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="openMenu:" destination="PBr-MS-GKO" id="bqi-Q6-23d"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="4Z8-qH-qSD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <connections>
-                        <outlet property="leadingConstraint" destination="Yr5-qo-yIb" id="IZ0-Nt-388"/>
-                        <outlet property="menuView" destination="vhD-yP-ApU" id="OSF-1f-moj"/>
                         <outlet property="tableView" destination="Vra-8P-Wfq" id="rMO-TP-Ijf"/>
                         <segue destination="P3v-qX-aEt" kind="show" identifier="segue" id="BbF-uH-Z7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPL-FF-5y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4963.28125" y="468.74999999999994"/>
+            <point key="canvasLocation" x="5758" y="468"/>
         </scene>
         <!--College Detail View Controller-->
         <scene sceneID="L3c-yS-Tmv">
@@ -1405,11 +1318,11 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="Vj0-dP-6Ow"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mG7-bj-WcT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiZ-gu-YGS">
-                                <rect key="frame" x="0.0" y="88" width="375" height="1372"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1372"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pme-TL-mDs">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1460"/>
@@ -1697,7 +1610,7 @@ of your classes.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnj-Te-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5013.6000000000004" y="1905.2473763118442"/>
+            <point key="canvasLocation" x="5758" y="1607"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="93r-0d-hl1">
@@ -1708,11 +1621,11 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="xdi-WF-exd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4RS-Dr-iSA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyA-S5-2SP">
-                                <rect key="frame" x="13" y="734" width="349" height="58"/>
+                                <rect key="frame" x="13" y="580" width="349" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="ciN-st-sBV"/>
                                 </constraints>
@@ -1724,64 +1637,67 @@ of your classes.</string>
                                     <action selector="websiteButton:" destination="uOx-Cx-hNp" eventType="touchUpInside" id="L2Y-I6-hke"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for being a beta tester of College Search. Please give us feedback by clicking here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnD-qf-Vmg">
-                                <rect key="frame" x="20" y="168" width="335" height="184"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVG-w7-XHY">
+                                <rect key="frame" x="61" y="272" width="252" height="86"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="hYj-16-oWp"/>
+                                    <constraint firstAttribute="height" constant="86" id="IIr-XZ-Xbg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                <color key="textColor" red="0.34965199229999999" green="0.64751338960000004" blue="0.99625259639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSW-U6-JxR">
-                                <rect key="frame" x="20" y="188" width="336" height="148"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="148" id="4T3-gN-tJU"/>
-                                </constraints>
-                                <state key="normal" title="FeedbackButton">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="feebackButton:" destination="uOx-Cx-hNp" eventType="touchUpInside" id="Ikd-b1-lmu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GyA-S5-2SP" firstAttribute="centerX" secondItem="4RS-Dr-iSA" secondAttribute="centerX" id="3gN-8Q-yDv"/>
-                            <constraint firstAttribute="bottom" secondItem="GyA-S5-2SP" secondAttribute="bottom" constant="20" symbolic="YES" id="546-r8-yOf"/>
-                            <constraint firstItem="tnD-qf-Vmg" firstAttribute="leading" secondItem="4RS-Dr-iSA" secondAttribute="leadingMargin" constant="4" id="5ZY-6Q-mIp"/>
-                            <constraint firstItem="tnD-qf-Vmg" firstAttribute="centerX" secondItem="4RS-Dr-iSA" secondAttribute="centerX" id="F1F-o1-O4w"/>
-                            <constraint firstItem="hSW-U6-JxR" firstAttribute="centerX" secondItem="tnD-qf-Vmg" secondAttribute="centerX" id="K0Q-iZ-Hrv"/>
-                            <constraint firstItem="tnD-qf-Vmg" firstAttribute="top" secondItem="8NX-q8-eKb" secondAttribute="bottom" constant="80" id="Pnd-rJ-hd2"/>
+                            <constraint firstAttribute="bottom" secondItem="GyA-S5-2SP" secondAttribute="bottom" constant="86" id="546-r8-yOf"/>
+                            <constraint firstItem="OVG-w7-XHY" firstAttribute="leading" secondItem="4RS-Dr-iSA" secondAttribute="leadingMargin" constant="45" id="5nZ-XZ-LOe"/>
                             <constraint firstItem="GyA-S5-2SP" firstAttribute="leading" secondItem="4RS-Dr-iSA" secondAttribute="leadingMargin" constant="-3" id="RTB-N1-t1K"/>
-                            <constraint firstItem="hSW-U6-JxR" firstAttribute="leading" secondItem="tnD-qf-Vmg" secondAttribute="leading" id="eyO-sP-uwd"/>
-                            <constraint firstItem="tnD-qf-Vmg" firstAttribute="centerX" secondItem="GyA-S5-2SP" secondAttribute="centerX" id="h4e-UZ-DBi"/>
-                            <constraint firstItem="hSW-U6-JxR" firstAttribute="top" secondItem="8NX-q8-eKb" secondAttribute="bottom" constant="100" id="wbr-uN-ZAH"/>
+                            <constraint firstItem="OVG-w7-XHY" firstAttribute="centerX" secondItem="GyA-S5-2SP" secondAttribute="centerX" id="Scv-7V-ADe"/>
+                            <constraint firstItem="OVG-w7-XHY" firstAttribute="top" secondItem="8NX-q8-eKb" secondAttribute="bottom" constant="272" id="kcN-p1-znY"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="3BB-d6-qRw">
+                        <color key="badgeColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hcr-g2-Od3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6023.1999999999998" y="470.91454272863569"/>
+            <point key="canvasLocation" x="6708" y="470.68965517241384"/>
         </scene>
-        <!--New HomeVC Navigation-->
-        <scene sceneID="Xn1-TJ-jkc">
+        <!--Favorites-->
+        <scene sceneID="YUv-ev-6tk">
             <objects>
-                <navigationController storyboardIdentifier="NewHomeVCNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="guJ-B2-or3" customClass="NewHomeVCNavigation" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2c4-a3-ZXH">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="PBr-MS-GKO" kind="relationship" relationship="rootViewController" id="DET-py-ZxF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AgZ-Xb-VeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="M8v-vB-yRV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sBa-6D-8DU"/>
+                        <viewControllerLayoutGuide type="bottom" id="i9X-xs-TVJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEu-zN-edv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZE-tG-PcC">
+                                <rect key="frame" x="102.66666666666667" y="279" width="169.33333333333331" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="JqY-pn-qcm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vZE-tG-PcC" firstAttribute="centerY" secondItem="SEu-zN-edv" secondAttribute="centerY" constant="-40" id="aIo-ha-zF7"/>
+                            <constraint firstItem="vZE-tG-PcC" firstAttribute="centerX" secondItem="SEu-zN-edv" secondAttribute="centerX" id="yML-OG-4jC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="bookmark-7" selectedImage="bookmark-7" id="DtU-ds-i6l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kL3-xO-lXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3986" y="470"/>
+            <point key="canvasLocation" x="7634" y="467"/>
         </scene>
         <!--SecondGPA Calc Screen View Controller-->
         <scene sceneID="TZ5-82-TEk">
@@ -1879,9 +1795,6 @@ of your classes.</string>
                                 <state key="normal" title="Done Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="guJ-B2-or3" kind="show" id="Dsi-df-rnq"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1942,6 +1855,53 @@ of your classes.</string>
             </objects>
             <point key="canvasLocation" x="1725.5999999999999" y="1297.536945812808"/>
         </scene>
+        <!--Your Colleges-->
+        <scene sceneID="pbs-Y0-D8Z">
+            <objects>
+                <tabBarController storyboardIdentifier="NewHomeVCTabBarController" title="Your Colleges" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0z9-l2-MiN" customClass="NewHomeVCTabBarController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="nM7-So-nbv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Fdk-Ch-NJ4" kind="relationship" relationship="viewControllers" id="KgQ-He-1Lz"/>
+                        <segue destination="pPu-72-2AP" kind="relationship" relationship="viewControllers" id="dKd-Q1-RQP"/>
+                        <segue destination="M8v-vB-yRV" kind="relationship" relationship="viewControllers" id="FWG-e0-l1j"/>
+                        <segue destination="uOx-Cx-hNp" kind="relationship" relationship="viewControllers" id="hnp-oN-bHn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLz-PO-xtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4084" y="467"/>
+        </scene>
+        <!--Your Colleges-->
+        <scene sceneID="Vqf-Ec-ZKi">
+            <objects>
+                <navigationController storyboardIdentifier="NewHomeVCNavigation" title="Your Colleges" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fdk-Ch-NJ4" customClass="NewHomeVCNavigation" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Your Colleges" image="home-7" id="1sY-do-KGd"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S11-X9-ZP4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PBr-MS-GKO" kind="relationship" relationship="rootViewController" id="Muv-pK-zpc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARe-qj-VrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4902" y="467"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ApplyButton" width="417" height="123"/>
@@ -1972,17 +1932,19 @@ of your classes.</string>
         <image name="Submit Button" width="912" height="123"/>
         <image name="WebsiteButton" width="417" height="123"/>
         <image name="Yes Button" width="327" height="153"/>
+        <image name="bookmark-7" width="30" height="30"/>
         <image name="checkGpaIcon" width="285" height="249"/>
         <image name="checkIcon" width="288" height="366"/>
+        <image name="connectivity-bar-7" width="30" height="30"/>
         <image name="facebook-logo" width="23" height="41"/>
         <image name="google-plus" width="38" height="41"/>
-        <image name="if_General_Office_30_2530786-1" width="30" height="21"/>
+        <image name="home-7" width="30" height="30"/>
         <image name="law" width="77" height="64"/>
         <image name="law-1" width="228" height="189"/>
         <image name="thatsOkayIcon" width="294" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qwa-7u-5LZ"/>
+        <segue reference="dKd-Q1-RQP"/>
         <segue reference="DTC-Dp-E94"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

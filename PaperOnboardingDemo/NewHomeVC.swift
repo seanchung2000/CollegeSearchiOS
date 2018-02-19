@@ -63,7 +63,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        leadingConstraint.constant = -180
+
+        //leadingConstraint.constant = -180
         // Prepare the ad loader and start loading ads.
         adLoader = GADAdLoader(adUnitID: adUnitID,
                                rootViewController: self,

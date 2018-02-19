@@ -107,13 +107,13 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
 
     func presentNewHomeVC() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let NewHomeVCNavigation:NewHomeVCNavigation = storyboard.instantiateViewController(withIdentifier: "NewHomeVCNavigation") as! NewHomeVCNavigation
+        let NewHomeVCTabBarController:NewHomeVCTabBarController = storyboard.instantiateViewController(withIdentifier: "NewHomeVCTabBarController") as! NewHomeVCTabBarController
         //NewHomeVCNavigation.collgeMatches = self.unique2
-        self.present(NewHomeVCNavigation, animated: true, completion: nil)
-        if let controller = NewHomeVCNavigation.viewControllers.first as? NewHomeVC {
+        self.present(NewHomeVCTabBarController, animated: true, completion: nil)
+        //if let controller = NewHomeVCTabBarController.viewControllers.first as? NewHomeVCTabBarController {
             //controller.myArray = self.unique2 as NSArray
             myArray = self.unique2
-        }
+       // }
     }
     
 
