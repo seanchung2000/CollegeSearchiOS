@@ -1697,7 +1697,7 @@ of your classes.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnj-Te-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5013.6000000000004" y="1905.2473763118442"/>
+            <point key="canvasLocation" x="4961" y="1912"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="93r-0d-hl1">
