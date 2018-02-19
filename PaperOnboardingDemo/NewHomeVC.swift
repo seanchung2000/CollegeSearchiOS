@@ -37,7 +37,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     let adUnitID = "ca-app-pub-8784727441633405/5374362219"
     
     /// The number of native ads to load.
-    let numAdsToLoad = 5
+    let numAdsToLoad = 20
     
     /// The native ads.
     var nativeAds = [GADNativeAd]()

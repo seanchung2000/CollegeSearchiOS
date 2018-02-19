@@ -80,6 +80,37 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
             self.createAlert(titleText: "Error", messageText: "No SAT nor ACT Score Entered")
         }
         else{
+            let userID: String = (Auth.auth().currentUser?.uid)!
+            let db = Firestore.firestore()                                                                                                                                                                                            
+            db.collection("Users").document("\(userID)").collection("GPA").document("\(gpaScore!)").setData([
+                "GPA": "\(gpaScore!)"
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+            db.collection("Users").document("\(userID)").collection("SAT").document("\(SatScore2!)").setData([
+                "SAT": "\(SatScore2!)"
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+           /* db.collection("Users").document("\(userID)").collection("ACT").document("\(Acttext2!)").setData([
+                "ACT": "\(Acttext2!)"
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }*/
+            
+            
             let dataToSave: [String: Any] = ["GPA": gpaScore!, "SAT Score": SatScore2!, "ACT Score": Acttext2!]
             docRef.setData(dataToSave) { (error) in
                 if let error = error {
