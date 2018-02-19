@@ -1056,59 +1056,59 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="Rgu-my-66j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="atC-Lh-d7X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-XQ-Cqd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SAT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="650-jd-7eS">
-                                <rect key="frame" x="59" y="264" width="280" height="41"/>
+                                <rect key="frame" x="59" y="401" width="280" height="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weighted GPA Score" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-bb-Ej0">
-                                <rect key="frame" x="59" y="182" width="280" height="41"/>
+                                <rect key="frame" x="59" y="319" width="280" height="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ACT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytz-aC-IRM">
-                                <rect key="frame" x="59" y="343" width="280" height="41"/>
+                                <rect key="frame" x="59" y="480" width="280" height="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="law-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-sh-n3t">
-                                <rect key="frame" x="73.666666666666686" y="22" width="228" height="63"/>
+                                <rect key="frame" x="73.666666666666686" y="159" width="228" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="7EI-nH-XCo"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-hu-Mmp">
-                                <rect key="frame" x="36" y="182" width="303" height="41"/>
+                                <rect key="frame" x="36" y="319" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="csi-5G-SyU"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="Mts-SI-Wl6">
-                                <rect key="frame" x="36" y="264" width="303" height="41"/>
+                                <rect key="frame" x="36" y="401" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="3pw-MV-OZk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8 + Username + android-person - Ionicons-2" translatesAutoresizingMaskIntoConstraints="NO" id="1Xo-kd-pFr">
-                                <rect key="frame" x="36" y="343" width="303" height="41"/>
+                                <rect key="frame" x="36" y="480" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="L7j-z6-D93"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Submit Button" translatesAutoresizingMaskIntoConstraints="NO" id="bH8-jK-mcJ">
-                                <rect key="frame" x="36" y="433" width="303" height="41"/>
+                                <rect key="frame" x="36" y="570" width="303" height="41"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-RF-2cc">
-                                <rect key="frame" x="36" y="433" width="303" height="41"/>
+                                <rect key="frame" x="36" y="570" width="303" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="b1n-1s-zvQ"/>
                                 </constraints>
@@ -1117,13 +1117,13 @@ of your classes.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-J4-gqd">
-                                <rect key="frame" x="170.66666666666666" y="307" width="34" height="39"/>
+                                <rect key="frame" x="170.66666666666666" y="444" width="34" height="39"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scores" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-UX-KX8">
-                                <rect key="frame" x="114" y="93" width="146" height="57"/>
+                                <rect key="frame" x="114" y="230" width="146" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="7dX-Hy-Rc1"/>
                                     <constraint firstAttribute="height" constant="57" id="JNH-QM-Jal"/>
@@ -1961,8 +1961,7 @@ of your classes.</string>
         <image name="thatsOkayIcon" width="294" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="08Q-za-rZr"/>
-        <segue reference="dKd-Q1-RQP"/>
+        <segue reference="qwa-7u-5LZ"/>
         <segue reference="DTC-Dp-E94"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

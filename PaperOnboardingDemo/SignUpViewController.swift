@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 import SVProgressHUD
+import Fabric
+import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -35,7 +37,19 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                      self.createAlert(titleText: "Error", messageText: "\(firebaseError.localizedDescription)")
                     return
                 }
+                Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                    if let firebaseError = error {
+                        print(firebaseError.localizedDescription)
+                        self.createAlert(titleText: "Error", messageText: "Incorrect Email or Password")
+                        return
+                    }
+                    Answers.logSignUp(withMethod: "Manual",
+                                      success: true,
+                                      customAttributes: [:])
+                    
+                })
                 self.presentLoggedInScreen()
+                
                 print("success")
             })
         }
@@ -74,8 +88,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     func presentLoggedInScreen() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginPageController:loginPageController = storyboard.instantiateViewController(withIdentifier: "loginPageController") as! loginPageController
-        self.present(loginPageController, animated: true, completion: nil)
+        let HomeVC:HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        self.present(HomeVC, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
