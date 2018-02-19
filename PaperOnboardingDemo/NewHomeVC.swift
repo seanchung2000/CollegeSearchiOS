@@ -1,6 +1,6 @@
 //
 //  NewHomeVC.swift
-//  PaperOnboardingDemo
+//  College Search
 //
 //  Created by Kunwar Sahni on 12/23/17.
 //  Copyright © 2017 Kunwar Sahni All rights reserved.

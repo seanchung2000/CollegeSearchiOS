@@ -20,6 +20,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collegeImage: UIImageView!
     @IBOutlet weak var collegeDescription: UITextView!
+    @IBOutlet weak var favoriteBarItem: UIBarButtonItem!
     @IBOutlet weak var averageGpa: UILabel!
     @IBOutlet weak var averageSat: UILabel!
     @IBOutlet weak var myBanner: GADBannerView!
@@ -35,6 +36,25 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score:"
+        let userID: String = (Auth.auth().currentUser?.uid)!
+        let db = Firestore.firestore()
+        let favoriteRef = db
+            .collection("Users").document("\(userID)")
+            .collection("Favorites")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        if(document.documentID == "\(myArray[myIndex])"){
+                            self.favoriteBarItem.image = #imageLiteral(resourceName: "unchecked bookmark")
+                        } else {
+                            self.favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+                        }
+                    }
+                }
+        }
+        
         
         let request = GADRequest()
         //request.testDevices = [kGADSimulatorID]
@@ -200,6 +220,41 @@ let actRef = db
         }
     }
     
+    @IBAction func favoriteTapped(_ sender: Any) {
+        let userID: String = (Auth.auth().currentUser?.uid)!
+        print("Favorite Tapped")
+        let db = Firestore.firestore()
+        let favoriteRef = db
+        .collection("Users").document("\(userID)")
+        .collection("Favorites")
+        .getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID)")
+                    print(myArray[myIndex])
+                    if("\(myArray[myIndex])" == document.documentID){
+                       //  db.collection("Users").document("\(userID)").collection("Favorites").document("\(myArray[myIndex] as! String)").delete()
+                        print("Testing")
+                        self.favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+                    }
+                }
+            }
+        }
+        db.collection("Users").document("\(userID)").collection("Favorites").document("\(myArray[myIndex] as! String)").setData([
+            "name": "\(myArray[myIndex] as! String)"
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                self.favoriteBarItem.image = #imageLiteral(resourceName: "bookmark2")
+                print("Document successfully written!")
+            }
+        }
+        
+        
+    }
     @IBAction func planAVisit(_ sender: Any) {
         UIApplication.shared.open(URL(string: "https://bigfuture.collegeboard.org/find-colleges/campus-visit-guide")! as URL, options: [:], completionHandler: nil)
     }
