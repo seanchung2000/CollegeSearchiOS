@@ -1349,7 +1349,7 @@ of your classes.</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average tuition:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3na-Yx-vWb">
-                                                <rect key="frame" x="-28" y="712" width="430.33333333333331" height="106"/>
+                                                <rect key="frame" x="16.666666666666657" y="712" width="341" height="106"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="k9u-Rg-FYa"/>
                                                 </constraints>

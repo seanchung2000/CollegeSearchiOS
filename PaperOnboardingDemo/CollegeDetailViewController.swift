@@ -14,7 +14,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import GoogleMobileAds
 //Ads Work
-
+var favoritesArray: [NSArray] = []
 
 class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
@@ -38,23 +38,9 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
         averageAct.text = "Average ACT Score:"
         let userID: String = (Auth.auth().currentUser?.uid)!
         let db = Firestore.firestore()
-        let favoriteRef = db
-            .collection("Users").document("\(userID)")
-            .collection("Favorites")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        if(document.documentID == "\(myArray[myIndex])"){
-                            self.favoriteBarItem.image = #imageLiteral(resourceName: "unchecked bookmark")
-                        } else {
-                            self.favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
-                        }
-                    }
-                }
-        }
-        
+
+
+
         
         let request = GADRequest()
         //request.testDevices = [kGADSimulatorID]
@@ -221,39 +207,8 @@ let actRef = db
     }
     
     @IBAction func favoriteTapped(_ sender: Any) {
-        let userID: String = (Auth.auth().currentUser?.uid)!
-        print("Favorite Tapped")
-        let db = Firestore.firestore()
-        let favoriteRef = db
-        .collection("Users").document("\(userID)")
-        .collection("Favorites")
-        .getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID)")
-                    print(myArray[myIndex])
-                    if("\(myArray[myIndex])" == document.documentID){
-                       //  db.collection("Users").document("\(userID)").collection("Favorites").document("\(myArray[myIndex] as! String)").delete()
-                        print("Testing")
-                        self.favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
-                    }
-                }
-            }
-        }
-        db.collection("Users").document("\(userID)").collection("Favorites").document("\(myArray[myIndex] as! String)").setData([
-            "name": "\(myArray[myIndex] as! String)"
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                self.favoriteBarItem.image = #imageLiteral(resourceName: "bookmark2")
-                print("Document successfully written!")
-            }
-        }
-        
-        
+        favoritesArray.append(myArray[myIndex] as! NSArray)
+        favoriteBarItem.image = #imageLiteral(resourceName: "unchecked bookmark")
     }
     @IBAction func planAVisit(_ sender: Any) {
         UIApplication.shared.open(URL(string: "https://bigfuture.collegeboard.org/find-colleges/campus-visit-guide")! as URL, options: [:], completionHandler: nil)

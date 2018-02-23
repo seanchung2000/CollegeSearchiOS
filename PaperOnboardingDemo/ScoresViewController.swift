@@ -14,6 +14,7 @@ import FirebaseFirestore
 import Foundation
 import Crashlytics
 import SVProgressHUD
+import CoreData
 
 class ScoresViewController: UIViewController, UITextFieldDelegate {
     var satColleges = [String]()
@@ -144,6 +145,7 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         //if let controller = NewHomeVCTabBarController.viewControllers.first as? NewHomeVCTabBarController {
             //controller.myArray = self.unique2 as NSArray
             myArray = self.unique2
+
        // }
     }
     
@@ -172,7 +174,7 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         
         let satRef = db.collection("Colleges")
         let query2 = satRef
-            .whereField("Average SAT Score", isLessThanOrEqualTo: sat)
+            .whereField("Average SAT", isLessThanOrEqualTo: sat)
             .getDocuments() { (querySnapshot, err) in
                 
                 // Async call needs completion handler
