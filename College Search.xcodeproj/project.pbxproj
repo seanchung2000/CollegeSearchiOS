@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */; };
 		230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */; };
-		230CA4D12029259D009E0538 /* gradeInClassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4D02029259D009E0538 /* gradeInClassTextField.swift */; };
 		230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */; };
 		231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */; };
 		232882421F044F5B00732946 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232882411F044F5B00732946 /* GoogleService-Info.plist */; };
 		23366033202E33960066B844 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23366032202E33960066B844 /* KDCircularProgress.swift */; };
-		2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */; };
 		23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */; };
 		23840FD51FF7EAED00515722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23840FD31FF7EAED00515722 /* Main.storyboard */; };
 		23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */; };
@@ -37,11 +35,9 @@
 		97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97289D17203B257F008BE0E3 /* FavoritesViewController.swift */; };
 		9789B0F120325D3500289B4D /* NativeAppInstallAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */; };
 		9789B0F220325D3500289B4D /* NativeContentAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0F020325D3500289B4D /* NativeContentAdCell.xib */; };
-		9789B0F42032645600289B4D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9789B0F32032645600289B4D /* MenuItem.swift */; };
 		97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */; };
 		97BCA444203B6297007E954A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97BCA442203B6297007E954A /* Model.xcdatamodeld */; };
 		97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D9694220310A14003F50E4 /* gpaCalcViewController.swift */; };
-		97ECF867203F9BB50031A273 /* matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECF866203F9BB50031A273 /* matching.swift */; };
 		DA059992DA841D98DBFB64FD /* Pods_College_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED4D039BEB403B2D913F195 /* Pods_College_Search.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,12 +58,10 @@
 		09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegesTableView.swift; sourceTree = "<group>"; };
 		20CE6CF75E65BF9F1C049A70 /* Pods-College Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.release.xcconfig"; sourceTree = "<group>"; };
 		230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstGPAcalcClassScreenViewController.swift; sourceTree = "<group>"; };
-		230CA4D02029259D009E0538 /* gradeInClassTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeInClassTextField.swift; sourceTree = "<group>"; };
 		230CA4D2202942A0009E0538 /* SecondGPACalcScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGPACalcScreenViewController.swift; sourceTree = "<group>"; };
 		231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		232882411F044F5B00732946 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23366032202E33960066B844 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
-		2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
 		23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewVCViewController.swift; sourceTree = "<group>"; };
 		23840FD41FF7EAED00515722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeVCNavigation.swift; sourceTree = "<group>"; };
@@ -98,11 +92,9 @@
 		97289D17203B257F008BE0E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAppInstallAdCell.xib; sourceTree = "<group>"; };
 		9789B0F020325D3500289B4D /* NativeContentAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeContentAdCell.xib; sourceTree = "<group>"; };
-		9789B0F32032645600289B4D /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHomeVCTabBarController.swift; path = /Users/kunwarsahni/Developer/CollegeSearchIOSApp/PaperOnboardingDemo/NewHomeVCTabBarController.swift; sourceTree = "<absolute>"; };
 		97BCA443203B6297007E954A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		97D9694220310A14003F50E4 /* gpaCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpaCalcViewController.swift; sourceTree = "<group>"; };
-		97ECF866203F9BB50031A273 /* matching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matching.swift; sourceTree = "<group>"; };
 		C9121BA71756DFCDBB4D1B42 /* Pods-PaperOnboardingDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemoTests/Pods-PaperOnboardingDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D48BB294E30861B30D2F5710 /* Pods-PaperOnboardingDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemoTests/Pods-PaperOnboardingDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8D8A0FBAC51B6BC9967E017 /* Pods-PaperOnboardingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemo/Pods-PaperOnboardingDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +142,6 @@
 		84A773A21CCE545200EF4EB0 /* PaperOnboardingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				97ECF866203F9BB50031A273 /* matching.swift */,
 				230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */,
 				09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */,
 				23E911431F05EC5B00B6D818 /* PaperOnboardingDemo.entitlements */,
@@ -158,7 +149,6 @@
 				97BCA442203B6297007E954A /* Model.xcdatamodeld */,
 				23A462181FEEAE6C0009C9E7 /* NewHomeVC.swift */,
 				23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */,
-				9789B0F32032645600289B4D /* MenuItem.swift */,
 				97D9694220310A14003F50E4 /* gpaCalcViewController.swift */,
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
@@ -167,12 +157,10 @@
 				23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */,
 				9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */,
 				9789B0F020325D3500289B4D /* NativeContentAdCell.xib */,
-				230CA4D02029259D009E0538 /* gradeInClassTextField.swift */,
 				23B660CE200EF63A002E3D9A /* CollegeDetailViewController.swift */,
 				23366032202E33960066B844 /* KDCircularProgress.swift */,
 				84A773A51CCE545200EF4EB0 /* ViewController.swift */,
 				23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */,
-				2347D53C1FF7DC34003E6EC5 /* SlideMenu.swift */,
 				231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */,
 				23E911311F04919A00B6D818 /* loginPageController.swift */,
 				23E911391F052BC600B6D818 /* ForgotPasswordViewController.swift */,
@@ -432,7 +420,6 @@
 				97BCA444203B6297007E954A /* Model.xcdatamodeld in Sources */,
 				84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */,
 				23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */,
-				97ECF867203F9BB50031A273 /* matching.swift in Sources */,
 				230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */,
 				84A773A41CCE545200EF4EB0 /* AppDelegate.swift in Sources */,
 				23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */,
@@ -440,17 +427,14 @@
 				23E911361F049C1300B6D818 /* HomeVC.swift in Sources */,
 				09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */,
 				23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */,
-				9789B0F42032645600289B4D /* MenuItem.swift in Sources */,
 				97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */,
 				23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */,
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
 				230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */,
-				2347D53D1FF7DC34003E6EC5 /* SlideMenu.swift in Sources */,
 				23E911321F04919A00B6D818 /* loginPageController.swift in Sources */,
 				23A462191FEEAE6C0009C9E7 /* NewHomeVC.swift in Sources */,
-				230CA4D12029259D009E0538 /* gradeInClassTextField.swift in Sources */,
 				23EC17F6202BAE9800DFED65 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

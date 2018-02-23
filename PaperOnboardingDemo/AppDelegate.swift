@@ -3,7 +3,7 @@
 //  PaperOnboardingDemo
 //
 //  Created by Alex K. on 25/04/16.
-//  Copyright © 2016 Alex K. All rights reserved.
+//  Copyright © 2016 Kunwar Sahni All rights reserved.
 //
 
 import UIKit
