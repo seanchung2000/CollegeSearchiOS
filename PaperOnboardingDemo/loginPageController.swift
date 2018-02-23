@@ -11,8 +11,17 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import Fabric
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseDatabase
+import SVProgressHUD
+
 
 class loginPageController: UIViewController, UITextFieldDelegate {
+    var unique2: NSArray = []
+    var satColleges = [String]()
+    var gpaColleges = [String]()
+    
     
     @IBOutlet weak var passwordTextFeild: UITextField!
     @IBOutlet weak var emailTextFeild: UITextField!
@@ -35,7 +44,12 @@ class loginPageController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    func showHomePage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let HomeVC:HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        self.present(HomeVC, animated: false, completion: nil)
+        SVProgressHUD.dismiss()
+    }
     @IBAction func loginTapped(_ sender: Any) {
         
         if let email = emailTextFeild.text, let password = passwordTextFeild.text{
@@ -46,12 +60,88 @@ class loginPageController: UIViewController, UITextFieldDelegate {
                         self.createAlert(titleText: "Error", messageText: "Incorrect Email or Password")
                         return
                     }
+                    ////
+                    let db = Firestore.firestore()
+                    if Auth.auth().currentUser != nil {
+                        SVProgressHUD.show(withStatus: "Loading Your Data")
+                        let userID: String = (Auth.auth().currentUser?.uid)!
+                        let satRef = db
+                            .collection("Users").document("\(userID)")
+                            .collection("SAT")
+                            .getDocuments() { (querySnapshot, err) in
+                                if let err = err {
+                                    print("Error getting documents: \(err)")
+                                } else {
+                                    for document in querySnapshot!.documents {
+                                        if (document.documentID == ""){
+                                            self.showHomePage()
+                                        }else{
+                                            let satRef = db.collection("Colleges")
+                                            let query2 = satRef
+                                                .whereField("Average SAT", isLessThanOrEqualTo: document.documentID)
+                                                .getDocuments() { (querySnapshot, err) in
+                                                    
+                                                    // Async call needs completion handler
+                                                    defer { self.satCollegesCompleted2() }
+                                                    
+                                                    if let err = err {
+                                                        print("Error getting documents: \(err)")
+                                                    } else {
+                                                        for document in querySnapshot!.documents {
+                                                            self.satColleges.append(document.documentID)
+                                                        }
+                                                    }
+                                                    
+                                            }//
+                                        }
+                                    }
+                                }
+                        }
+                        
+                        let gpaRef = db
+                            .collection("Users").document("\(userID)")
+                            .collection("GPA")
+                            .getDocuments() { (querySnapshot, err) in
+                                if let err = err {
+                                    print("Error getting documents: \(err)")
+                                } else {
+                                    for document in querySnapshot!.documents {
+                                        if(document.documentID == ""){
+                                            self.showHomePage()
+                                        }else {
+                                            let gpaRef = db.collection("Colleges")
+                                            let query1 = gpaRef
+                                                .whereField("Average GPA", isLessThanOrEqualTo : document.documentID)
+                                                .getDocuments() { (querySnapshot, err) in
+                                                    
+                                                    // Async call needs completion handler
+                                                    defer { self.gpaDocumentsCompleted2() }
+                                                    
+                                                    if let err = err {
+                                                        print("Error getting documents: \(err)")
+                                                    } else {
+                                                        for document in querySnapshot!.documents {
+                                                            self.satColleges.append(document.documentID)
+                                                        }
+                                                    }
+                                            }////
+                                        }
+                                    }
+                                }
+                        }
+                        //findMatchesFunction(gpa: gpa, sat: sat)
+                        //  showHomePage()
+                    }else{
+                        print("Not Signed In")
+                    }
+                
+                    ////
+                    /*
                     self.presentLoggedInScreen()
-                    print("success")
+                    print("success")*/
                     Answers.logSignUp(withMethod: "Manual",
                                                 success: true,
                                                 customAttributes: [:])
-                    
                 })
         }
     }
@@ -86,5 +176,33 @@ class loginPageController: UIViewController, UITextFieldDelegate {
     
     self.present(alert, animated: false, completion: nil)
     
+    }
+    func presentNewHomeVC() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let NewHomeVCTabBarController:NewHomeVCTabBarController = storyboard.instantiateViewController(withIdentifier: "NewHomeVCTabBarController") as! NewHomeVCTabBarController
+        //NewHomeVCNavigation.collgeMatches = self.unique2
+        self.present(NewHomeVCTabBarController, animated: true, completion: nil)
+        //if let controller = NewHomeVCTabBarController.viewControllers.first as? NewHomeVCTabBarController {
+        //controller.myArray = self.unique2 as NSArray
+        myArray = self.unique2
+        SVProgressHUD.dismiss()
+        
+        // }
+    }
+    func gpaDocumentsCompleted2() {
+        print("GPA Documents completed")
+        AddArrays2()
+        
+    }
+    
+    func satCollegesCompleted2() {
+        print("SAT Documents completed")
+    }
+    
+    func AddArrays2() -> Array<Any> {
+        let unique = Array(Set(gpaColleges + satColleges))
+        self.unique2 = unique as NSArray
+        self.presentNewHomeVC()
+        return unique
     }
 }
