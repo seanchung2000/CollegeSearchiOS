@@ -28,7 +28,16 @@ class loginPageController: UIViewController, UITextFieldDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if currentReachabilityStatus == .notReachable {
+            SVProgressHUD.show(withStatus: "Not Connected to Internet")
+            
+        } else if currentReachabilityStatus == .reachableViaWiFi{
+            SVProgressHUD.dismiss()
+        } else if currentReachabilityStatus == .reachableViaWWAN{
+            SVProgressHUD.dismiss()
+        } else {
+            print("Error")
+        }
         emailTextFeild.delegate = self
         
         emailTextFeild.tag = 0

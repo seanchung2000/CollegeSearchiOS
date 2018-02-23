@@ -35,6 +35,16 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if currentReachabilityStatus == .notReachable {
+            SVProgressHUD.show(withStatus: "Not Connected to Internet")
+            
+        } else if currentReachabilityStatus == .reachableViaWiFi{
+            SVProgressHUD.dismiss()
+        } else if currentReachabilityStatus == .reachableViaWWAN{
+            SVProgressHUD.dismiss()
+        } else {
+            print("Error")
+        }
         let userID: String = (Auth.auth().currentUser?.uid)!
         docRef = Firestore.firestore().document("Users/\(userID)")
         // Do any additional setup after loading the view.

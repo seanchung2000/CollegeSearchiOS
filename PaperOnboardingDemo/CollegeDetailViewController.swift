@@ -13,6 +13,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseStorage
 import GoogleMobileAds
+import SVProgressHUD
 //Ads Work
 var favoritesArray: [NSArray] = []
 
@@ -32,6 +33,16 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     var docRef: DocumentReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if currentReachabilityStatus == .notReachable {
+            SVProgressHUD.show(withStatus: "Not Connected to Internet")
+            
+        } else if currentReachabilityStatus == .reachableViaWiFi{
+            SVProgressHUD.dismiss()
+        } else if currentReachabilityStatus == .reachableViaWWAN{
+            SVProgressHUD.dismiss()
+        } else {
+            print("Error")
+        }
         titleLabel.text = myArrayShuff[myIndex] as? String
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"

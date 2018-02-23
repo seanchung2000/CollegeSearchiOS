@@ -33,6 +33,7 @@
 		84C7E5FC1CCE59B200C9F001 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F61CCE59B200C9F001 /* Nunito-Regular.ttf */; };
 		84C7E5FE1CCE59B200C9F001 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */; };
 		97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97289D17203B257F008BE0E3 /* FavoritesViewController.swift */; };
+		975084A820403B9900F0F48F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975084A720403B9900F0F48F /* Reachability.swift */; };
 		9789B0F120325D3500289B4D /* NativeAppInstallAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */; };
 		9789B0F220325D3500289B4D /* NativeContentAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0F020325D3500289B4D /* NativeContentAdCell.xib */; };
 		97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */; };
@@ -91,6 +92,7 @@
 		84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		87D4EE4480D0D0E5D9D405DC /* Pods-College Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.debug.xcconfig"; sourceTree = "<group>"; };
 		97289D17203B257F008BE0E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		975084A720403B9900F0F48F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAppInstallAdCell.xib; sourceTree = "<group>"; };
 		9789B0F020325D3500289B4D /* NativeContentAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeContentAdCell.xib; sourceTree = "<group>"; };
 		97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHomeVCTabBarController.swift; path = /Users/kunwarsahni/Developer/CollegeSearchIOSApp/PaperOnboardingDemo/NewHomeVCTabBarController.swift; sourceTree = "<absolute>"; };
@@ -154,6 +156,7 @@
 				23A2C4C71FF702020052E9E0 /* NewHomeVCNavigation.swift */,
 				97D9694220310A14003F50E4 /* gpaCalcViewController.swift */,
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
+				975084A720403B9900F0F48F /* Reachability.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
 				97289D17203B257F008BE0E3 /* FavoritesViewController.swift */,
 				97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */,
@@ -437,6 +440,7 @@
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
 				97ECF869203FA8C60031A273 /* ArrayExtensions.swift in Sources */,
 				230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */,
+				975084A820403B9900F0F48F /* Reachability.swift in Sources */,
 				23E911321F04919A00B6D818 /* loginPageController.swift in Sources */,
 				23A462191FEEAE6C0009C9E7 /* NewHomeVC.swift in Sources */,
 				23EC17F6202BAE9800DFED65 /* SettingsViewController.swift in Sources */,

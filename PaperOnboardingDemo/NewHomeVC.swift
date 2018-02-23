@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 import FirebaseStorage
-
+import SVProgressHUD
 var myArray: NSArray = ["2"]
 var array2 =  [AnyObject]()
 var myIndex: Int = 0
@@ -65,6 +65,16 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if currentReachabilityStatus == .notReachable {
+            SVProgressHUD.show(withStatus: "Not Connected to Internet")
+            
+        } else if currentReachabilityStatus == .reachableViaWiFi{
+            SVProgressHUD.dismiss()
+        } else if currentReachabilityStatus == .reachableViaWWAN{
+            SVProgressHUD.dismiss()
+        } else {
+            print("Error")
+        }
         //leadingConstraint.constant = -180
         // Prepare the ad loader and start loading ads.
         adLoader = GADAdLoader(adUnitID: adUnitID,
