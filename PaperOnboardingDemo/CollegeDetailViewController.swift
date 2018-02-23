@@ -32,7 +32,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     var docRef: DocumentReference!
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = myArray[myIndex] as? String
+        titleLabel.text = myArrayShuff[myIndex] as? String
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score:"
@@ -54,7 +54,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
         DispatchQueue.main.async {
             self.getCollegeData()
         }
-        let imageName = "\(myArray[myIndex])2.png"
+        let imageName = "\(myArrayShuff[myIndex])2.png"
         let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
         
         imageURL.downloadURL(completion: { (url, error) in
@@ -86,7 +86,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     func getCollegeData() {
         let db = Firestore.firestore()
         let financialRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
             .collection("Financial")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -101,7 +101,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
                 }
         }
         let gpaRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
             .collection("GPA")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -115,7 +115,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
         
 
     let satRef = db
-        .collection("Colleges").document("\(myArray[myIndex] as! String)")
+        .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
         .collection("SAT")
         .getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -130,7 +130,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
 
 
 let actRef = db
-    .collection("Colleges").document("\(myArray[myIndex] as! String)")
+    .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
     .collection("ACT")
     .getDocuments() { (querySnapshot, err) in
         if let err = err {
@@ -143,7 +143,7 @@ let actRef = db
 }
         
         let descriptionRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
             .collection("Description")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -155,7 +155,7 @@ let actRef = db
                 }
         }
         let tuitionRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
             .collection("Tuition")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -169,7 +169,7 @@ let actRef = db
         
         
         let rateRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
             .collection("Rate")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -193,7 +193,7 @@ let actRef = db
     @IBAction func websiteButton(_ sender: Any) {
         let db = Firestore.firestore()
         let websiteRef = db
-            .collection("Colleges").document("\(myArray[myIndex] as! String)")
+            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
             .collection("Website")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -207,7 +207,7 @@ let actRef = db
     }
     
     @IBAction func favoriteTapped(_ sender: Any) {
-        favoritesArray.append(myArray[myIndex] as! NSArray)
+        //favoritesArray.append(myArrayShuff[myIndex] as! NSArray)
         favoriteBarItem.image = #imageLiteral(resourceName: "unchecked bookmark")
     }
     @IBAction func planAVisit(_ sender: Any) {

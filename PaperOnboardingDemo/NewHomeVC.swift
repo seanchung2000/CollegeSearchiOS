@@ -15,6 +15,7 @@ import FirebaseStorage
 var myArray: NSArray = ["2"]
 var array2 =  [AnyObject]()
 var myIndex: Int = 0
+let myArrayShuff = myArray.shuffled()
 
 
 class CollegeTableViewCell: UITableViewCell {
@@ -33,6 +34,7 @@ class CollegeTableViewCell: UITableViewCell {
 }
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADNativeAppInstallAdLoaderDelegate, GADNativeContentAdLoaderDelegate {
+    
     /// The ad unit ID from the AdMob UI.
     let adUnitID = "ca-app-pub-8784727441633405/5374362219"
     
@@ -52,7 +54,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var menuView: SlideMenu!
+   // @IBOutlet weak var menuView: SlideMenu!
     
     
     var menuShowing = false
@@ -63,7 +65,6 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //leadingConstraint.constant = -180
         // Prepare the ad loader and start loading ads.
         adLoader = GADAdLoader(adUnitID: adUnitID,
@@ -77,7 +78,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         self.tableView.delegate = self
         tableView.backgroundView = UIImageView(image: UIImage(named: "College"))
        // cell.backgroundView = [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell_normal.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
-        print("Number of Schools = \(myArray.count)")
+        print("Number of Schools = \(myArrayShuff.count)")
         tableView.register(UINib(nibName: "NativeAppInstallAdCell", bundle: nil),
                            forCellReuseIdentifier: "NativeAppInstallAdCell")
         tableView.register(UINib(nibName: "NativeContentAdCell", bundle: nil),
@@ -185,7 +186,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
+        return myArrayShuff.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
@@ -207,7 +208,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
                 
                 return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
 }
-        let schoolKey = "\(myArray[indexPath.row])"
+        let schoolKey = "\(myArrayShuff[indexPath.row])"
         cell.textLabel!.text = schoolKey
         cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
         cell.textLabel?.textColor = UIColor.white
@@ -221,7 +222,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
             if let image = imageCache[schoolKey] {
                 cell.imageView?.image = image
             } else {
-                let imageName = "\(myArray[indexPath.row])CollegeLogo.png"
+                let imageName = "\(myArrayShuff[indexPath.row])CollegeLogo.png"
                 let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
                 
                 imageURL.downloadURL(completion: { (url, error) in

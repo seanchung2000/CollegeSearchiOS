@@ -38,6 +38,7 @@
 		97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */; };
 		97BCA444203B6297007E954A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97BCA442203B6297007E954A /* Model.xcdatamodeld */; };
 		97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D9694220310A14003F50E4 /* gpaCalcViewController.swift */; };
+		97ECF869203FA8C60031A273 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECF868203FA8C60031A273 /* ArrayExtensions.swift */; };
 		DA059992DA841D98DBFB64FD /* Pods_College_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED4D039BEB403B2D913F195 /* Pods_College_Search.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHomeVCTabBarController.swift; path = /Users/kunwarsahni/Developer/CollegeSearchIOSApp/PaperOnboardingDemo/NewHomeVCTabBarController.swift; sourceTree = "<absolute>"; };
 		97BCA443203B6297007E954A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		97D9694220310A14003F50E4 /* gpaCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpaCalcViewController.swift; sourceTree = "<group>"; };
+		97ECF868203FA8C60031A273 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		C9121BA71756DFCDBB4D1B42 /* Pods-PaperOnboardingDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemoTests/Pods-PaperOnboardingDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D48BB294E30861B30D2F5710 /* Pods-PaperOnboardingDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemoTests/Pods-PaperOnboardingDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8D8A0FBAC51B6BC9967E017 /* Pods-PaperOnboardingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperOnboardingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperOnboardingDemo/Pods-PaperOnboardingDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		84A773A21CCE545200EF4EB0 /* PaperOnboardingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				97ECF868203FA8C60031A273 /* ArrayExtensions.swift */,
 				230CA4CE20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift */,
 				09B9B7411FF5C8E500D0B332 /* CollegesTableView.swift */,
 				23E911431F05EC5B00B6D818 /* PaperOnboardingDemo.entitlements */,
@@ -432,6 +435,7 @@
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */,
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
+				97ECF869203FA8C60031A273 /* ArrayExtensions.swift in Sources */,
 				230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */,
 				23E911321F04919A00B6D818 /* loginPageController.swift in Sources */,
 				23A462191FEEAE6C0009C9E7 /* NewHomeVC.swift in Sources */,
