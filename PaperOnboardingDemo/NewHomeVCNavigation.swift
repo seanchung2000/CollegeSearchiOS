@@ -14,10 +14,10 @@ class NewHomeVCNavigation: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationTitleFont = UIFont(name: "Eveleth", size: 20)!
-        navigationBar.topItem?.title = "Your Colleges"
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: navigationTitleFont, NSAttributedStringKey.foregroundColor : UIColor.white]
-        UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Rectangle 4")!)
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+        }
     }
 
 }

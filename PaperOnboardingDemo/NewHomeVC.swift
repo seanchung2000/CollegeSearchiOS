@@ -32,6 +32,13 @@ class CollegeTableViewCell: UITableViewCell {
     }
     
 }
+extension NewHomeVC: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+        
+    }
+}
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADNativeAppInstallAdLoaderDelegate, GADNativeContentAdLoaderDelegate {
     
@@ -54,17 +61,23 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
-   // @IBOutlet weak var menuView: SlideMenu!
-    
-    
-    var menuShowing = false
-    
     var imageCache = [String:UIImage]()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+            navigationController?.navigationBar.topItem?.title = "Your Colleges"
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
+        } else {
+            navigationController?.navigationBar.topItem?.title = "Your Colleges"
+            navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
+           // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+        }
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
             
@@ -75,6 +88,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         } else {
             print("Error")
         }
+        
         //leadingConstraint.constant = -180
         // Prepare the ad loader and start loading ads.
         adLoader = GADAdLoader(adUnitID: adUnitID,
@@ -170,31 +184,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
                                customAttributes: [:])
         UIApplication.shared.open(URL(string: "https://interadaptive.com/feedback")! as URL, options: [:], completionHandler: nil)
     }
-    
-    
-    
-    @IBAction func openMenu(_ sender: Any) {
-        if(menuShowing) {
-            leadingConstraint.constant = -180
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()
-                
-            })
-            
-        } else {
-            leadingConstraint.constant = 0
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()
-
-            })
-        }
-        
-        menuShowing = !menuShowing
-    }
-    
-    
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myArrayShuff.count
     }
