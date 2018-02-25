@@ -19,6 +19,7 @@ import CoreData
 class ScoresViewController: UIViewController, UITextFieldDelegate {
     var satColleges = [String]()
     var gpaColleges = [String]()
+    var locationColleges = [String]()
 
     var docRef: DocumentReference!
 //    let defaultStore = Firestore.firestore()

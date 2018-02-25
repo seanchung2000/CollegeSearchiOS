@@ -16,12 +16,15 @@ var myArray: NSArray = ["2"]
 var array2 =  [AnyObject]()
 var myIndex: Int = 0
 let myArrayShuff = myArray.shuffled()
+var locationArray: NSArray = ["1"]
 
 
 class CollegeTableViewCell: UITableViewCell {
     
     static let identifier = "CollegeTableViewCell"
 
+    @IBOutlet weak var collegeName: UILabel!
+    @IBOutlet weak var collegeCampusImage: UIImageView!
     
     weak var dataTask: URLSessionDataTask?
     
@@ -29,6 +32,7 @@ class CollegeTableViewCell: UITableViewCell {
         super.prepareForReuse()
         dataTask?.cancel()
         imageView?.image = nil
+        collegeCampusImage?.image = nil
     }
     
 }
@@ -40,44 +44,28 @@ extension NewHomeVC: UISearchResultsUpdating {
     }
 }
 
-class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADNativeAppInstallAdLoaderDelegate, GADNativeContentAdLoaderDelegate {
-    
-    /// The ad unit ID from the AdMob UI.
-    let adUnitID = "ca-app-pub-8784727441633405/5374362219"
-    
-    /// The number of native ads to load.
-    let numAdsToLoad = 20
-    
-    /// The native ads.
-    var nativeAds = [GADNativeAd]()
-    
-    /// The ad loader that loads the native ads.
-    var adLoader: GADAdLoader!
-    
-    /// The number of completed ad loads (success or failures).
-    var numAdLoadCallbacks = 0
-   
+class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     var imageCache = [String:UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+            navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
             navigationController?.navigationBar.topItem?.title = "Your Colleges"
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
         } else {
             navigationController?.navigationBar.topItem?.title = "Your Colleges"
-            navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+            navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
            // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
         }
+        
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
             
@@ -89,74 +77,14 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
             print("Error")
         }
         
-        //leadingConstraint.constant = -180
-        // Prepare the ad loader and start loading ads.
-        adLoader = GADAdLoader(adUnitID: adUnitID,
-                               rootViewController: self,
-                               adTypes: [GADAdLoaderAdType.nativeAppInstall,
-                                         GADAdLoaderAdType.nativeContent],
-                               options: nil)
-        adLoader.delegate = self
-        preloadNextAd()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        tableView.backgroundView = UIImageView(image: UIImage(named: "College"))
-       // cell.backgroundView = [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell_normal.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
         print("Number of Schools = \(myArrayShuff.count)")
-        tableView.register(UINib(nibName: "NativeAppInstallAdCell", bundle: nil),
-                           forCellReuseIdentifier: "NativeAppInstallAdCell")
-        tableView.register(UINib(nibName: "NativeContentAdCell", bundle: nil),
-                           forCellReuseIdentifier: "NativeContentAdCell")
-        
+
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
     }
-    
-    func preloadNextAd() {
-        if numAdLoadCallbacks < numAdsToLoad {
-            adLoader.load(GADRequest())
-        } else {
-            //enableMenuButton()
-        }
-    }
-    func adLoader(_ adLoader: GADAdLoader,
-                  didFailToReceiveAdWithError error: GADRequestError) {
-        print("\(adLoader) failed with error: \(error.localizedDescription)")
-        
-        // Increment the number of ad load callbacks.
-        numAdLoadCallbacks += 1
-        
-        // Load the next native ad.
-        preloadNextAd()
-    }
-    
-    func adLoader(_ adLoader: GADAdLoader,
-                  didReceive nativeAppInstallAd: GADNativeAppInstallAd) {
-        print("Received native app install ad: \(nativeAppInstallAd)")
-        
-        // Increment the number of ad load callbacks.
-        numAdLoadCallbacks += 1
-        
-        // Add the native ad to the list of native ads.
-        nativeAds.append(nativeAppInstallAd)
-        
-        // Load the next native ad.
-        preloadNextAd()
-    }
-    
-    func adLoader(_ adLoader: GADAdLoader,
-                  didReceive nativeContentAd: GADNativeContentAd) {
-        print("Received native content ad: \(nativeContentAd)")
-        
-        // Increment the number of ad load callbacks.
-        numAdLoadCallbacks += 1
-        
-        // Add the native ad to the list of native ads.
-        nativeAds.append(nativeContentAd)
-        
-        // Load the next native ad.
-        preloadNextAd()
-    }
+
     
     @IBAction func loggedOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
@@ -198,21 +126,16 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
                  cell =  CollegeTableViewCell(style: .default, reuseIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
             }
             
-            func getRandomColor() -> UIColor{
-                
-                var randomRed:CGFloat = CGFloat(drand48())
-                
-                var randomGreen:CGFloat = CGFloat(drand48())
-                
-                var randomBlue:CGFloat = CGFloat(drand48())
-                
-                return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-}
+
         let schoolKey = "\(myArrayShuff[indexPath.row])"
-        cell.textLabel!.text = schoolKey
-        cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
-        cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = getRandomColor()
+            cell.collegeName.text = schoolKey
+       //     cell.collegeLocation.text = "\(locationArray[indexPath.row])"
+            
+       // cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
+        //cell.textLabel?.textColor = UIColor.white
+        //cell.backgroundColor = getRandomColor()
+            
+            
 
             let clearView = UIView()
             clearView.backgroundColor = UIColor.clear // Whatever color you like
@@ -220,9 +143,9 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         
 
             if let image = imageCache[schoolKey] {
-                cell.imageView?.image = image
+                cell.collegeCampusImage?.image = image
             } else {
-                let imageName = "\(myArrayShuff[indexPath.row])CollegeLogo.png"
+                let imageName = "\(myArrayShuff[indexPath.row])2.png"
                 let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
                 
                 imageURL.downloadURL(completion: { (url, error) in
@@ -242,7 +165,9 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
                         guard let imageData = UIImage(data: data!) else { return }
                         
                         DispatchQueue.main.async {
-                            cell.imageView?.image = imageData
+                            cell.collegeCampusImage.layer.cornerRadius = 10
+                            cell.collegeCampusImage.clipsToBounds = true
+                            cell.collegeCampusImage.image = imageData
                             cell.setNeedsLayout()
                             strongSelf.imageCache[schoolKey] = imageData
                         }
@@ -252,7 +177,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, G
                     
                 })
             }
-            
+
 
 
             return cell
