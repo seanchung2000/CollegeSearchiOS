@@ -18,7 +18,10 @@ import SVProgressHUD
 var favoritesArray: [NSArray] = []
 
 class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
-    @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    @IBOutlet weak var collegeLogo: UIImageView!
+    // @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collegeImage: UIImageView!
     @IBOutlet weak var collegeDescription: UITextView!
     @IBOutlet weak var favoriteBarItem: UIBarButtonItem!
@@ -43,7 +46,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
         } else {
             print("Error")
         }
-        titleLabel.text = myArrayShuff[myIndex] as? String
+  //      titleLabel.text = myArrayShuff[myIndex] as? String
         averageGpa.text = "Average GPA:"
         averageSat.text = "Average SAT Score:"
         averageAct.text = "Average ACT Score:"
@@ -86,6 +89,48 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
                 
                 DispatchQueue.main.async {
                     self?.collegeImage.image = imageData
+                    if #available(iOS 11.0, *) {
+                        self?.navigationController?.navigationBar.prefersLargeTitles = true
+                        //navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
+                        self?.navigationController?.navigationBar.topItem?.title = "\(myArrayShuff[myIndex])"
+                        //navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+                        self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+                        
+                    } else {
+                        self?.navigationController?.navigationBar.topItem?.title = "\(myArrayShuff[myIndex])"
+                        //navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
+                        self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+                        
+                        // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+                    }
+                }
+                
+            }).resume()
+            
+        })
+///
+        
+        let imageName2 = "\(myArrayShuff[myIndex])CollegeLogo.png"
+        let imageURL2 = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName2)
+        
+        imageURL2.downloadURL(completion: { (url, error) in
+            
+            if error != nil {
+                print(error?.localizedDescription)
+                return
+            }
+            
+            URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
+                guard let strongSelf = self else { return }
+                if error != nil {
+                    print(error)
+                    return
+                }
+                
+                guard let imageData = UIImage(data: data!) else { return }
+                
+                DispatchQueue.main.async {
+                    self?.collegeLogo.image = imageData
                 }
                 
             }).resume()
@@ -165,10 +210,7 @@ let actRef = db
                     }
                 }
         }
-        let tuitionRef = db
-            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-            .collection("Tuition")
-            .getDocuments() { (querySnapshot, err) in
+        let tuitionRef = db.collection("Colleges").document(myArrayShuff[myIndex] as! String).collection("Tuition").getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
