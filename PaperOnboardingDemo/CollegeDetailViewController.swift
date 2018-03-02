@@ -14,12 +14,12 @@ import FirebaseFirestore
 import FirebaseStorage
 import GoogleMobileAds
 import SVProgressHUD
+import UIKit
 //Ads Work
 var favoritesArray: [NSArray] = []
 
-class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
-    
-    
+class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
+ 
     @IBOutlet weak var collegeLogo: UIImageView!
     // @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collegeImage: UIImageView!
@@ -34,6 +34,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var acceptanceRateGraph: KDCircularProgress!
     @IBOutlet weak var acceptanceRateLabel: UILabel!
     var docRef: DocumentReference!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if currentReachabilityStatus == .notReachable {
@@ -47,9 +48,9 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
             print("Error")
         }
   //      titleLabel.text = myArrayShuff[myIndex] as? String
-        averageGpa.text = "Average GPA:"
-        averageSat.text = "Average SAT Score:"
-        averageAct.text = "Average ACT Score:"
+    //    averageGpa.text = "Average GPA:"
+      //  averageSat.text = "Average SAT Score:"
+        //averageAct.text = "Average ACT Score:"
         let userID: String = (Auth.auth().currentUser?.uid)!
         let db = Firestore.firestore()
 
@@ -164,7 +165,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        self.averageGpa.text = "Average GPA: \(document.documentID)"
+                        self.averageGpa.text = "\(document.documentID)"
                     }
                 }
         }
@@ -178,7 +179,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    self.averageSat.text = "Average SAT: \(document.documentID)"
+                    self.averageSat.text = "\(document.documentID)"
                 }
             }
     }
@@ -193,7 +194,7 @@ let actRef = db
             print("Error getting documents: \(err)")
         } else {
             for document in querySnapshot!.documents {
-                self.averageAct.text = "Average ACT: \(document.documentID)"
+                self.averageAct.text = "\(document.documentID)"
             }
         }
 }
