@@ -3,13 +3,16 @@
 //  PaperOnboardingDemo
 //
 //  Created by Kunwar Sahni on 6/29/17.
-//  Copyright © 2017 Alex K. All rights reserved.
+//  Copyright © 2017 Kunwar Sahni All rights reserved.
 //
 
 import UIKit
 import FirebaseAuth
 import SVProgressHUD
 import Fabric
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseDatabase
 import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
@@ -49,7 +52,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     
                 })
                 self.presentLoggedInScreen()
-                
+                //
+                let userID: String = (Auth.auth().currentUser?.uid)!
+                let db = Firestore.firestore()
+                db.collection("Users").document("\(userID)").collection("GPA").document("0").setData([
+                    "GPA": "0"
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
+                db.collection("Users").document("\(userID)").collection("SAT").document("0").setData([
+                    "SAT": "0"
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
+                //
                 print("success")
             })
         }

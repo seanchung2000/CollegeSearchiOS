@@ -58,7 +58,7 @@ class FirstViewVCViewController: UIViewController {
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        if (document.documentID == ""){
+                        if (document.documentID == "0"){
                             self.showHomePage()
                         }else{
                         let satRef = db.collection("Colleges")
@@ -91,7 +91,7 @@ class FirstViewVCViewController: UIViewController {
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        if(document.documentID == ""){
+                        if(document.documentID == "0"){
                             self.showHomePage()
                         }else {
                         let gpaRef = db.collection("Colleges")

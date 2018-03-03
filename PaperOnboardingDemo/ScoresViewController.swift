@@ -93,7 +93,21 @@ class ScoresViewController: UIViewController, UITextFieldDelegate {
         }
         else{
             let userID: String = (Auth.auth().currentUser?.uid)!
-            let db = Firestore.firestore()                                                                                                                                                                                            
+            let db = Firestore.firestore()
+           db.collection("Users").document("\(userID)").collection("GPA").document("0").delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            }
+            db.collection("Users").document("\(userID)").collection("SAT").document("0").delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            }
             db.collection("Users").document("\(userID)").collection("GPA").document("\(gpaScore!)").setData([
                 "GPA": "\(gpaScore!)"
             ]) { err in
