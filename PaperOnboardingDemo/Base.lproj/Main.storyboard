@@ -108,7 +108,7 @@
         <!--View Controller-->
         <scene sceneID="g9b-uN-MEg">
             <objects>
-                <viewController id="7Om-vX-Pij" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingOne" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Om-vX-Pij" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvP-tt-olz"/>
                         <viewControllerLayoutGuide type="bottom" id="1tp-TE-8A2"/>
@@ -1265,9 +1265,7 @@ of your classes.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4Z8-qH-qSD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="a13-6v-IZt"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="4Z8-qH-qSD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="tableView" destination="Vra-8P-Wfq" id="rMO-TP-Ijf"/>
@@ -2611,7 +2609,7 @@ yet?</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ygk-BL-8wj"/>
-        <segue reference="zsE-kK-hNy"/>
+        <segue reference="5Yd-w5-Kup"/>
         <segue reference="dKd-Q1-RQP"/>
         <segue reference="nfP-Iv-FHM"/>
     </inferredMetricsTieBreakers>
