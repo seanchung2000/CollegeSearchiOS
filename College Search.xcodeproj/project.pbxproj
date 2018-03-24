@@ -32,6 +32,8 @@
 		84C7E5FA1CCE59B200C9F001 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F51CCE59B200C9F001 /* Nunito-Light.ttf */; };
 		84C7E5FC1CCE59B200C9F001 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F61CCE59B200C9F001 /* Nunito-Regular.ttf */; };
 		84C7E5FE1CCE59B200C9F001 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */; };
+		970E45362066D73200BA0B5D /* collegeDetailControllerSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E45352066D73200BA0B5D /* collegeDetailControllerSegmented.swift */; };
+		970E45382066D75300BA0B5D /* financialDetailControllerSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E45372066D75300BA0B5D /* financialDetailControllerSegmented.swift */; };
 		97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97289D17203B257F008BE0E3 /* FavoritesViewController.swift */; };
 		975084A820403B9900F0F48F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975084A720403B9900F0F48F /* Reachability.swift */; };
 		9789B0F120325D3500289B4D /* NativeAppInstallAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */; };
@@ -91,6 +93,8 @@
 		84C7E5F61CCE59B200C9F001 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		87D4EE4480D0D0E5D9D405DC /* Pods-College Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.debug.xcconfig"; sourceTree = "<group>"; };
+		970E45352066D73200BA0B5D /* collegeDetailControllerSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collegeDetailControllerSegmented.swift; sourceTree = "<group>"; };
+		970E45372066D75300BA0B5D /* financialDetailControllerSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financialDetailControllerSegmented.swift; sourceTree = "<group>"; };
 		97289D17203B257F008BE0E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		975084A720403B9900F0F48F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAppInstallAdCell.xib; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				23E911351F049C1300B6D818 /* HomeVC.swift */,
 				975084A720403B9900F0F48F /* Reachability.swift */,
 				23840FD31FF7EAED00515722 /* Main.storyboard */,
+				970E45352066D73200BA0B5D /* collegeDetailControllerSegmented.swift */,
+				970E45372066D75300BA0B5D /* financialDetailControllerSegmented.swift */,
 				97289D17203B257F008BE0E3 /* FavoritesViewController.swift */,
 				97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */,
 				23EC17F5202BAE9800DFED65 /* SettingsViewController.swift */,
@@ -437,12 +443,14 @@
 				23E911361F049C1300B6D818 /* HomeVC.swift in Sources */,
 				09B9B7421FF5C8E500D0B332 /* CollegesTableView.swift in Sources */,
 				23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */,
+				970E45382066D75300BA0B5D /* financialDetailControllerSegmented.swift in Sources */,
 				97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */,
 				23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */,
 				231B40CB1F22CAC5004CBAAD /* ScoresViewController.swift in Sources */,
 				97ECF869203FA8C60031A273 /* ArrayExtensions.swift in Sources */,
+				970E45362066D73200BA0B5D /* collegeDetailControllerSegmented.swift in Sources */,
 				230CA4D3202942A0009E0538 /* SecondGPACalcScreenViewController.swift in Sources */,
 				975084A820403B9900F0F48F /* Reachability.swift in Sources */,
 				23E911321F04919A00B6D818 /* loginPageController.swift in Sources */,

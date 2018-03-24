@@ -66,6 +66,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
            // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
         }
         
+        
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
             
@@ -111,6 +112,24 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         Answers.logCustomEvent(withName: "Feedback Pressed",
                                customAttributes: [:])
         UIApplication.shared.open(URL(string: "https://interadaptive.com/feedback")! as URL, options: [:], completionHandler: nil)
+    }
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let bookmark = bookmarkAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions:[bookmark])
+    }
+    
+    @available(iOS 11.0, *)
+    func bookmarkAction(at: IndexPath) -> UIContextualAction {
+       // let college = myArrayShuff[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: "Bookmark") { (action, view, completion) in
+           print("bookmarked")
+           completion(true)
+        }
+        action.image = #imageLiteral(resourceName: "bookmark-7")
+        action.backgroundColor = UIColor(patternImage: UIImage(named: "Color2")!)
+        
+        return action
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

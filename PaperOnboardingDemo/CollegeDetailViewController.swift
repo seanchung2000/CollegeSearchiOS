@@ -19,7 +19,10 @@ import UIKit
 var favoritesArray: [NSArray] = []
 
 class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
- 
+    @IBOutlet weak var controller: UISegmentedControl!
+    
+    @IBOutlet weak var financialDataView: UIView!
+    @IBOutlet weak var academicDataView: UIView!
     @IBOutlet weak var collegeLogo: UIImageView!
     // @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collegeImage: UIImageView!
@@ -37,6 +40,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        financialDataView.isHidden = true
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
             
@@ -271,6 +275,17 @@ let actRef = db
     
     @IBAction func apply(_ sender: Any) {
         UIApplication.shared.open(URL(string: "http://www.commonapp.org/")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func changeView(_ sender: Any) {
+        if controller.selectedSegmentIndex == 0 {
+            financialDataView.isHidden = true
+            academicDataView.isHidden = false
+        }
+        if controller.selectedSegmentIndex == 1 {
+            academicDataView.isHidden = true
+            financialDataView.isHidden = false
+        }
     }
     
 }

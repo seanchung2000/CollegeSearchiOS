@@ -118,6 +118,10 @@ class FirstViewVCViewController: UIViewController {
           //  showHomePage()
         }else{
             print("Not Signed In")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginPageController:loginPageController = storyboard.instantiateViewController(withIdentifier: "loginPageController") as! loginPageController
+                self.present(loginPageController, animated: false, completion: nil)
+                SVProgressHUD.dismiss()
         }
     }
     func presentNewHomeVC() {
