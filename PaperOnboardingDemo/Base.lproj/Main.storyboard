@@ -1489,8 +1489,8 @@ of your classes.</string>
                                                     <constraint firstAttribute="width" constant="70" id="FUV-GI-hrL"/>
                                                 </constraints>
                                             </imageView>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="via-SD-Gco">
-                                                <rect key="frame" x="82" y="203" width="213" height="28"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="via-SD-Gco">
+                                                <rect key="frame" x="81.5" y="203" width="213" height="28"/>
                                                 <segments>
                                                     <segment title="Academic Data"/>
                                                     <segment title="Financial Data"/>
@@ -2533,15 +2533,33 @@ yet?</string>
                         <rect key="frame" x="0.0" y="0.0" width="376" height="923"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Financial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zc-Pm-bnn">
-                                <rect key="frame" x="118" y="157" width="140" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average financial aid:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-yi-ef0">
+                                <rect key="frame" x="-73" y="55" width="523" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="ylS-KU-Iaa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average tuition:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiK-E5-wDK">
+                                <rect key="frame" x="-30" y="201" width="437" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="7Pt-Hq-pKH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89365434646606445" green="0.89087539911270142" blue="0.89029771089553833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2pJ-yi-ef0" firstAttribute="top" secondItem="2Iu-fs-f8F" secondAttribute="bottom" constant="35" id="URQ-r3-0cN"/>
+                            <constraint firstItem="KiK-E5-wDK" firstAttribute="leading" secondItem="BMn-YL-fuc" secondAttribute="leadingMargin" constant="-46" id="fQr-6C-k6O"/>
+                            <constraint firstItem="KiK-E5-wDK" firstAttribute="centerX" secondItem="2pJ-yi-ef0" secondAttribute="centerX" id="jJf-KL-UhB"/>
+                            <constraint firstItem="KiK-E5-wDK" firstAttribute="top" secondItem="2pJ-yi-ef0" secondAttribute="bottom" constant="63" id="rul-Xh-lcU"/>
+                            <constraint firstItem="2pJ-yi-ef0" firstAttribute="centerX" secondItem="BMn-YL-fuc" secondAttribute="centerX" id="vxs-sE-seY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNz-5n-evW" userLabel="First Responder" sceneMemberID="firstResponder"/>
