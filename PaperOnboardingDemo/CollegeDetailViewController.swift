@@ -20,7 +20,7 @@ var favoritesArray: [NSArray] = []
 
 class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     @IBOutlet weak var controller: UISegmentedControl!
-    
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var financialDataView: UIView!
     @IBOutlet weak var academicDataView: UIView!
     @IBOutlet weak var collegeLogo: UIImageView!
@@ -146,105 +146,20 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
   
     func getCollegeData() {
         let db = Firestore.firestore()
-        let financialRef = db
+        let locationRef = db
             .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-            .collection("Financial")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                    print("HELLLLLOOOOO2")
-
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.averageFinancialAid.text = "Average Financial Aid: $\(document.documentID)"
-                        print("HELLLLLOOOOO")
-                    }
-                }
-        }
-        let gpaRef = db
-            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-            .collection("GPA")
+            .collection("Location")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        self.averageGpa.text = "\(document.documentID)"
+                        self.locationLabel.text = "\(document.documentID)"
+                        print("\(document.documentID)")
                     }
                 }
         }
         
-
-    let satRef = db
-        .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-        .collection("SAT")
-        .getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    self.averageSat.text = "\(document.documentID)"
-                }
-            }
-    }
-
-
-
-let actRef = db
-    .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-    .collection("ACT")
-    .getDocuments() { (querySnapshot, err) in
-        if let err = err {
-            print("Error getting documents: \(err)")
-        } else {
-            for document in querySnapshot!.documents {
-                self.averageAct.text = "\(document.documentID)"
-            }
-        }
-}
-        
-        let descriptionRef = db
-            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-            .collection("Description")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.collegeDescription.text = "\(document.documentID)"
-                    }
-                }
-        }
-        let tuitionRef = db.collection("Colleges").document(myArrayShuff[myIndex] as! String).collection("Tuition").getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.averageTuituon.text = "Average Tuition: $\(document.documentID)"
-                    }
-                }
-        }
-        
-        
-        let rateRef = db
-            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
-            .collection("Rate")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.acceptanceRateLabel.text = "\(document.documentID)%"
-                      //  var ratedouble: Double = document.documentID as! Double
-                      //  print(ratedouble)
-                        if let rate = Double(document.documentID) {
-                            print(rate)
-                            var degreeRate: Double = (360 * rate)/100
-                            self.acceptanceRateGraph.animate(fromAngle: 0, toAngle: degreeRate, duration: 2.5, completion: nil)
-                        }
-                    }
-                }
-            }
 }
 
     
