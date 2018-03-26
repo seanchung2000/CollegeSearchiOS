@@ -2371,10 +2371,10 @@ yet?</string>
             </objects>
             <point key="canvasLocation" x="697" y="3018"/>
         </scene>
-        <!--View Controller-->
+        <!--Academic Segmented View Controller-->
         <scene sceneID="Aqq-yO-927">
             <objects>
-                <viewController id="Qwo-ku-nA3" sceneMemberID="viewController">
+                <viewController id="Qwo-ku-nA3" customClass="academicSegmentedViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYB-rs-Xg5"/>
                         <viewControllerLayoutGuide type="bottom" id="e23-Fa-Foz"/>
@@ -2416,7 +2416,7 @@ yet?</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlb-OR-3ey">
-                                <rect key="frame" x="65" y="311" width="66" height="66"/>
+                                <rect key="frame" x="45" y="311" width="105" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2427,7 +2427,7 @@ yet?</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1600" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jz-nj-OYi">
-                                <rect key="frame" x="237" y="318" width="75" height="52"/>
+                                <rect key="frame" x="219" y="318" width="106" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2452,7 +2452,7 @@ yet?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZ6-4e-TCV" customClass="KDCircularProgress" customModule="College_Search" customModuleProvider="target">
-                                <rect key="frame" x="110" y="597" width="157" height="185"/>
+                                <rect key="frame" x="110" y="645" width="157" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Acceptance Rate:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pok-Ml-WoE">
@@ -2500,15 +2500,23 @@ yet?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.89365434646606445" green="0.89087539911270142" blue="0.89029771089553833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="acceptanceRateGraph" destination="mZ6-4e-TCV" id="2oP-Rt-Bea"/>
+                        <outlet property="acceptanceRateLabel" destination="SN3-be-UOB" id="MYc-5G-fWh"/>
+                        <outlet property="averageAct" destination="tYf-H9-mfE" id="jSY-ft-O3Q"/>
+                        <outlet property="averageGpa" destination="qlb-OR-3ey" id="xph-Pa-2Kg"/>
+                        <outlet property="averageSat" destination="9jz-nj-OYi" id="c1f-gr-ZdK"/>
+                        <outlet property="collegeDescription" destination="whX-tI-Q6C" id="hAK-6u-dDu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tE7-r0-NGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6685.6000000000004" y="1604.7976011994003"/>
         </scene>
-        <!--View Controller-->
+        <!--Financial Segmented View Controller-->
         <scene sceneID="LEH-8n-5Sq">
             <objects>
-                <viewController id="Ynu-J0-IRs" sceneMemberID="viewController">
+                <viewController id="Ynu-J0-IRs" customClass="financialSegmentedViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Iu-fs-f8F"/>
                         <viewControllerLayoutGuide type="bottom" id="DWw-Dt-M80"/>
@@ -2517,38 +2525,31 @@ yet?</string>
                         <rect key="frame" x="0.0" y="0.0" width="376" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average financial aid:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-yi-ef0">
-                                <rect key="frame" x="-73" y="55" width="523" height="83"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="ylS-KU-Iaa"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average tuition:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiK-E5-wDK">
+                                <rect key="frame" x="0.0" y="201" width="376" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average tuition:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiK-E5-wDK">
-                                <rect key="frame" x="-30" y="201" width="437" height="106"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="7Pt-Hq-pKH"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average financial aid:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-yi-ef0">
+                                <rect key="frame" x="0.0" y="62" width="376" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EvelethCleanRegular" family="Eveleth" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89365434646606445" green="0.89087539911270142" blue="0.89029771089553833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="2pJ-yi-ef0" firstAttribute="top" secondItem="2Iu-fs-f8F" secondAttribute="bottom" constant="35" id="URQ-r3-0cN"/>
-                            <constraint firstItem="KiK-E5-wDK" firstAttribute="leading" secondItem="BMn-YL-fuc" secondAttribute="leadingMargin" constant="-46" id="fQr-6C-k6O"/>
-                            <constraint firstItem="KiK-E5-wDK" firstAttribute="centerX" secondItem="2pJ-yi-ef0" secondAttribute="centerX" id="jJf-KL-UhB"/>
-                            <constraint firstItem="KiK-E5-wDK" firstAttribute="top" secondItem="2pJ-yi-ef0" secondAttribute="bottom" constant="63" id="rul-Xh-lcU"/>
-                            <constraint firstItem="2pJ-yi-ef0" firstAttribute="centerX" secondItem="BMn-YL-fuc" secondAttribute="centerX" id="vxs-sE-seY"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="financialLabel" destination="2pJ-yi-ef0" id="P4H-c2-lL6"/>
+                        <outlet property="tuitionLabel" destination="KiK-E5-wDK" id="8I2-pq-t8A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNz-5n-evW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5758" y="3006"/>
+            <point key="canvasLocation" x="5756.8000000000002" y="3005.3973013493255"/>
         </scene>
     </scenes>
     <resources>
