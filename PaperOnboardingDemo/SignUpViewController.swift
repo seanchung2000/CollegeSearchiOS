@@ -51,7 +51,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                                       customAttributes: [:])
                     
                 })
-                self.presentLoggedInScreen()
                 //
                 let userID: String = (Auth.auth().currentUser?.uid)!
                 let db = Firestore.firestore()
@@ -75,6 +74,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 }
                 //
                 print("success")
+                self.presentLoggedInScreen()
             })
         }
             else {
@@ -112,8 +112,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     func presentLoggedInScreen() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let HomeVC:HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        self.present(HomeVC, animated: true, completion: nil)
+        let dataCollect1ViewController:dataCollect1ViewController = storyboard.instantiateViewController(withIdentifier: "dataCollect1ViewController") as! dataCollect1ViewController
+        self.present(dataCollect1ViewController, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

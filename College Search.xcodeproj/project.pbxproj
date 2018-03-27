@@ -36,6 +36,7 @@
 		970A40BC2067F0AB00037856 /* financialSegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A40BB2067F0AB00037856 /* financialSegmentedViewController.swift */; };
 		97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97289D17203B257F008BE0E3 /* FavoritesViewController.swift */; };
 		975084A820403B9900F0F48F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975084A720403B9900F0F48F /* Reachability.swift */; };
+		978502FB2069C90D0006D236 /* dataCollect1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */; };
 		9789B0F120325D3500289B4D /* NativeAppInstallAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */; };
 		9789B0F220325D3500289B4D /* NativeContentAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0F020325D3500289B4D /* NativeContentAdCell.xib */; };
 		97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */; };
@@ -97,6 +98,7 @@
 		970A40BB2067F0AB00037856 /* financialSegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financialSegmentedViewController.swift; sourceTree = "<group>"; };
 		97289D17203B257F008BE0E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		975084A720403B9900F0F48F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataCollect1ViewController.swift; sourceTree = "<group>"; };
 		9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAppInstallAdCell.xib; sourceTree = "<group>"; };
 		9789B0F020325D3500289B4D /* NativeContentAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeContentAdCell.xib; sourceTree = "<group>"; };
 		97AC1A22203A541A00A214B5 /* NewHomeVCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHomeVCTabBarController.swift; path = /Users/kunwarsahni/Developer/CollegeSearchIOSApp/PaperOnboardingDemo/NewHomeVCTabBarController.swift; sourceTree = "<absolute>"; };
@@ -150,6 +152,7 @@
 		84A773A21CCE545200EF4EB0 /* PaperOnboardingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */,
 				970A40B92067F09900037856 /* academicSegmentedViewController.swift */,
 				970A40BB2067F0AB00037856 /* financialSegmentedViewController.swift */,
 				97ECF868203FA8C60031A273 /* ArrayExtensions.swift */,
@@ -446,6 +449,7 @@
 				23E911381F0528B800B6D818 /* SignUpViewController.swift in Sources */,
 				970A40BA2067F09900037856 /* academicSegmentedViewController.swift in Sources */,
 				97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */,
+				978502FB2069C90D0006D236 /* dataCollect1ViewController.swift in Sources */,
 				23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */,

@@ -55,8 +55,8 @@ class loginPageController: UIViewController, UITextFieldDelegate {
     
     func showHomePage() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let HomeVC:HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        self.present(HomeVC, animated: false, completion: nil)
+        let dataCollect1ViewController:dataCollect1ViewController = storyboard.instantiateViewController(withIdentifier: "dataCollect1ViewController") as! dataCollect1ViewController
+        self.present(dataCollect1ViewController, animated: false, completion: nil)
         SVProgressHUD.dismiss()
     }
     @IBAction func loginTapped(_ sender: Any) {

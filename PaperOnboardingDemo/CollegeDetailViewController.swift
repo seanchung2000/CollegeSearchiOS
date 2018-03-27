@@ -19,13 +19,13 @@ import UIKit
 var favoritesArray: [NSArray] = []
 
 class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
+    @IBOutlet weak var collegeImage: UIImageView!
     @IBOutlet weak var controller: UISegmentedControl!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var financialDataView: UIView!
     @IBOutlet weak var academicDataView: UIView!
     @IBOutlet weak var collegeLogo: UIImageView!
     // @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var collegeImage: UIImageView!
     @IBOutlet weak var collegeDescription: UITextView!
     @IBOutlet weak var favoriteBarItem: UIBarButtonItem!
     @IBOutlet weak var averageGpa: UILabel!
