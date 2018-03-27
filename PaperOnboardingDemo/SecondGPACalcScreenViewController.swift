@@ -82,5 +82,17 @@ class SecondGPACalcScreenViewController: UIViewController, UIPickerViewDelegate,
             classType.resignFirstResponder()
         }
     }
-
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func moreClassesTapped(_ sender: Any) {
+        print("\(classType.text)")
+        print("\(classGrade.text)")
+        print("\(className.text)")
+        userData.append("Class Name: \(className.text)")
+        userData.append("Type Of Class: \(classType.text)")
+        userData.append("Grade In Class: \(classGrade.text)")
+        print("User Data Array: \(userData)")
+    }
 }
