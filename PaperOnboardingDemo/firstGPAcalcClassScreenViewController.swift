@@ -7,6 +7,7 @@
 //
 
 import UIKit
+var userGpa = [Double]()
 var userData : Array = [""]
 class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDelegate,  UIPickerViewDataSource {
 
