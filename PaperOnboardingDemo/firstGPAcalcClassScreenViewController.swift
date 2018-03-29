@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 var userGpa = [Double]()
 var userData : Array = [""]
 class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDelegate,  UIPickerViewDataSource {
@@ -27,6 +28,16 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
     var picker = UIPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if currentReachabilityStatus == .notReachable {
+            SVProgressHUD.show(withStatus: "Not Connected to Internet")
+            
+        } else if currentReachabilityStatus == .reachableViaWiFi{
+            SVProgressHUD.dismiss()
+        } else if currentReachabilityStatus == .reachableViaWWAN{
+            SVProgressHUD.dismiss()
+        } else {
+            print("Error")
+        }
         picker.showsSelectionIndicator = true
         picker.delegate = self
         picker.dataSource = self

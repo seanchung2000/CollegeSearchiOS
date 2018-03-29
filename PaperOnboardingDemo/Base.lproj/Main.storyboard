@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Om-vX-Pij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mtn-Iu-N3E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2267,10 +2267,10 @@ yet?</string>
             </objects>
             <point key="canvasLocation" x="-356" y="2212"/>
         </scene>
-        <!--View Controller-->
+        <!--Act-->
         <scene sceneID="yNk-bM-IVZ">
             <objects>
-                <viewController id="pLt-z7-mSe" sceneMemberID="viewController">
+                <viewController id="pLt-z7-mSe" customClass="act" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jTE-zp-IM6"/>
                         <viewControllerLayoutGuide type="bottom" id="CKG-Ag-H7u"/>
@@ -2320,6 +2320,9 @@ yet?</string>
                                 <state key="normal" title="No Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Mtn-Iu-N3E" kind="show" id="DHU-y4-Fjd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-zo-TPn">
                                 <rect key="frame" x="61" y="510" width="109" height="52"/>
@@ -2403,6 +2406,9 @@ yet?</string>
                                 <state key="normal" title="Next Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Mtn-Iu-N3E" kind="show" id="u4D-eR-DgI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weighted GPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuR-Ny-aB9">
                                 <rect key="frame" x="36" y="480" width="303" height="41"/>
@@ -2978,6 +2984,7 @@ can apply to all over the US.</string>
         <segue reference="qwa-7u-5LZ"/>
         <segue reference="DTC-Dp-E94"/>
         <segue reference="Bbg-eT-rTp"/>
+        <segue reference="DHU-y4-Fjd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

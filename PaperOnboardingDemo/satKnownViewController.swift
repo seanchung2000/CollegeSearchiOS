@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import Firebase
+import FirebaseFirestore
+import Foundation
+import Crashlytics
+import SVProgressHUD
 
 class satKnownViewController: UIViewController {
 
+    @IBOutlet weak var satTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        if satTextField.text == "" {
+            self.createAlert(titleText: "Error", messageText: "No SAT Score Entered")
+        } else {
+        let userID: String = (Auth.auth().currentUser?.uid)!
+        let db = Firestore.firestore()
+        db.collection("Users").document("\(userID)").collection("SAT").document("0").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        db.collection("Users").document("\(userID)").collection("SAT").document("\(satTextField.text)").setData([
+            "SAT": "\(satTextField.text)"
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func createAlert (titleText : String , messageText: String) {
+        
+        let alert = UIAlertController (title: titleText, message: messageText, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dissmis", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
-    */
 
 }

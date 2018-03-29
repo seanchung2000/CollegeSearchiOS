@@ -7,29 +7,42 @@
 //
 
 import UIKit
+import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import Firebase
+import FirebaseFirestore
+import Foundation
+import Crashlytics
+import SVProgressHUD
+
 
 class satQuestionViewController: UIViewController {
 
+    @IBOutlet weak var yetButton: UIButton!
+    @IBOutlet weak var noButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func noButtonTapped(_ sender: Any) {
+        let userID: String = (Auth.auth().currentUser?.uid)!
+        let db = Firestore.firestore()
+        db.collection("Users").document("\(userID)").collection("SAT").document("0").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        db.collection("Users").document("\(userID)").collection("SAT").document("\(1)").setData([
+            "SAT": "\(1)"
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+            
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
