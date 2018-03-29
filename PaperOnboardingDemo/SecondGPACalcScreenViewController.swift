@@ -6,6 +6,9 @@
 //  Copyright © 2018 Kunwar Sahni. All rights reserved.
 //
 var userAverageGpa: Double = 0
+var x: Int = 0
+var y: Int = 1
+var z: Int = 2
 import UIKit
 
 extension Int: Sequence {
@@ -89,177 +92,32 @@ class SecondGPACalcScreenViewController: UIViewController, UIPickerViewDelegate,
         }
     }
     @IBAction func doneButtonTapped(_ sender: Any) {
-        userData.append("Class Name: \(className.text)")
-        userData.append("Type Of Class: \(classType.text)")
-        userData.append("Grade In Class: \(classGrade.text)")
-        var userDataCount: Int = (userData.count)/3
-        for i in userDataCount {
-            var x = 1
-            var y = 2
-            var z = 3
-            var classNameFromUserData: String = userData[x]
-            var typeOfClassFromUserData: String = userData[y]
-            var gradeInClassFromUserData: String = userData[z]
-            classNameFromUserData = classNameFromUserData.replacingOccurrences(of: "Class Name: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            classNameFromUserData = classNameFromUserData.replacingOccurrences(of: "Type Of Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            classNameFromUserData = classNameFromUserData.replacingOccurrences(of: "Grade In Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            //
-            typeOfClassFromUserData = typeOfClassFromUserData.replacingOccurrences(of: "Class Name: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            typeOfClassFromUserData = typeOfClassFromUserData.replacingOccurrences(of: "Type Of Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            typeOfClassFromUserData = typeOfClassFromUserData.replacingOccurrences(of: "Grade In Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            //
-            gradeInClassFromUserData = gradeInClassFromUserData.replacingOccurrences(of: "Class Name: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            gradeInClassFromUserData = gradeInClassFromUserData.replacingOccurrences(of: "Type Of Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            gradeInClassFromUserData = classNameFromUserData.replacingOccurrences(of: "Grade In Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
-            print("from print fucntion 1\(typeOfClassFromUserData)")
-            print("from print fucntion 2\(gradeInClassFromUserData)")
-            print("from print fucntion 3\(classNameFromUserData)")
-            if gradeInClassFromUserData == "Honors"{
-                if typeOfClassFromUserData == ""{
-                    print("Error From Type Of Class If Loops")
-                } else if typeOfClassFromUserData == "+A"{
-                    userGpa.append(4.83)
-                } else if typeOfClassFromUserData == "A"{
-                    userGpa.append(4.50)
-                } else if typeOfClassFromUserData == "-A"{
-                    userGpa.append(4.17)
-                } else if typeOfClassFromUserData == "+B"{
-                    userGpa.append(3.83)
-                } else if typeOfClassFromUserData == "B"{
-                    userGpa.append(3.50)
-                } else if typeOfClassFromUserData == "-B"{
-                    userGpa.append(3.17)
-                } else if typeOfClassFromUserData == "+C"{
-                    userGpa.append(2.83)
-                } else if typeOfClassFromUserData == "C"{
-                    userGpa.append(2.50)
-                } else if typeOfClassFromUserData == "-C"{
-                    userGpa.append(2.17)
-                } else if typeOfClassFromUserData == "+D"{
-                    userGpa.append(1.83)
-                } else if typeOfClassFromUserData == "D"{
-                    userGpa.append(1.50)
-                } else if typeOfClassFromUserData == "-D"{
-                    userGpa.append(1.17)
-                } else if typeOfClassFromUserData == "F"{
-                    userGpa.append(0.50)
-                } else {
-                    print("Error From Type Of Class If Loops")
-                }
-            } else if gradeInClassFromUserData == "AP"{
-                if typeOfClassFromUserData == ""{
-                    print("Error From Type Of Class If Loops")
-                } else if typeOfClassFromUserData == "+A"{
-                    userGpa.append(5.33)
-                } else if typeOfClassFromUserData == "A"{
-                    userGpa.append(5.00)
-                } else if typeOfClassFromUserData == "-A"{
-                    userGpa.append(4.67)
-                } else if typeOfClassFromUserData == "+B"{
-                    userGpa.append(4.33)
-                } else if typeOfClassFromUserData == "B"{
-                    userGpa.append(4.00)
-                } else if typeOfClassFromUserData == "-B"{
-                    userGpa.append(3.67)
-                } else if typeOfClassFromUserData == "+C"{
-                    userGpa.append(3.33)
-                } else if typeOfClassFromUserData == "C"{
-                    userGpa.append(3.00)
-                } else if typeOfClassFromUserData == "-C"{
-                    userGpa.append(2.67)
-                } else if typeOfClassFromUserData == "+D"{
-                    userGpa.append(2.33)
-                } else if typeOfClassFromUserData == "D"{
-                    userGpa.append(2.00)
-                } else if typeOfClassFromUserData == "-D"{
-                    userGpa.append(1.67)
-                } else if typeOfClassFromUserData == "F"{
-                    userGpa.append(1.00)
-                } else {
-                    print("Error From Type Of Class If Loops")
-                }
-            } else if gradeInClassFromUserData == "DE"{
-                if typeOfClassFromUserData == ""{
-                    print("Error From Type Of Class If Loops")
-                } else if typeOfClassFromUserData == "+A"{
-                    userGpa.append(4.83)
-                } else if typeOfClassFromUserData == "A"{
-                    userGpa.append(4.50)
-                } else if typeOfClassFromUserData == "-A"{
-                    userGpa.append(4.17)
-                } else if typeOfClassFromUserData == "+B"{
-                    userGpa.append(3.83)
-                } else if typeOfClassFromUserData == "B"{
-                    userGpa.append(3.50)
-                } else if typeOfClassFromUserData == "-B"{
-                    userGpa.append(3.17)
-                } else if typeOfClassFromUserData == "+C"{
-                    userGpa.append(2.83)
-                } else if typeOfClassFromUserData == "C"{
-                    userGpa.append(2.50)
-                } else if typeOfClassFromUserData == "-C"{
-                    userGpa.append(2.17)
-                } else if typeOfClassFromUserData == "+D"{
-                    userGpa.append(1.83)
-                } else if typeOfClassFromUserData == "D"{
-                    userGpa.append(1.50)
-                } else if typeOfClassFromUserData == "-D"{
-                    userGpa.append(1.17)
-                } else if typeOfClassFromUserData == "F"{
-                    userGpa.append(0.50)
-                } else {
-                    print("Error From Type Of Class If Loops")
-                }
-            } else if gradeInClassFromUserData == "None of the above"{
-                if typeOfClassFromUserData == ""{
-                    print("Error From Type Of Class If Loops")
-                } else if typeOfClassFromUserData == "+A"{
-                    userGpa.append(4.33)
-                } else if typeOfClassFromUserData == "A"{
-                    userGpa.append(4.00)
-                } else if typeOfClassFromUserData == "-A"{
-                    userGpa.append(3.67)
-                } else if typeOfClassFromUserData == "+B"{
-                    userGpa.append(3.33)
-                } else if typeOfClassFromUserData == "B"{
-                    userGpa.append(3.00)
-                } else if typeOfClassFromUserData == "-B"{
-                    userGpa.append(2.67)
-                } else if typeOfClassFromUserData == "+C"{
-                    userGpa.append(2.33)
-                } else if typeOfClassFromUserData == "C"{
-                    userGpa.append(2.00)
-                } else if typeOfClassFromUserData == "-C"{
-                    userGpa.append(1.67)
-                } else if typeOfClassFromUserData == "+D"{
-                    userGpa.append(1.33)
-                } else if typeOfClassFromUserData == "D"{
-                    userGpa.append(1.00)
-                } else if typeOfClassFromUserData == "-D"{
-                    userGpa.append(0.67)
-                } else if typeOfClassFromUserData == "F"{
-                    userGpa.append(0.00)
-                } else {
-                    print("Error From Type Of Class If Loops")
-                }
-            } else {
-                print("Error From Type Of Class If Loops")
-            }
-            x = x+3
-            y = y+3
-            z = z+3
-        }
-        userAverageGpa = (userGpa.reduce(0, +))/Double(userDataCount)
-        print(userAverageGpa)
+        calculateUserData()
     }
     
     @IBAction func moreClassesTapped(_ sender: Any) {
-        print("\(classType.text)")
-        print("\(classGrade.text)")
-        print("\(className.text)")
+
         userData.append("Class Name: \(className.text)")
         userData.append("Type Of Class: \(classType.text)")
         userData.append("Grade In Class: \(classGrade.text)")
-        print("User Data Array: \(userData)")
+        //print("User Data Array: \(userData)")
+    }
+    func calculateUserData () {
+        /*
+        var x: Int = 1
+        var y: Int = 2
+        var z: Int = 3
+        */
+        var loopTimes: Int = (userData.count)/3
+        for i in loopTimes {
+            var calcUserClassName = userData[x]
+            var calcUserClassType = userData[y]
+            var calcUserClassGrade = userData[z]
+            calcUserClassType = calcUserClassType.replacingOccurrences(of: "Type Of Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
+            calcUserClassGrade = calcUserClassGrade.replacingOccurrences(of: "Grade In Class: ", with: "", options: NSString.CompareOptions.literal, range: nil)
+            y = y + 3
+            x = x + 3
+            z = z + 3
+        }
     }
 }

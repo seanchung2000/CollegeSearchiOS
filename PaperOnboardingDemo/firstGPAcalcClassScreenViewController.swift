@@ -84,14 +84,11 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
         }
     }
     @IBAction func nextButtonTapped(_ sender: Any) {
-        print("\(typeOfClass.text)")
-        print("\(gradeInClass.text)")
-        print("\(className.text)")
         userData.append("Class Name: \(String(describing: className.text))")
         userData.append("Type Of Class: \(String(describing: typeOfClass.text))")
         userData.append("Grade In Class: \(String(describing: gradeInClass.text))")
         userData.remove(at: 0)
-        print("User Data Array: \(userData)")
+        //print("User Data Array: \(userData)")
     }
     
 }
