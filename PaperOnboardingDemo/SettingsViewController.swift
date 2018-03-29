@@ -7,10 +7,13 @@
 //
 
 import UIKit
-import Crashlytics
-import Firebase
 import FirebaseAuth
-
+import FirebaseDatabase
+import Firebase
+import FirebaseFirestore
+import Foundation
+import Crashlytics
+import SVProgressHUD
 
 class SettingsViewController: UIViewController {
 
@@ -36,6 +39,46 @@ class SettingsViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginPageController:loginPageController = storyboard.instantiateViewController(withIdentifier: "loginPageController") as! loginPageController
         self.present(loginPageController, animated: false, completion: nil)
+    }
+    @IBAction func resetYourScoresTapped(_ sender: Any) {
+        let userID: String = (Auth.auth().currentUser?.uid)!
+        let db = Firestore.firestore()
+        db.collection("Users").document("\(userID)").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        db.collection("Users").document("\(userID)").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        db.collection("Users").document("\(userID)").collection("GPA").document("0").setData([
+            "GPA": "0"
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        db.collection("Users").document("\(userID)").collection("SAT").document("0").setData([
+            "SAT": "0"
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let FirstViewVCViewController:FirstViewVCViewController = storyboard.instantiateViewController(withIdentifier: "FirstViewVCViewController") as! FirstViewVCViewController
+        self.present(FirstViewVCViewController, animated: false, completion: nil)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
