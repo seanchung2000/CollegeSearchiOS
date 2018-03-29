@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -388,8 +389,12 @@ is?</string>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is                                           your GPA?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNB-II-9Zu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is                                           your GPA?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNB-II-9Zu">
                                 <rect key="frame" x="54" y="235" width="266" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="L4O-1Y-sX0"/>
+                                    <constraint firstAttribute="height" constant="206" id="Ysg-ai-9Si"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1101,8 +1106,8 @@ of your classes.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-XQ-Cqd">
-                                <rect key="frame" x="0.0" y="-65" width="375" height="668"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-XQ-Cqd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SAT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="650-jd-7eS">
                                 <rect key="frame" x="59" y="290" width="280" height="41"/>
@@ -2116,15 +2121,18 @@ of your classes.</string>
                                     <segue destination="pLt-z7-mSe" kind="show" id="Ygk-BL-8wj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weighted GPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-bZ-vE6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SAT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-bZ-vE6">
                                 <rect key="frame" x="36" y="480" width="303" height="41"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is                                           your SAT Score?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A68-G1-lEr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is                                           your SAT Score?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A68-G1-lEr">
                                 <rect key="frame" x="55" y="230" width="266" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="A68-G1-lEr" secondAttribute="height" multiplier="133:103" id="AA2-OT-bus"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2289,7 +2297,7 @@ yet?</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaK-jy-I8J">
-                                <rect key="frame" x="42" y="279" width="291.5" height="206"/>
+                                <rect key="frame" x="42" y="230.5" width="291.5" height="206"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="206" id="Rhp-C3-eoZ"/>
                                 </constraints>
@@ -2337,6 +2345,7 @@ yet?</string>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="AF3-mT-RKv" secondAttribute="bottom" id="27w-cB-q94"/>
                             <constraint firstItem="EXJ-rh-KIu" firstAttribute="trailing" secondItem="Xcf-qH-1YP" secondAttribute="trailing" id="4pX-GP-Pup"/>
+                            <constraint firstItem="zaK-jy-I8J" firstAttribute="centerX" secondItem="Bpw-lQ-l8k" secondAttribute="centerX" id="6qc-Jr-B3l"/>
                             <constraint firstItem="7Oe-VO-2xf" firstAttribute="leading" secondItem="Bpw-lQ-l8k" secondAttribute="leadingMargin" constant="45" id="7rU-p8-pXw"/>
                             <constraint firstItem="bRr-VZ-7C3" firstAttribute="top" secondItem="jTE-zp-IM6" secondAttribute="bottom" constant="70" id="856-x6-OTF"/>
                             <constraint firstItem="AF3-mT-RKv" firstAttribute="top" secondItem="Bpw-lQ-l8k" secondAttribute="top" id="8b9-Po-vLl"/>
@@ -2351,11 +2360,12 @@ yet?</string>
                             <constraint firstItem="CKG-Ag-H7u" firstAttribute="top" secondItem="EXJ-rh-KIu" secondAttribute="bottom" constant="105" id="UvC-b4-cfy"/>
                             <constraint firstItem="AF3-mT-RKv" firstAttribute="leading" secondItem="Bpw-lQ-l8k" secondAttribute="leading" id="hZu-4R-obW"/>
                             <constraint firstItem="CKG-Ag-H7u" firstAttribute="top" secondItem="7Oe-VO-2xf" secondAttribute="bottom" constant="100" id="nPl-4X-Xeg"/>
-                            <constraint firstItem="zaK-jy-I8J" firstAttribute="top" secondItem="bRr-VZ-7C3" secondAttribute="bottom" constant="63" id="nhC-YM-da8"/>
                             <constraint firstItem="EXJ-rh-KIu" firstAttribute="leading" secondItem="Xcf-qH-1YP" secondAttribute="leading" id="qh3-3z-6SK"/>
                             <constraint firstItem="bRr-VZ-7C3" firstAttribute="centerX" secondItem="Bpw-lQ-l8k" secondAttribute="centerX" id="r86-xb-ZWh"/>
                             <constraint firstItem="EXJ-rh-KIu" firstAttribute="top" secondItem="d3A-zo-TPn" secondAttribute="top" id="sgl-TL-Jqb"/>
+                            <constraint firstItem="zaK-jy-I8J" firstAttribute="centerY" secondItem="Bpw-lQ-l8k" secondAttribute="centerY" id="uQ5-Vi-4Wi"/>
                             <constraint firstItem="d3A-zo-TPn" firstAttribute="leading" secondItem="7Oe-VO-2xf" secondAttribute="leading" id="utb-fT-GXS"/>
+                            <constraint firstItem="zaK-jy-I8J" firstAttribute="centerX" secondItem="Bpw-lQ-l8k" secondAttribute="centerX" id="w5c-cN-3Ak"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -2409,15 +2419,18 @@ yet?</string>
                                     <segue destination="Mtn-Iu-N3E" kind="show" id="u4D-eR-DgI"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weighted GPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuR-Ny-aB9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ACT Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuR-Ny-aB9">
                                 <rect key="frame" x="36" y="480" width="303" height="41"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is                                           your ACT Score?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXU-0P-Qba">
-                                <rect key="frame" x="55" y="235" width="266" height="206"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is                                           your ACT Score?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXU-0P-Qba">
+                                <rect key="frame" x="39" y="230" width="298" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LXU-0P-Qba" secondAttribute="height" multiplier="149:103" id="eZw-cl-SNb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2428,11 +2441,9 @@ yet?</string>
                             <constraint firstItem="KuR-Ny-aB9" firstAttribute="trailing" secondItem="rdv-0l-9VZ" secondAttribute="trailing" id="11W-8X-YeH"/>
                             <constraint firstItem="CQj-Tg-Lza" firstAttribute="leading" secondItem="T4q-bV-R0H" secondAttribute="leadingMargin" constant="82" id="37O-zv-K6m"/>
                             <constraint firstItem="rdv-0l-9VZ" firstAttribute="leading" secondItem="KuR-Ny-aB9" secondAttribute="leading" id="4Gb-Xd-9n2"/>
-                            <constraint firstItem="rdv-0l-9VZ" firstAttribute="top" secondItem="LXU-0P-Qba" secondAttribute="bottom" constant="39" id="A1z-KI-CaT"/>
                             <constraint firstItem="EXr-hF-z9H" firstAttribute="top" secondItem="iru-SR-QeB" secondAttribute="bottom" constant="50" id="Abg-ez-c5Q"/>
-                            <constraint firstItem="LXU-0P-Qba" firstAttribute="top" secondItem="SE3-kz-hLn" secondAttribute="bottom" constant="8" symbolic="YES" id="EFQ-sV-lQA"/>
-                            <constraint firstItem="LXU-0P-Qba" firstAttribute="centerX" secondItem="KuR-Ny-aB9" secondAttribute="centerX" id="FpH-k9-rgq"/>
-                            <constraint firstItem="LXU-0P-Qba" firstAttribute="centerX" secondItem="Ony-a0-jsD" secondAttribute="centerX" id="IKW-Uo-U9v"/>
+                            <constraint firstItem="LXU-0P-Qba" firstAttribute="centerX" secondItem="rdv-0l-9VZ" secondAttribute="centerX" id="G5G-cf-JVE"/>
+                            <constraint firstItem="LXU-0P-Qba" firstAttribute="top" secondItem="SE3-kz-hLn" secondAttribute="bottom" constant="3" id="IS1-wf-mDw"/>
                             <constraint firstItem="KuR-Ny-aB9" firstAttribute="centerX" secondItem="iru-SR-QeB" secondAttribute="centerX" id="L3p-5u-Sam"/>
                             <constraint firstItem="iru-SR-QeB" firstAttribute="leading" secondItem="T4q-bV-R0H" secondAttribute="leadingMargin" constant="83" id="MaB-12-qiy"/>
                             <constraint firstItem="SE3-kz-hLn" firstAttribute="centerX" secondItem="rdv-0l-9VZ" secondAttribute="centerX" id="PPA-pF-A51"/>
@@ -2441,6 +2452,8 @@ yet?</string>
                             <constraint firstItem="Ony-a0-jsD" firstAttribute="leading" secondItem="T4q-bV-R0H" secondAttribute="leading" id="cru-Ka-a1A"/>
                             <constraint firstItem="rdv-0l-9VZ" firstAttribute="leading" secondItem="T4q-bV-R0H" secondAttribute="leadingMargin" constant="20" id="ePW-W0-f5n"/>
                             <constraint firstItem="KuR-Ny-aB9" firstAttribute="bottom" secondItem="rdv-0l-9VZ" secondAttribute="bottom" id="gfm-qB-hoJ"/>
+                            <constraint firstItem="LXU-0P-Qba" firstAttribute="centerX" secondItem="Ony-a0-jsD" secondAttribute="centerX" id="hDq-nA-eN7"/>
+                            <constraint firstItem="rdv-0l-9VZ" firstAttribute="top" secondItem="LXU-0P-Qba" secondAttribute="bottom" constant="44" id="jVZ-ma-qUd"/>
                             <constraint firstItem="CQj-Tg-Lza" firstAttribute="top" secondItem="rdv-0l-9VZ" secondAttribute="bottom" constant="42" id="mcT-Qf-aP7"/>
                             <constraint firstItem="KuR-Ny-aB9" firstAttribute="top" secondItem="rdv-0l-9VZ" secondAttribute="top" id="nMM-8a-X9m"/>
                             <constraint firstItem="SE3-kz-hLn" firstAttribute="top" secondItem="fGb-Z4-A4v" secondAttribute="bottom" constant="81" id="rT9-hI-vJk"/>
@@ -2452,7 +2465,7 @@ yet?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fx-Kn-ng0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="3045"/>
+            <point key="canvasLocation" x="696.79999999999995" y="3044.5277361319345"/>
         </scene>
         <!--Academic Segmented View Controller-->
         <scene sceneID="Aqq-yO-927">
@@ -2982,7 +2995,7 @@ can apply to all over the US.</string>
         <segue reference="5Yd-w5-Kup"/>
         <segue reference="DTC-Dp-E94"/>
         <segue reference="Bbg-eT-rTp"/>
-        <segue reference="DHU-y4-Fjd"/>
+        <segue reference="u4D-eR-DgI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
