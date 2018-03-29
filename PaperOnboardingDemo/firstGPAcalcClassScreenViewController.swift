@@ -84,11 +84,28 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
         }
     }
     @IBAction func nextButtonTapped(_ sender: Any) {
-        userData.append("Class Name: \(String(describing: className.text))")
-        userData.append("Type Of Class: \(String(describing: typeOfClass.text))")
-        userData.append("Grade In Class: \(String(describing: gradeInClass.text))")
-        userData.remove(at: 0)
-        //print("User Data Array: \(userData)")
+        if className.text == "" {
+            self.createAlert(titleText: "Error", messageText: "Class must have a name")
+        } else if typeOfClass.text == "" {
+            self.createAlert(titleText: "Error", messageText: "Class must have a type")
+        } else if gradeInClass.text == ""{
+            self.createAlert(titleText: "Error", messageText: "Class must have a grade")
+        } else {
+            userData.append("Class Name: \(String(describing: className.text))")
+            userData.append("Type Of Class: \(String(describing: typeOfClass.text))")
+            userData.append("Grade In Class: \(String(describing: gradeInClass.text))")
+            userData.remove(at: 0)
+        }
+    }
+    func createAlert (titleText : String , messageText: String) {
+        
+        let alert = UIAlertController (title: titleText, message: messageText, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dissmis", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
 }

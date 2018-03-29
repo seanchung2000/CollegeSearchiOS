@@ -333,10 +333,10 @@ is?</string>
             </objects>
             <point key="canvasLocation" x="-1290" y="1298"/>
         </scene>
-        <!--View Controller-->
+        <!--Gpa Known View Controller-->
         <scene sceneID="XCb-Su-TL4">
             <objects>
-                <viewController id="2CU-BU-X9h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gpaKnownViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2CU-BU-X9h" customClass="gpaKnownViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qMv-Hk-bt4"/>
                         <viewControllerLayoutGuide type="bottom" id="hBJ-v0-MtX"/>
@@ -377,6 +377,7 @@ is?</string>
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="2CU-BU-X9h" eventType="touchUpInside" id="jGa-xc-zIf"/>
                                     <segue destination="yq9-vQ-aFK" kind="show" id="5Yd-w5-Kup"/>
                                 </connections>
                             </button>
@@ -420,6 +421,9 @@ is?</string>
                             <constraint firstItem="005-6B-z8O" firstAttribute="centerX" secondItem="b5X-Hn-00j" secondAttribute="centerX" id="ueZ-3u-dgZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gpaTextField" destination="005-6B-z8O" id="9mw-TI-UjE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kw-Kz-xeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1441,7 +1445,7 @@ of your classes.</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1600" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mN-fB-tVr">
-                                                <rect key="frame" x="233" y="547" width="67" height="52"/>
+                                                <rect key="frame" x="229" y="547" width="75" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fnt-Td-138"/>
                                                 </constraints>
@@ -1450,7 +1454,7 @@ of your classes.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average financial aid:                        " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evn-qy-cLL">
-                                                <rect key="frame" x="-14" y="1014" width="405" height="83"/>
+                                                <rect key="frame" x="-73" y="1014" width="523" height="83"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="83" id="fj0-lG-1nV"/>
                                                 </constraints>
@@ -1462,7 +1466,7 @@ of your classes.</string>
                                                 <rect key="frame" x="110" y="839" width="157" height="185"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acceptance Rate:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-lJ-a81">
-                                                        <rect key="frame" x="-34" y="-29" width="221" height="66"/>
+                                                        <rect key="frame" x="-34" y="-29" width="222.5" height="66"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="66" id="4hB-2r-iDP"/>
@@ -1472,7 +1476,7 @@ of your classes.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-yF-FIk">
-                                                        <rect key="frame" x="49" y="73" width="58" height="38"/>
+                                                        <rect key="frame" x="49" y="73" width="59.5" height="38"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2066,10 +2070,10 @@ of your classes.</string>
             </objects>
             <point key="canvasLocation" x="7632" y="466.99507389162562"/>
         </scene>
-        <!--View Controller-->
+        <!--Sat Known View Controller-->
         <scene sceneID="5Ve-us-tvg">
             <objects>
-                <viewController id="zWF-fY-yXc" sceneMemberID="viewController">
+                <viewController id="zWF-fY-yXc" customClass="satKnownViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wd5-UK-XN2"/>
                         <viewControllerLayoutGuide type="bottom" id="hr3-7c-izg"/>
@@ -2100,8 +2104,8 @@ of your classes.</string>
                                     <constraint firstAttribute="height" constant="41" id="qMd-Jx-B06"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwk-gJ-qqb">
-                                <rect key="frame" x="99" y="563" width="177" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwk-gJ-qqb">
+                                <rect key="frame" x="99" y="160" width="177" height="403"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="02K-Bw-UUp"/>
                                 </constraints>
@@ -2109,6 +2113,7 @@ of your classes.</string>
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="zWF-fY-yXc" eventType="touchUpInside" id="enS-Cy-62w"/>
                                     <segue destination="pLt-z7-mSe" kind="show" id="Ygk-BL-8wj"/>
                                 </connections>
                             </button>
@@ -2152,15 +2157,18 @@ of your classes.</string>
                             <constraint firstItem="gSV-bZ-vE6" firstAttribute="bottom" secondItem="ur5-do-dZq" secondAttribute="bottom" id="xop-st-uxj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="satTextField" destination="gSV-bZ-vE6" id="dEU-CZ-hlh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Or-12-gJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="2212"/>
+            <point key="canvasLocation" x="696.79999999999995" y="2211.5442278860573"/>
         </scene>
-        <!--View Controller-->
+        <!--Sat Question View Controller-->
         <scene sceneID="PkM-l6-fnT">
             <objects>
-                <viewController id="yq9-vQ-aFK" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="yq9-vQ-aFK" customClass="satQuestionViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tN6-bq-qyc"/>
                         <viewControllerLayoutGuide type="bottom" id="5CK-bQ-7Mm"/>
@@ -2211,6 +2219,7 @@ yet?</string>
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="noButtonTapped:" destination="yq9-vQ-aFK" eventType="touchUpInside" id="LmF-Ag-UQ1"/>
                                     <segue destination="pLt-z7-mSe" kind="show" id="IaX-BT-ZmX"/>
                                 </connections>
                             </button>
@@ -2249,6 +2258,10 @@ yet?</string>
                             <constraint firstItem="I7M-PO-lp4" firstAttribute="centerX" secondItem="MZR-Ax-U1R" secondAttribute="centerX" id="wxc-ka-EKh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noButton" destination="uq4-Rv-aU7" id="tiE-Iw-lir"/>
+                        <outlet property="yetButton" destination="T0l-FH-FKX" id="Pzi-ON-dUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDS-zU-Er4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2346,7 +2359,7 @@ yet?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9E-k7-Qon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-356" y="3045"/>
+            <point key="canvasLocation" x="-356" y="3020"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aqs-Te-KKE">

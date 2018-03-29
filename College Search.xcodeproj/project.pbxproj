@@ -34,6 +34,9 @@
 		84C7E5FE1CCE59B200C9F001 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C7E5F71CCE59B200C9F001 /* OpenSans-Regular.ttf */; };
 		970A40BA2067F09900037856 /* academicSegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A40B92067F09900037856 /* academicSegmentedViewController.swift */; };
 		970A40BC2067F0AB00037856 /* financialSegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A40BB2067F0AB00037856 /* financialSegmentedViewController.swift */; };
+		971B9F1D206D2905001E525A /* gpaKnownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B9F1C206D2905001E525A /* gpaKnownViewController.swift */; };
+		971B9F1F206D2B2E001E525A /* satQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B9F1E206D2B2E001E525A /* satQuestionViewController.swift */; };
+		971B9F21206D2CAF001E525A /* satKnownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B9F20206D2CAF001E525A /* satKnownViewController.swift */; };
 		97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97289D17203B257F008BE0E3 /* FavoritesViewController.swift */; };
 		975084A820403B9900F0F48F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975084A720403B9900F0F48F /* Reachability.swift */; };
 		978502FB2069C90D0006D236 /* dataCollect1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */; };
@@ -96,6 +99,9 @@
 		87D4EE4480D0D0E5D9D405DC /* Pods-College Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-College Search/Pods-College Search.debug.xcconfig"; sourceTree = "<group>"; };
 		970A40B92067F09900037856 /* academicSegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = academicSegmentedViewController.swift; sourceTree = "<group>"; };
 		970A40BB2067F0AB00037856 /* financialSegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financialSegmentedViewController.swift; sourceTree = "<group>"; };
+		971B9F1C206D2905001E525A /* gpaKnownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpaKnownViewController.swift; sourceTree = "<group>"; };
+		971B9F1E206D2B2E001E525A /* satQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satQuestionViewController.swift; sourceTree = "<group>"; };
+		971B9F20206D2CAF001E525A /* satKnownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satKnownViewController.swift; sourceTree = "<group>"; };
 		97289D17203B257F008BE0E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		975084A720403B9900F0F48F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataCollect1ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +183,9 @@
 				84A773A51CCE545200EF4EB0 /* ViewController.swift */,
 				23840FD11FF7E9F800515722 /* FirstViewVCViewController.swift */,
 				231B40CA1F22CAC5004CBAAD /* ScoresViewController.swift */,
+				971B9F1E206D2B2E001E525A /* satQuestionViewController.swift */,
+				971B9F20206D2CAF001E525A /* satKnownViewController.swift */,
+				971B9F1C206D2905001E525A /* gpaKnownViewController.swift */,
 				23E911311F04919A00B6D818 /* loginPageController.swift */,
 				23E911391F052BC600B6D818 /* ForgotPasswordViewController.swift */,
 				23E911371F0528B800B6D818 /* SignUpViewController.swift */,
@@ -438,8 +447,10 @@
 				23366033202E33960066B844 /* KDCircularProgress.swift in Sources */,
 				97BCA444203B6297007E954A /* Model.xcdatamodeld in Sources */,
 				84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */,
+				971B9F21206D2CAF001E525A /* satKnownViewController.swift in Sources */,
 				23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */,
 				230CA4CF20291E5B009E0538 /* firstGPAcalcClassScreenViewController.swift in Sources */,
+				971B9F1F206D2B2E001E525A /* satQuestionViewController.swift in Sources */,
 				84A773A41CCE545200EF4EB0 /* AppDelegate.swift in Sources */,
 				23840FD21FF7E9F800515722 /* FirstViewVCViewController.swift in Sources */,
 				97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */,
@@ -450,6 +461,7 @@
 				970A40BA2067F09900037856 /* academicSegmentedViewController.swift in Sources */,
 				97AC1A23203A541A00A214B5 /* NewHomeVCTabBarController.swift in Sources */,
 				978502FB2069C90D0006D236 /* dataCollect1ViewController.swift in Sources */,
+				971B9F1D206D2905001E525A /* gpaKnownViewController.swift in Sources */,
 				23E9113A1F052BC600B6D818 /* ForgotPasswordViewController.swift in Sources */,
 				23A2C4C81FF702020052E9E0 /* NewHomeVCNavigation.swift in Sources */,
 				97D9694320310A14003F50E4 /* gpaCalcViewController.swift in Sources */,
