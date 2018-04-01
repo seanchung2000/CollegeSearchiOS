@@ -24,6 +24,8 @@ class FirstViewVCViewController: UIViewController {
     var gpaColleges = [String]()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        print("HELLO")
         starting()
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
@@ -35,7 +37,7 @@ class FirstViewVCViewController: UIViewController {
         } else {
             print("Error")
         }
-        super.viewDidLoad()
+        
     }
     
     func showHomePage() {

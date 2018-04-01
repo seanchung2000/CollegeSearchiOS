@@ -20,7 +20,7 @@
         <!--First ViewVC View Controller-->
         <scene sceneID="oH1-oI-8eZ">
             <objects>
-                <viewController storyboardIdentifier="FirstViewVCViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mtn-Iu-N3E" customClass="FirstViewVCViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewVCViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mtn-Iu-N3E" customClass="FirstViewVCViewController" customModule="College_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B3F-Fg-DVC"/>
                         <viewControllerLayoutGuide type="bottom" id="1KV-aH-QZx"/>
@@ -2980,8 +2980,8 @@ can apply to all over the US.</string>
         <segue reference="FRS-vX-Goh"/>
         <segue reference="Ygk-BL-8wj"/>
         <segue reference="5Yd-w5-Kup"/>
-        <segue reference="ng3-nr-YJi"/>
-        <segue reference="7Wg-Fc-LvY"/>
+        <segue reference="7fc-CP-ftx"/>
+        <segue reference="Bbg-eT-rTp"/>
         <segue reference="u4D-eR-DgI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
