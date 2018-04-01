@@ -22,10 +22,10 @@ class FirstViewVCViewController: UIViewController {
     var unique2: NSArray = []
     var satColleges = [String]()
     var gpaColleges = [String]()
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("HELLO")
         starting()
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
@@ -48,10 +48,10 @@ class FirstViewVCViewController: UIViewController {
     }
 
         func starting() {
-            print("HELLLLLLLOOojaskfjdkl;afjkdsal;fjkdlas;jfkal;jkld;al")
         let db = Firestore.firestore()
         if Auth.auth().currentUser != nil {
-       SVProgressHUD.show(withStatus: "Loading Your Data")
+        nextButton.isEnabled = false
+        SVProgressHUD.show(withStatus: "Loading Your Data")
         let userID: String = (Auth.auth().currentUser?.uid)!
         let satRef = db
             .collection("Users").document("\(userID)")

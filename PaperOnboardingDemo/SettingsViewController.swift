@@ -76,8 +76,8 @@ class SettingsViewController: UIViewController {
             }
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let FirstViewVCViewController:FirstViewVCViewController = storyboard.instantiateViewController(withIdentifier: "FirstViewVCViewController") as! FirstViewVCViewController
-        self.present(FirstViewVCViewController, animated: false, completion: nil)
+        let dataCollect1ViewController:dataCollect1ViewController = storyboard.instantiateViewController(withIdentifier: "dataCollect1ViewController") as! dataCollect1ViewController
+        self.present(dataCollect1ViewController, animated: false, completion: nil)
         
     }
     override func viewDidLoad() {
