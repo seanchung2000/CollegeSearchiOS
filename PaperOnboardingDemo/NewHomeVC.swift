@@ -17,7 +17,7 @@ var array2 =  [AnyObject]()
 var myIndex: Int = 0
 let myArrayShuff = myArray.shuffled()
 var locationArray: NSArray = ["1"]
-
+var bookmarkArray: Array = [""]
 
 class CollegeTableViewCell: UITableViewCell {
     
@@ -50,7 +50,9 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var imageCache = [String:UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let index = bookmarkArray.index(of: "") {
+            bookmarkArray.remove(at: index)
+        }
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
@@ -122,13 +124,33 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @available(iOS 11.0, *)
     func bookmarkAction(at: IndexPath) -> UIContextualAction {
        // let college = myArrayShuff[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Bookmark") { (action, view, completion) in
-           print("bookmarked")
+        var actionTitle: String = ""
+        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+            actionTitle = "Remove Bookmark"
+        } else {
+            actionTitle = "Bookmark"
+        }
+        let action = UIContextualAction(style: .normal, title: actionTitle) { (action, view, completion) in
+            
+            if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+                if let index = bookmarkArray.index(of: myArrayShuff[myIndex] as! String) {
+                    bookmarkArray.remove(at: index)
+                }
+                print(bookmarkArray)
+            } else {
+                bookmarkArray.append(myArrayShuff[myIndex] as! String)
+                print(bookmarkArray)
+            }
+            
+            
            completion(true)
         }
-        action.image = #imageLiteral(resourceName: "bookmark-7")
         action.backgroundColor = UIColor(patternImage: UIImage(named: "Color2")!)
-        
+        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+            action.image = #imageLiteral(resourceName: "unCheckedBookmark")
+        } else {
+            action.image = #imageLiteral(resourceName: "bookmark-7")
+        }
         return action
     }
    

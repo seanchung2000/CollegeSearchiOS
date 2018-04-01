@@ -40,6 +40,12 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+            favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
+
+        } else {
+            favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+        }
         financialDataView.isHidden = true
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
@@ -181,7 +187,17 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     
     @IBAction func favoriteTapped(_ sender: Any) {
         //favoritesArray.append(myArrayShuff[myIndex] as! NSArray)
-        favoriteBarItem.image = #imageLiteral(resourceName: "unchecked bookmark")
+        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+            favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+            if let index = bookmarkArray.index(of: myArrayShuff[myIndex] as! String) {
+                bookmarkArray.remove(at: index)
+            }
+            print(bookmarkArray)
+        } else {
+            favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
+            bookmarkArray.append(myArrayShuff[myIndex] as! String)
+            print(bookmarkArray)
+        }
     }
     @IBAction func planAVisit(_ sender: Any) {
         UIApplication.shared.open(URL(string: "https://bigfuture.collegeboard.org/find-colleges/campus-visit-guide")! as URL, options: [:], completionHandler: nil)

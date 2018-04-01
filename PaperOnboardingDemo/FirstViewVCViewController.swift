@@ -26,6 +26,7 @@ class FirstViewVCViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show(withStatus: "Loading Your Data")
         starting()
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
@@ -120,6 +121,7 @@ class FirstViewVCViewController: UIViewController {
             //findMatchesFunction(gpa: gpa, sat: sat)
           //  showHomePage()
         }else{
+            nextButton.isEnabled = true
             print("Not Signed In")
             SVProgressHUD.dismiss()
         }
