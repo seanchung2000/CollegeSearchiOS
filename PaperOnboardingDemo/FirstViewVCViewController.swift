@@ -24,6 +24,7 @@ class FirstViewVCViewController: UIViewController {
     var gpaColleges = [String]()
     
     override func viewDidLoad() {
+        starting()
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
 
@@ -43,9 +44,9 @@ class FirstViewVCViewController: UIViewController {
         self.present(dataCollect1ViewController, animated: false, completion: nil)
         SVProgressHUD.dismiss()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
+
+        func starting() {
+            print("HELLLLLLLOOojaskfjdkl;afjkdsal;fjkdlas;jfkal;jkld;al")
         let db = Firestore.firestore()
         if Auth.auth().currentUser != nil {
        SVProgressHUD.show(withStatus: "Loading Your Data")
@@ -120,7 +121,8 @@ class FirstViewVCViewController: UIViewController {
             print("Not Signed In")
             SVProgressHUD.dismiss()
         }
-    }
+        }
+    
     func presentNewHomeVC() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let NewHomeVCTabBarController:NewHomeVCTabBarController = storyboard.instantiateViewController(withIdentifier: "NewHomeVCTabBarController") as! NewHomeVCTabBarController
