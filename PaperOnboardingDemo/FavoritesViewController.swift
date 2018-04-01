@@ -12,10 +12,11 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 import FirebaseStorage
+import SVProgressHUD
 
-var myArray2: NSArray = ["2"]
-var myIndex2: Int = 0
+let myArrayShuffBookmarks = bookmarkArray
 
-class FavoritesViewController: UIViewController{
+class FavoritesViewController: UIViewController {
 
 }
+

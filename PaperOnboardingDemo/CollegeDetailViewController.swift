@@ -40,7 +40,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+        if bookmarkArray.contains(myArray[myIndex] as! String){
             favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
 
         } else {
@@ -79,7 +79,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
         DispatchQueue.main.async {
             self.getCollegeData()
         }
-        let imageName = "\(myArrayShuff[myIndex])2.png"
+        let imageName = "\(myArray[myIndex])2.png"
         let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
         
         imageURL.downloadURL(completion: { (url, error) in
@@ -103,12 +103,12 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                     if #available(iOS 11.0, *) {
                         self?.navigationController?.navigationBar.prefersLargeTitles = true
                         //navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
-                        self?.navigationController?.navigationBar.topItem?.title = "\(myArrayShuff[myIndex])"
+                        self?.navigationController?.navigationBar.topItem?.title = "\(myArray[myIndex])"
                         //navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
                         self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
                         
                     } else {
-                        self?.navigationController?.navigationBar.topItem?.title = "\(myArrayShuff[myIndex])"
+                        self?.navigationController?.navigationBar.topItem?.title = "\(myArray[myIndex])"
                         //navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
                         self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
                         
@@ -121,7 +121,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
         })
 ///
         
-        let imageName2 = "\(myArrayShuff[myIndex])CollegeLogo.png"
+        let imageName2 = "\(myArray[myIndex])CollegeLogo.png"
         let imageURL2 = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName2)
         
         imageURL2.downloadURL(completion: { (url, error) in
@@ -153,7 +153,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     func getCollegeData() {
         let db = Firestore.firestore()
         let locationRef = db
-            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
             .collection("Location")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -172,7 +172,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     @IBAction func websiteButton(_ sender: Any) {
         let db = Firestore.firestore()
         let websiteRef = db
-            .collection("Colleges").document("\(myArrayShuff[myIndex] as! String)")
+            .collection("Colleges").document("\(myArray[myIndex] as! String)")
             .collection("Website")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -186,16 +186,16 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     }
     
     @IBAction func favoriteTapped(_ sender: Any) {
-        //favoritesArray.append(myArrayShuff[myIndex] as! NSArray)
-        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+        //favoritesArray.append(myArray[myIndex] as! NSArray)
+        if bookmarkArray.contains(myArray[myIndex] as! String){
             favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
-            if let index = bookmarkArray.index(of: myArrayShuff[myIndex] as! String) {
+            if let index = bookmarkArray.index(of: myArray[myIndex] as! String) {
                 bookmarkArray.remove(at: index)
             }
             print(bookmarkArray)
         } else {
             favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
-            bookmarkArray.append(myArrayShuff[myIndex] as! String)
+            bookmarkArray.append(myArray[myIndex] as! String)
             print(bookmarkArray)
         }
     }

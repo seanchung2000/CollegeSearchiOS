@@ -40,6 +40,7 @@
 		97289D18203B257F008BE0E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97289D17203B257F008BE0E3 /* FavoritesViewController.swift */; };
 		975084A820403B9900F0F48F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975084A720403B9900F0F48F /* Reachability.swift */; };
 		978502FB2069C90D0006D236 /* dataCollect1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */; };
+		9788238C207199E700BE813E /* naviFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788238B207199E700BE813E /* naviFavorites.swift */; };
 		9789B0F120325D3500289B4D /* NativeAppInstallAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */; };
 		9789B0F220325D3500289B4D /* NativeContentAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9789B0F020325D3500289B4D /* NativeContentAdCell.xib */; };
 		97A8C75920711D4D00B8D0D9 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A8C74320711D4D00B8D0D9 /* IQTextView.swift */; };
@@ -124,6 +125,7 @@
 		97289D17203B257F008BE0E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		975084A720403B9900F0F48F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataCollect1ViewController.swift; sourceTree = "<group>"; };
+		9788238B207199E700BE813E /* naviFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naviFavorites.swift; sourceTree = "<group>"; };
 		9789B0EF20325D3500289B4D /* NativeAppInstallAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAppInstallAdCell.xib; sourceTree = "<group>"; };
 		9789B0F020325D3500289B4D /* NativeContentAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeContentAdCell.xib; sourceTree = "<group>"; };
 		97A8C74320711D4D00B8D0D9 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
@@ -197,8 +199,9 @@
 		84A773A21CCE545200EF4EB0 /* PaperOnboardingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				97A8C76A2071221800B8D0D9 /* actKnownViewController.swift */,
+				9788238B207199E700BE813E /* naviFavorites.swift */,
 				97A8C74120711D4D00B8D0D9 /* IQKeyboardManagerSwift */,
+				97A8C76A2071221800B8D0D9 /* actKnownViewController.swift */,
 				97ABD0E6206D98A500BA113B /* actNotKnownViewController.swift */,
 				978502FA2069C90D0006D236 /* dataCollect1ViewController.swift */,
 				970A40B92067F09900037856 /* academicSegmentedViewController.swift */,
@@ -555,6 +558,7 @@
 				97A8C76820711D4D00B8D0D9 /* IQUIView+Hierarchy.swift in Sources */,
 				23366033202E33960066B844 /* KDCircularProgress.swift in Sources */,
 				97BCA444203B6297007E954A /* Model.xcdatamodeld in Sources */,
+				9788238C207199E700BE813E /* naviFavorites.swift in Sources */,
 				84A773A61CCE545200EF4EB0 /* ViewController.swift in Sources */,
 				971B9F21206D2CAF001E525A /* satKnownViewController.swift in Sources */,
 				23B660CF200EF63A002E3D9A /* CollegeDetailViewController.swift in Sources */,

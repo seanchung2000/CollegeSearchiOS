@@ -82,7 +82,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        print("Number of Schools = \(myArrayShuff.count)")
+        print("Number of Schools = \(myArray.count)")
 
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
@@ -125,20 +125,20 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func bookmarkAction(at: IndexPath) -> UIContextualAction {
        // let college = myArrayShuff[indexPath.row]
         var actionTitle: String = ""
-        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+        if bookmarkArray.contains(myArray[myIndex] as! String){
             actionTitle = "Remove Bookmark"
         } else {
             actionTitle = "Bookmark"
         }
         let action = UIContextualAction(style: .normal, title: actionTitle) { (action, view, completion) in
             
-            if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
-                if let index = bookmarkArray.index(of: myArrayShuff[myIndex] as! String) {
+            if bookmarkArray.contains(myArray[myIndex] as! String){
+                if let index = bookmarkArray.index(of: myArray[myIndex] as! String) {
                     bookmarkArray.remove(at: index)
                 }
                 print(bookmarkArray)
             } else {
-                bookmarkArray.append(myArrayShuff[myIndex] as! String)
+                bookmarkArray.append(myArray[myIndex] as! String)
                 print(bookmarkArray)
             }
             
@@ -146,7 +146,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
            completion(true)
         }
         action.backgroundColor = UIColor(patternImage: UIImage(named: "Color2")!)
-        if bookmarkArray.contains(myArrayShuff[myIndex] as! String){
+        if bookmarkArray.contains(myArray[myIndex] as! String){
             action.image = #imageLiteral(resourceName: "unCheckedBookmark")
         } else {
             action.image = #imageLiteral(resourceName: "bookmark-7")
@@ -155,7 +155,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArrayShuff.count
+        return myArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
@@ -168,7 +168,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
 
-        let schoolKey = "\(myArrayShuff[indexPath.row])"
+        let schoolKey = "\(myArray[indexPath.row])"
             cell.collegeName.text = schoolKey
        //     cell.collegeLocation.text = "\(locationArray[indexPath.row])"
             
@@ -186,7 +186,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if let image = imageCache[schoolKey] {
                 cell.collegeCampusImage?.image = image
             } else {
-                let imageName = "\(myArrayShuff[indexPath.row])2.png"
+                let imageName = "\(myArray[indexPath.row])2.png"
                 let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
                 
                 imageURL.downloadURL(completion: { (url, error) in
