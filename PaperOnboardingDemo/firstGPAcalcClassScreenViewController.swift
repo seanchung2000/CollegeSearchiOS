@@ -80,6 +80,10 @@ class firstGPAcalcClassScreenViewController: UIViewController, UIPickerViewDeleg
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(gradesPicker){
             return grades[row]

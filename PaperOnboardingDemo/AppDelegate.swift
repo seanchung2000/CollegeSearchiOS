@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    IQKeyboardManager.sharedManager().enable = true
     UIApplication.shared.statusBarStyle = .lightContent
     Fabric.with([Crashlytics.self])
     FirebaseApp.configure()

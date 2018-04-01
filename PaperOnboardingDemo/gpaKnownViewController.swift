@@ -56,7 +56,9 @@ class gpaKnownViewController: UIViewController {
             }
         }
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func createAlert (titleText : String , messageText: String) {
         
         let alert = UIAlertController (title: titleText, message: messageText, preferredStyle: .alert)

@@ -39,18 +39,17 @@ class loginPageController: UIViewController, UITextFieldDelegate {
             print("Error")
         }
         emailTextFeild.delegate = self
-        
         emailTextFeild.tag = 0
-        
         emailTextFeild.returnKeyType = UIReturnKeyType.next
         
         passwordTextFeild.delegate = self
-        
         passwordTextFeild.tag = 1
-        
-        
         passwordTextFeild.returnKeyType = UIReturnKeyType.done
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func showHomePage() {

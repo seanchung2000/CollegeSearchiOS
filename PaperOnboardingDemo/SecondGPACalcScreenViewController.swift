@@ -78,6 +78,10 @@ class SecondGPACalcScreenViewController: UIViewController, UIPickerViewDelegate,
         return 1
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(gradesPicker){
             return grades.count
