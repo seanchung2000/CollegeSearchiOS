@@ -66,6 +66,7 @@ class FirstViewVCViewController: UIViewController {
                             self.showHomePage()
                         }else{
                         let satRef = db.collection("Colleges")
+                            print("Printing SAT Document ID \(document.documentID)")
                         let query2 = satRef
                             .whereField("Average SAT", isLessThanOrEqualTo: document.documentID)
                             .getDocuments() { (querySnapshot, err) in

@@ -1442,7 +1442,7 @@ of your classes.</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1600" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mN-fB-tVr">
-                                                <rect key="frame" x="229.33333333333334" y="546.33333333333337" width="74.666666666666657" height="52"/>
+                                                <rect key="frame" x="228.66666666666666" y="546.33333333333337" width="74.666666666666657" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fnt-Td-138"/>
                                                 </constraints>
@@ -1519,7 +1519,7 @@ of your classes.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average SAT:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPu-Sm-3ut">
-                                                <rect key="frame" x="216" y="497" width="101" height="20.333333333333371"/>
+                                                <rect key="frame" x="215" y="497" width="101" height="20.333333333333371"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
