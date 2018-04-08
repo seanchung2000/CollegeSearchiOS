@@ -21,5 +21,7 @@ target 'College Search' do
   pod 'Firebase/AdMob'
   pod 'TwicketSegmentedControl'
   pod 'SnapKit', '~> 4.0.0'
+  pod 'Taplytics'
+  pod 'PushNotifications'
 
 end

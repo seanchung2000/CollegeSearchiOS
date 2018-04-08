@@ -11,10 +11,12 @@ import Firebase
 import Fabric
 import Crashlytics
 import CoreData
+import Taplytics
+import UserNotifications
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
   var window: UIWindow?
 
@@ -24,9 +26,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UIApplication.shared.statusBarStyle = .lightContent
     Fabric.with([Crashlytics.self])
     FirebaseApp.configure()
+    Taplytics.startAPIKey("f12edb50e86dfba490cdd23d5dbe57badd92a3ed")
     GADMobileAds.configure(withApplicationID: "ca-app-pub-8784727441633405~1211400707")
+    Taplytics.registerPushNotifications()
     return true
   }
+    //
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+    }
+    
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // "userInfo" will give you the notification information
+        completionHandler(UIBackgroundFetchResult.noData)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // "notification.request.content.userInfo" will give you the notification information
+        completionHandler(UNNotificationPresentationOptions.badge)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // "response.notification.request.content.userInfo" will give you the notification information
+        completionHandler()
+    }
+    //
 
     
     // MARK: - Core Data stack
@@ -110,5 +138,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          print("Not Logged In")
         }
     }
+    
+
 }
 //NewHomeVCTabBarController

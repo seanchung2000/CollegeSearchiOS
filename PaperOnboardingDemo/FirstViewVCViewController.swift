@@ -13,6 +13,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import FirebaseDatabase
 import SVProgressHUD
+import Taplytics
 
 var sat: String = ""
 var gpa: String = ""
@@ -28,16 +29,6 @@ class FirstViewVCViewController: UIViewController {
         super.viewDidLoad()
         SVProgressHUD.show(withStatus: "Loading Your Data")
         starting()
-        if currentReachabilityStatus == .notReachable {
-            SVProgressHUD.show(withStatus: "Not Connected to Internet")
-
-        } else if currentReachabilityStatus == .reachableViaWiFi{
-            SVProgressHUD.dismiss()
-        } else if currentReachabilityStatus == .reachableViaWWAN{
-            SVProgressHUD.dismiss()
-        } else {
-            print("Error")
-        }
         
     }
     

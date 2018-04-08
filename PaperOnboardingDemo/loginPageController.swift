@@ -15,8 +15,8 @@ import FirebaseFirestore
 import FirebaseStorage
 import FirebaseDatabase
 import SVProgressHUD
-
-
+import Taplytics
+import UserNotifications
 class loginPageController: UIViewController, UITextFieldDelegate {
     var unique2: NSArray = []
     var satColleges = [String]()
@@ -28,6 +28,8 @@ class loginPageController: UIViewController, UITextFieldDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Taplytics.registerPushNotifications()
+        //UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
         if currentReachabilityStatus == .notReachable {
             SVProgressHUD.show(withStatus: "Not Connected to Internet")
             
@@ -38,6 +40,7 @@ class loginPageController: UIViewController, UITextFieldDelegate {
         } else {
             print("Error")
         }
+        
         emailTextFeild.delegate = self
         emailTextFeild.tag = 0
         emailTextFeild.returnKeyType = UIReturnKeyType.next
