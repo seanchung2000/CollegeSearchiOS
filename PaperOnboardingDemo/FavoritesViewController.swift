@@ -15,13 +15,13 @@ import FirebaseStorage
 import SVProgressHUD
 
 let myArrayShuffBookmarks = bookmarkArray
+var incomingFromBookmarks: Bool = false
 
 
 
 class CollegeTableViewCell2: UITableViewCell {
     
     static let identifier = "CollegeTableViewCell2"
-   
 //    @IBOutlet weak var collegeName: UILabel!
 //    @IBOutlet weak var collegeCampusImage: UIImageView!
 
@@ -42,6 +42,12 @@ class CollegeTableViewCell2: UITableViewCell {
 
 class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        print("View Appeared")
+        print(myArrayShuffBookmarks.count)
+    }
     
     @IBOutlet weak var tableView: UITableView!
     //TABLE VIEW OUTLET
@@ -49,6 +55,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     var imageCache = [String:UIImage]()
     
     override func viewDidLoad() {
+        incomingFromBookmarks = false
         super.viewDidLoad()
         print(myArrayShuffBookmarks)
         print(myArrayShuffBookmarks.count)
@@ -207,6 +214,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        incomingFromBookmarks = true
         myIndex = indexPath.row
         performSegue(withIdentifier: "segue2", sender: self)
     }

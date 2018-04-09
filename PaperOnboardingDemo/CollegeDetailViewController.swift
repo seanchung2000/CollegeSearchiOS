@@ -40,11 +40,22 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if incomingFromBookmarks {
+            if bookmarkArray.contains(myArrayShuffBookmarks[myIndex] as! String){
+                favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
+                
+            } else {
+                favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+            }
+        } else {
         if bookmarkArray.contains(myArray[myIndex] as! String){
             favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
 
         } else {
             favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+        }
+            
         }
         financialDataView.isHidden = true
         if currentReachabilityStatus == .notReachable {
@@ -65,7 +76,88 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
         let db = Firestore.firestore()
 
 
-
+        if incomingFromBookmarks {
+            let request = GADRequest()
+            //request.testDevices = [kGADSimulatorID]
+            myBanner.adUnitID = "ca-app-pub-8784727441633405/5374362219"
+            myBanner.rootViewController = self
+            myBanner.delegate = self
+            
+            myBanner.load(request)
+            //averageTuituon.text = "Average Tuituon:"
+            //averageFinancialAid.text = "Average Financial Aid:"
+            DispatchQueue.main.async {
+                self.getCollegeData()
+            }
+            let imageName = "\(myArrayShuffBookmarks[myIndex])2.png"
+            let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
+            
+            imageURL.downloadURL(completion: { (url, error) in
+                
+                if error != nil {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
+                    guard let strongSelf = self else { return }
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    
+                    guard let imageData = UIImage(data: data!) else { return }
+                    
+                    DispatchQueue.main.async {
+                        self?.collegeImage.image = imageData
+                        if #available(iOS 11.0, *) {
+                            self?.navigationController?.navigationBar.prefersLargeTitles = true
+                            //navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
+                            self?.navigationController?.navigationBar.topItem?.title = "\(myArrayShuffBookmarks[myIndex])"
+                            //navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+                            self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+                            
+                        } else {
+                            self?.navigationController?.navigationBar.topItem?.title = "\(myArrayShuffBookmarks[myIndex])"
+                            //navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
+                            self?.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+                            
+                            // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
+                        }
+                    }
+                    
+                }).resume()
+                
+            })
+            ///
+            
+            let imageName2 = "\(myArrayShuffBookmarks[myIndex])CollegeLogo.png"
+            let imageURL2 = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName2)
+            
+            imageURL2.downloadURL(completion: { (url, error) in
+                
+                if error != nil {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
+                    guard let strongSelf = self else { return }
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    
+                    guard let imageData = UIImage(data: data!) else { return }
+                    
+                    DispatchQueue.main.async {
+                        self?.collegeLogo.image = imageData
+                    }
+                    
+                }).resume()
+                
+            })
+        } else {
         
         let request = GADRequest()
         //request.testDevices = [kGADSimulatorID]
@@ -147,10 +239,29 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
             }).resume()
             
         })
-
+        }
     }
   
     func getCollegeData() {
+        if incomingFromBookmarks {
+            
+            let db = Firestore.firestore()
+            let locationRef = db
+                .collection("Colleges").document("\(myArrayShuffBookmarks[myIndex] as! String)")
+                .collection("Location")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            self.locationLabel.text = "\(document.documentID)"
+                            print("\(document.documentID)")
+                        }
+                    }
+            }
+            
+            
+        } else {
         let db = Firestore.firestore()
         let locationRef = db
             .collection("Colleges").document("\(myArray[myIndex] as! String)")
@@ -165,7 +276,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                     }
                 }
         }
-        
+        }
 }
 
     
@@ -186,6 +297,22 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     }
     
     @IBAction func favoriteTapped(_ sender: Any) {
+        
+        if incomingFromBookmarks {
+            
+            if bookmarkArray.contains(myArrayShuffBookmarks[myIndex] as! String){
+                favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
+                if let index = bookmarkArray.index(of: myArrayShuffBookmarks[myIndex] as! String) {
+                    bookmarkArray.remove(at: index)
+                }
+                print(bookmarkArray)
+            } else {
+                favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
+                bookmarkArray.append(myArrayShuffBookmarks[myIndex] as! String)
+                print(bookmarkArray)
+            }
+            
+        } else {
         //favoritesArray.append(myArray[myIndex] as! NSArray)
         if bookmarkArray.contains(myArray[myIndex] as! String){
             favoriteBarItem.image = #imageLiteral(resourceName: "bookmark-7")
@@ -197,6 +324,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
             favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
             bookmarkArray.append(myArray[myIndex] as! String)
             print(bookmarkArray)
+        }
         }
     }
     @IBAction func planAVisit(_ sender: Any) {

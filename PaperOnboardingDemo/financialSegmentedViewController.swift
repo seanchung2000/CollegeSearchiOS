@@ -19,7 +19,40 @@ class financialSegmentedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if incomingFromBookmarks {
+            
+            
+            let db = Firestore.firestore()
+            let financialRef = db
+                .collection("Colleges").document("\(myArrayShuffBookmarks[myIndex] as! String)")
+                .collection("Financial")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                        
+                    } else {
+                        for document in querySnapshot!.documents {
+                            self.financialLabel.text = "Average Financial Aid: $\(document.documentID)"
+                        }
+                    }
+            }
+            
+            let tuitionRef = db
+                .collection("Colleges").document("\(myArrayShuffBookmarks[myIndex] as! String)")
+                .collection("Tuition")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            self.tuitionLabel.text = "Average Tuition: $\(document.documentID)"
+                        }
+                    }
+            }
+            
+            
+            
+        } else {
         let db = Firestore.firestore()
         let financialRef = db
             .collection("Colleges").document("\(myArray[myIndex] as! String)")
@@ -47,5 +80,6 @@ class financialSegmentedViewController: UIViewController {
                     }
                 }
         }
+    }
     }
 }

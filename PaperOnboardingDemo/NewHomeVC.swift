@@ -48,6 +48,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        incomingFromBookmarks = false
         if let index = bookmarkArray.index(of: "") {
             bookmarkArray.remove(at: index)
         }
@@ -127,7 +128,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        let bookmark = bookmarkAction(at: indexPath)
 //        return UISwipeActionsConfiguration(actions:[bookmark])
 //    }
-//    
+//
 //    @available(iOS 11.0, *)
 //    func bookmarkAction(at: IndexPath) -> UIContextualAction {
 //       // let college = myArrayShuff[indexPath.row]
@@ -138,7 +139,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //            actionTitle = "Bookmark"
 //        }
 //        let action = UIContextualAction(style: .normal, title: actionTitle) { (action, view, completion) in
-//            
+//
 //            if bookmarkArray.contains(myArray[myIndex] as! String){
 //                if let index = bookmarkArray.index(of: myArray[myIndex] as! String) {
 //                    bookmarkArray.remove(at: index)
@@ -148,8 +149,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //                bookmarkArray.append(myArray[myIndex] as! String)
 //                print(bookmarkArray)
 //            }
-//            
-//            
+//
+//
 //           completion(true)
 //        }
 //        action.backgroundColor = UIColor(patternImage: UIImage(named: "Color2")!)
@@ -234,6 +235,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        incomingFromBookmarks = false
         myIndex = indexPath.row
         performSegue(withIdentifier: "segue", sender: self)
     }

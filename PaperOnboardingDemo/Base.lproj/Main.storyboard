@@ -1399,7 +1399,7 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="Vj0-dP-6Ow"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mG7-bj-WcT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1396"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiZ-gu-YGS">
@@ -1484,6 +1484,9 @@ of your classes.</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-vQ-geo" customClass="GADBannerView">
                                                 <rect key="frame" x="26" y="1173" width="321" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-8784727441633405/5374362219"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="cwa-nO-rHn">
                                                 <rect key="frame" x="133" y="47" width="110" height="109"/>
@@ -1942,6 +1945,7 @@ of your classes.</string>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="jF9-hL-J9i" id="LIH-Hy-ArX"/>
+                        <segue destination="P3v-qX-aEt" kind="show" identifier="segue2" id="5Gb-mn-CJd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL3-xO-lXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3029,6 +3033,7 @@ can apply to all over the US.</string>
         <segue reference="c3v-IU-ua6"/>
         <segue reference="IaX-BT-ZmX"/>
         <segue reference="5Yd-w5-Kup"/>
+        <segue reference="5Gb-mn-CJd"/>
         <segue reference="ZEF-Pv-TRn"/>
         <segue reference="faj-qp-mZo"/>
         <segue reference="DHU-y4-Fjd"/>
