@@ -37,39 +37,27 @@ class CollegeTableViewCell: UITableViewCell {
     
 }
 
-extension NewHomeVC: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}
-
-class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate {
+class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var imageCache = [String:UIImage]()
     
     var filteredColleges = [myArray]
-    
-    let searchController = UISearchController(searchResultsController: nil)
+  //  var isSearching = false
+   // let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if #available(iOS 11.0, *) {
+        if let index = bookmarkArray.index(of: "") {
+            bookmarkArray.remove(at: index)
+        }
+      /*  if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         } else {
             // Fallback on earlier versions
         }
-        if let index = bookmarkArray.index(of: "") {
-            bookmarkArray.remove(at: index)
-        }
-        
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Colleges"
-        definesPresentationContext = true
-        
+     //   searchController.delegate = self
+        searchController.returnKeyType = UIReturnKeyType.done*/
         
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
@@ -106,25 +94,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         cell.backgroundColor = UIColor.blue
     }
 
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
     
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-
-        //var searchString: NSString = searchText as NSString
-        //return filteredColleges.contains(searchString)
-        
-//            candies.filter({( candy : Candy) -> Bool in
-//            return candy.name.lowercased().contains(searchText.lowercased())
-//        })
-        
-    
-        tableView.reloadData()
-    }
-
     
     @IBAction func loggedOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
@@ -191,17 +161,9 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         return action
     }
    
-    
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if isFiltering() {
-            return filteredColleges.count
-        }
-        
         return myArray.count
     }
     
@@ -213,65 +175,8 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             if cell == nil {
                  cell =  CollegeTableViewCell(style: .default, reuseIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
             }
+    
             
-             if isFiltering() { ////
-                let schoolKey = "\(filteredColleges[indexPath.row])"
-                cell.collegeName.text = schoolKey
-                //     cell.collegeLocation.text = "\(locationArray[indexPath.row])"
-                
-                // cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
-                //cell.textLabel?.textColor = UIColor.white
-                //cell.backgroundColor = getRandomColor()
-                
-                
-                
-                let clearView = UIView()
-                clearView.backgroundColor = UIColor.clear // Whatever color you like
-                UITableViewCell.appearance().selectedBackgroundView = clearView
-                
-                
-                if let image = imageCache[schoolKey] {
-                    cell.collegeCampusImage?.image = image
-                } else {
-                    let imageName = "\(filteredColleges[indexPath.row])2.png"
-                    let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
-                    
-                    imageURL.downloadURL(completion: { (url, error) in
-                        
-                        if error != nil {
-                            print(error?.localizedDescription)
-                            return
-                        }
-                        
-                        cell.dataTask = URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
-                            guard let strongSelf = self else { return }
-                            if error != nil {
-                                print(error)
-                                return
-                            }
-                            
-                            guard let imageData = UIImage(data: data!) else { return }
-                            
-                            DispatchQueue.main.async {
-                                cell.collegeCampusImage.layer.cornerRadius = 10
-                                cell.collegeCampusImage.clipsToBounds = true
-                                cell.collegeCampusImage.image = imageData
-                                cell.setNeedsLayout()
-                                strongSelf.imageCache[schoolKey] = imageData
-                            }
-                            
-                        })
-                        cell.dataTask?.resume()
-                        
-                    })
-                }
-                
-                
-                
-                return cell
-                
-                ////
-            }
         let schoolKey = "\(myArray[indexPath.row])"
             cell.collegeName.text = schoolKey
        //     cell.collegeLocation.text = "\(locationArray[indexPath.row])"

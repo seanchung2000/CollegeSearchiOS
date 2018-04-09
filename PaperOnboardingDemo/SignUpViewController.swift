@@ -16,13 +16,12 @@ import FirebaseDatabase
 import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
-    
+    var checkBox: Bool = false
+    @IBOutlet weak var checkBoxImage: UIImageView!
+    @IBOutlet weak var privacyPolicyButton: UIButton!
     @IBOutlet weak var passwordTextFeild: UITextField!
-    
     @IBOutlet weak var emailTextFeild: UITextField!
-    
     @IBOutlet weak var nameTextFeild: UITextField!
-    
     @IBOutlet weak var confirmPasswordTextFeild: UITextField!
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
@@ -30,7 +29,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         if let email = emailTextFeild.text, let password = passwordTextFeild.text{
             
-            if passwordTextFeild.text == confirmPasswordTextFeild.text{
+            if passwordTextFeild.text == confirmPasswordTextFeild.text {
             
             Auth.auth().createUser(withEmail: email, password: password, completion: { user, error in
                 
@@ -76,12 +75,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 print("success")
                 self.presentLoggedInScreen()
             })
-        }
-            else {
+            } else if checkBox == false {
+                SVProgressHUD.dismiss()
+                self.createAlert(titleText: "Error", messageText: "You must agree to our privacy policy and terms of use.")
+            } else {
                 SVProgressHUD.dismiss()
                 print("passwords do not match")
                 self.createAlert(titleText: "Error", messageText: "Passwords do not match.")
-                
             }
         }
     }
@@ -148,5 +148,30 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
 
 
-
+    @IBAction func privacyPolicyClicked(_ sender: Any) {
+          UIApplication.shared.open(URL(string: "https://www.interadaptive.com/privacy-policy")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func termsOfSerivceOne(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.interadaptive.com/terms-of-use-college-search")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func termsOfServiceTwo(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.interadaptive.com/terms-of-use-college-search")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func checkBoxClicked(_ sender: Any) {
+        if checkBox {
+            checkBox = false
+            checkBoxImage.image = UIImage(named:"unChecked")
+        } else {
+            checkBox = true
+            checkBoxImage.image = UIImage(named:"checked")
+        }
+    }
+    
 }
+
+
+
+
