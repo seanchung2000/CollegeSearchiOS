@@ -1938,12 +1938,20 @@ of your classes.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You don't have any bookmarks yet. Add bookmarks by clicking the bookmark icon in the top right of a college page. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-OC-vcf">
+                                <rect key="frame" x="0.0" y="311" width="375" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="fH6-jM-qOY"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="noBookmarksLabel" destination="hCj-OC-vcf" id="KaF-W1-Mvm"/>
                         <outlet property="tableView" destination="jF9-hL-J9i" id="LIH-Hy-ArX"/>
                         <segue destination="P3v-qX-aEt" kind="show" identifier="segue2" id="5Gb-mn-CJd"/>
                     </connections>

@@ -41,22 +41,19 @@ class CollegeTableViewCell2: UITableViewCell {
 
 
 class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate {
+
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-        print("View Appeared")
-        print(myArrayShuffBookmarks.count)
-    }
-    
+    @IBOutlet weak var noBookmarksLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    //TABLE VIEW OUTLET
     
     var imageCache = [String:UIImage]()
     
+    
+
+    
     override func viewDidLoad() {
-        incomingFromBookmarks = false
         super.viewDidLoad()
+        incomingFromBookmarks = false
         print(myArrayShuffBookmarks)
         print(myArrayShuffBookmarks.count)
 
@@ -100,7 +97,21 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let myArrayShuffBookmarks = bookmarkArray
+        tableView.reloadData()
+        print("View Appeared")
+        reloadtTableView()
+        print(myArrayShuffBookmarks.count)
+        if myArrayShuffBookmarks.count == 0 {
+            noBookmarksLabel.isHidden = false
+        } else {
+            noBookmarksLabel.isHidden = true
+        }
+        viewDidLoad()
+    }
     //    @available(iOS 11.0, *)
     //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     //        let bookmark = bookmarkAction(at: indexPath)
