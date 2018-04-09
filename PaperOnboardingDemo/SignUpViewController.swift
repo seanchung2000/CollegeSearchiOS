@@ -29,7 +29,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         if let email = emailTextFeild.text, let password = passwordTextFeild.text{
             
-            if passwordTextFeild.text == confirmPasswordTextFeild.text {
+            if checkBox == false {
+                SVProgressHUD.dismiss()
+                self.createAlert(titleText: "Error", messageText: "You must agree to our privacy policy and terms of use.")
+            } else if passwordTextFeild.text == confirmPasswordTextFeild.text {
             
             Auth.auth().createUser(withEmail: email, password: password, completion: { user, error in
                 
@@ -75,9 +78,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 print("success")
                 self.presentLoggedInScreen()
             })
-            } else if checkBox == false {
-                SVProgressHUD.dismiss()
-                self.createAlert(titleText: "Error", messageText: "You must agree to our privacy policy and terms of use.")
             } else {
                 SVProgressHUD.dismiss()
                 print("passwords do not match")

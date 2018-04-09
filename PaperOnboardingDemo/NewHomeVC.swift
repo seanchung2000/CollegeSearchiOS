@@ -122,44 +122,44 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                customAttributes: [:])
         UIApplication.shared.open(URL(string: "https://interadaptive.com/feedback")! as URL, options: [:], completionHandler: nil)
     }
-    @available(iOS 11.0, *)
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let bookmark = bookmarkAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions:[bookmark])
-    }
-    
-    @available(iOS 11.0, *)
-    func bookmarkAction(at: IndexPath) -> UIContextualAction {
-       // let college = myArrayShuff[indexPath.row]
-        var actionTitle: String = ""
-        if bookmarkArray.contains(myArray[myIndex] as! String){
-            actionTitle = "Remove Bookmark"
-        } else {
-            actionTitle = "Bookmark"
-        }
-        let action = UIContextualAction(style: .normal, title: actionTitle) { (action, view, completion) in
-            
-            if bookmarkArray.contains(myArray[myIndex] as! String){
-                if let index = bookmarkArray.index(of: myArray[myIndex] as! String) {
-                    bookmarkArray.remove(at: index)
-                }
-                print(bookmarkArray)
-            } else {
-                bookmarkArray.append(myArray[myIndex] as! String)
-                print(bookmarkArray)
-            }
-            
-            
-           completion(true)
-        }
-        action.backgroundColor = UIColor(patternImage: UIImage(named: "Color2")!)
-        if bookmarkArray.contains(myArray[myIndex] as! String){
-            action.image = #imageLiteral(resourceName: "unCheckedBookmark")
-        } else {
-            action.image = #imageLiteral(resourceName: "bookmark-7")
-        }
-        return action
-    }
+//    @available(iOS 11.0, *)
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let bookmark = bookmarkAction(at: indexPath)
+//        return UISwipeActionsConfiguration(actions:[bookmark])
+//    }
+//    
+//    @available(iOS 11.0, *)
+//    func bookmarkAction(at: IndexPath) -> UIContextualAction {
+//       // let college = myArrayShuff[indexPath.row]
+//        var actionTitle: String = ""
+//        if bookmarkArray.contains(myArray[myIndex] as! String){
+//            actionTitle = "Remove Bookmark"
+//        } else {
+//            actionTitle = "Bookmark"
+//        }
+//        let action = UIContextualAction(style: .normal, title: actionTitle) { (action, view, completion) in
+//            
+//            if bookmarkArray.contains(myArray[myIndex] as! String){
+//                if let index = bookmarkArray.index(of: myArray[myIndex] as! String) {
+//                    bookmarkArray.remove(at: index)
+//                }
+//                print(bookmarkArray)
+//            } else {
+//                bookmarkArray.append(myArray[myIndex] as! String)
+//                print(bookmarkArray)
+//            }
+//            
+//            
+//           completion(true)
+//        }
+//        action.backgroundColor = UIColor(patternImage: UIImage(named: "Color2")!)
+//        if bookmarkArray.contains(myArray[myIndex] as! String){
+//            action.image = #imageLiteral(resourceName: "unCheckedBookmark")
+//        } else {
+//            action.image = #imageLiteral(resourceName: "bookmark-7")
+//        }
+//        return action
+//    }
    
 
     
