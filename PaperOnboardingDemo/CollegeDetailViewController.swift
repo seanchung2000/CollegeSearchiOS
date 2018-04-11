@@ -315,7 +315,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                         print("Document successfully removed!")
                     }
                 }
-                
+                FavoritesViewController().reloadDataFunc()
             } else {
                 favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
                 bookmarkArray.append(myArrayShuffBookmarks[myIndex] as! String)
@@ -330,6 +330,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                         print("Document successfully written!")
                     }
                 }
+                FavoritesViewController().reloadDataFunc()
             }
             
         } else {
@@ -347,6 +348,8 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                 } else {
                     print("Document successfully removed!")
                 }
+                FavoritesViewController().reloadDataFunc()
+
             }
             
             
@@ -364,8 +367,7 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                     print("Document successfully written!")
                 }
             }
-            
-            
+            FavoritesViewController().reloadDataFunc()
         }
         }
     }

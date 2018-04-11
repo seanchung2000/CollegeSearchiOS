@@ -58,6 +58,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             bookmarkArray.remove(at: index)
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.reloadData()
         }
         
         
@@ -98,6 +99,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let myArrayShuffBookmarks = bookmarkArray
         print("VIEW APPEARED BOOKMARKS")
         self.tableView.reloadData()
         tableView.reloadData()
@@ -226,6 +228,9 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         incomingFromBookmarks = true
         myIndex = indexPath.row
         performSegue(withIdentifier: "segue2", sender: self)
+    }
+    func reloadDataFunc() {
+        
     }
 }
 

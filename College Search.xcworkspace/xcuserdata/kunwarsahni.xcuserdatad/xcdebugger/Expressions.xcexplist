@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in FavoritesViewController.reloadDataFunc():FavoritesViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FavoritesViewController.reloadDataFunc():FavoritesViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
