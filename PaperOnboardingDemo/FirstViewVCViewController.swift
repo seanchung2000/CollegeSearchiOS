@@ -55,61 +55,167 @@ class FirstViewVCViewController: UIViewController {
                     for document in querySnapshot!.documents {
                         if (document.documentID == "0"){
                             self.showHomePage()
-                        }else{
-                        let satRef = db.collection("Colleges")
-                            print("Printing SAT Document ID \(document.documentID)")
-                        let query2 = satRef
-                            .whereField("Average SAT", isLessThanOrEqualTo: document.documentID)
-                            .getDocuments() { (querySnapshot, err) in
-                                
-                                // Async call needs completion handler
-                                defer { self.satCollegesCompleted2() }
-                                
-                                if let err = err {
-                                    print("Error getting documents: \(err)")
-                                } else {
-                                    for document in querySnapshot!.documents {
-                                        self.satColleges.append(document.documentID)
+                        } else{
+                            //
+                            var userSatScoreString = document.documentID
+                             userSatScoreString = userSatScoreString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
+                            userSatScoreString = userSatScoreString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
+                            var userSatScore = Int(userSatScoreString)
+                            print(userSatScore)
+                            //
+                            //
+                            
+                            let satRef1 = db
+                                .collection("Colleges")
+                                .getDocuments() { (querySnapshot, err) in
+                                    if let err = err {
+                                        print("Error getting documents: \(err)")
+                                    } else {
+                                        for document in querySnapshot!.documents {
+                                            var collegeName = document.documentID
+                                            
+                                            ///
+                                            
+                                            
+                                            let satRef2 = db
+                                                .collection("Colleges").document("\(document.documentID)")
+                                                .collection("SAT")
+                                                .getDocuments() { (querySnapshot, err) in
+                                                    
+                                                    defer { self.satCollegesCompleted2() }
+                                                    
+                                                    if let err = err {
+                                                        print("Error getting documents: \(err)")
+                                                    } else {
+                                                        for document in querySnapshot!.documents {
+                                                            
+                                                            var collegeSatScoreString = document.documentID
+                                                            
+                                                            collegeSatScoreString = collegeSatScoreString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                                            collegeSatScoreString = collegeSatScoreString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                                            
+                                                            var collegeSatScore = Int(collegeSatScoreString)
+                                                            
+                                                            if collegeSatScoreString == "Not Available" {
+                                                                print("Sat Score Is Not Avaliable")
+                                                            } else if collegeSatScore == nil {
+                                                                
+                                                            } else if userSatScore == nil {
+                                                            
+                                                            } else if collegeSatScore! <= userSatScore! {
+                                                                self.satColleges.append(collegeName)
+                                                            } else {
+                                                            }
+                                                            
+                                                        }
+                                                    }
+                                            }
+                                            
+                                            
+                                            ///
+                                        }
                                     }
-                                }
-                                
-                        }//
+                            }
+                            
+                            
+                            //
                     }
                     }
                     }
                 }
-        
-        let gpaRef = db
-            .collection("Users").document("\(userID)")
-            .collection("GPA")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        if(document.documentID == "0"){
-                            self.showHomePage()
-                        }else {
-                        let gpaRef = db.collection("Colleges")
-                        let query1 = gpaRef
-                            .whereField("Average GPA", isLessThanOrEqualTo : document.documentID)
-                            .getDocuments() { (querySnapshot, err) in
+
+            
+            
+            ////GPA GPA GPA GPA GPA
+            
+            
+            let gpaReg = db
+                .collection("Users").document("\(userID)")
+                .collection("GPA")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            if (document.documentID == "0"){
+                                self.showHomePage()
+                            } else{
+                                //
+                                var userSatScoreString = document.documentID
+                                userSatScoreString = userSatScoreString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                userSatScoreString = userSatScoreString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                var userSatScore = Int(userSatScoreString)
+                                print(userSatScore)
+                                //
+                                //
                                 
-                                // Async call needs completion handler
-                                defer { self.gpaDocumentsCompleted2() }
-                                
-                                if let err = err {
-                                    print("Error getting documents: \(err)")
-                                } else {
-                                    for document in querySnapshot!.documents {
-                                        self.satColleges.append(document.documentID)
-                                    }
+                                let satRef1 = db
+                                    .collection("Colleges")
+                                    .getDocuments() { (querySnapshot, err) in
+                                        if let err = err {
+                                            print("Error getting documents: \(err)")
+                                        } else {
+                                            for document in querySnapshot!.documents {
+                                                var collegeName = document.documentID
+                                                
+                                                ///
+                                                
+                                                
+                                                let satRef2 = db
+                                                    .collection("Colleges").document("\(document.documentID)")
+                                                    .collection("GPA")
+                                                    .getDocuments() { (querySnapshot, err) in
+                                                        
+                                                        defer { self.gpaDocumentsCompleted2() }
+                                                        
+                                                        if let err = err {
+                                                            print("Error getting documents: \(err)")
+                                                        } else {
+                                                            for document in querySnapshot!.documents {
+                                                                
+                                                                var collegeSatScoreString = document.documentID
+                                                                
+                                                                collegeSatScoreString = collegeSatScoreString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                                                collegeSatScoreString = collegeSatScoreString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                                                
+                                                                var collegeSatScore = Int(collegeSatScoreString)
+                                                                
+                                                                if collegeSatScoreString == "Not Available" {
+                                                                    print("Sat Score Is Not Avaliable")
+                                                                } else if collegeSatScore == nil {
+                                                                    
+                                                                } else if userSatScore == nil {
+                                                                    
+                                                                } else if collegeSatScore! <= userSatScore! {
+                                                                    self.gpaColleges.append(collegeName)
+                                                                } else {
+                                                                }
+                                                                
+                                                            }
+                                                        }
+                                                }
+                                                
+                                                
+                                                ///
+                                            }
+                                        }
                                 }
-                        }////
+                                
+                                
+                                //
+                            }
+                        }
                     }
-                    }
-                }
-        }
+            }
+
+            
+            
+            
+            
+            
+            
+            
+            
             //findMatchesFunction(gpa: gpa, sat: sat)
           //  showHomePage()
         }else{
