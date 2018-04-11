@@ -71,78 +71,9 @@ class loginPageController: UIViewController, UITextFieldDelegate {
                         self.createAlert(titleText: "Error", messageText: "Incorrect Email or Password")
                         return
                     }
-                    ////
-                    let db = Firestore.firestore()
                     if Auth.auth().currentUser != nil {
-                        SVProgressHUD.show(withStatus: "Loading Your Data")
-                        let userID: String = (Auth.auth().currentUser?.uid)!
-                        let satRef = db
-                            .collection("Users").document("\(userID)")
-                            .collection("SAT")
-                            .getDocuments() { (querySnapshot, err) in
-                                if let err = err {
-                                    print("Error getting documents: \(err)")
-                                } else {
-                                    for document in querySnapshot!.documents {
-                                        if (document.documentID == ""){
-                                            self.showHomePage()
-                                        }else{
-                                            let satRef = db.collection("Colleges")
-                                            let query2 = satRef
-                                                .whereField("Average SAT", isLessThanOrEqualTo: document.documentID)
-                                                .getDocuments() { (querySnapshot, err) in
-                                                    
-                                                    // Async call needs completion handler
-                                                    defer { self.satCollegesCompleted2() }
-                                                    
-                                                    if let err = err {
-                                                        print("Error getting documents: \(err)")
-                                                    } else {
-                                                        for document in querySnapshot!.documents {
-                                                            self.satColleges.append(document.documentID)
-                                                        }
-                                                    }
-                                                    
-                                            }//
-                                        }
-                                    }
-                                }
-                        }
-                        
-                        let gpaRef = db
-                            .collection("Users").document("\(userID)")
-                            .collection("GPA")
-                            .getDocuments() { (querySnapshot, err) in
-                                if let err = err {
-                                    print("Error getting documents: \(err)")
-                                } else {
-                                    for document in querySnapshot!.documents {
-                                        if(document.documentID == ""){
-                                            self.showHomePage()
-                                        }else {
-                                            let gpaRef = db.collection("Colleges")
-                                            let query1 = gpaRef
-                                                .whereField("Average GPA", isLessThanOrEqualTo : document.documentID)
-                                                .getDocuments() { (querySnapshot, err) in
-                                                    
-                                                    // Async call needs completion handler
-                                                    defer { self.gpaDocumentsCompleted2() }
-                                                    
-                                                    if let err = err {
-                                                        print("Error getting documents: \(err)")
-                                                    } else {
-                                                        for document in querySnapshot!.documents {
-                                                            self.satColleges.append(document.documentID)
-                                                        }
-                                                    }
-                                            }////
-                                        }
-                                    }
-                                }
-                        }
-                        //findMatchesFunction(gpa: gpa, sat: sat)
-                        //  showHomePage()
-                    }else{
+                        self.presentFirstController()
+                    } else{
                         print("Not Signed In")
                     }
                 
@@ -161,6 +92,12 @@ class loginPageController: UIViewController, UITextFieldDelegate {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let HomeVC:HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         self.present(HomeVC, animated: true, completion: nil)
+    }
+    
+    func presentFirstController() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let FirstViewVCViewController:FirstViewVCViewController = storyboard.instantiateViewController(withIdentifier: "FirstViewVCViewController") as! FirstViewVCViewController
+        self.present(FirstViewVCViewController, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
