@@ -45,6 +45,27 @@ class FirstViewVCViewController: UIViewController {
         nextButton.isEnabled = false
         SVProgressHUD.show(withStatus: "Loading Your Data")
         let userID: String = (Auth.auth().currentUser?.uid)!
+            
+            let bookmarkRef = db
+                .collection("Users").document("\(userID)")
+                .collection("Bookmarks")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            if document.exists {
+                               bookmarkArray.append(document.documentID)
+                                print("BOOKMARKS: \(bookmarkArray)")
+                            } else {
+                                //
+                            }
+                        }
+                    }
+            }
+            
+            
+            
         let satRef = db
             .collection("Users").document("\(userID)")
             .collection("SAT")

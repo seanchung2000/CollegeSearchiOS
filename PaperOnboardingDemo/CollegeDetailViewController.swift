@@ -16,7 +16,7 @@ import GoogleMobileAds
 import SVProgressHUD
 import UIKit
 //Ads Work
-var favoritesArray: [NSArray] = []
+var favoritesArray: Array = ["1"]
 
 class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     @IBOutlet weak var collegeImage: UIImageView!
@@ -297,7 +297,8 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
     }
     
     @IBAction func favoriteTapped(_ sender: Any) {
-        
+        let userID: String = (Auth.auth().currentUser?.uid)!
+        let db = Firestore.firestore()
         if incomingFromBookmarks {
             
             if bookmarkArray.contains(myArrayShuffBookmarks[myIndex] as! String){
@@ -306,10 +307,29 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                     bookmarkArray.remove(at: index)
                 }
                 print(bookmarkArray)
+                
+                db.collection("Users").document("\(userID)").collection("Bookmarks").document(myArrayShuffBookmarks[myIndex] as! String).delete() { err in
+                    if let err = err {
+                        print("Error removing document: \(err)")
+                    } else {
+                        print("Document successfully removed!")
+                    }
+                }
+                
             } else {
                 favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
                 bookmarkArray.append(myArrayShuffBookmarks[myIndex] as! String)
                 print(bookmarkArray)
+                
+                db.collection("Users").document("\(userID)").collection("Bookmarks").document(myArrayShuffBookmarks[myIndex] as! String).setData([
+                    "GPA": "0"
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
             }
             
         } else {
@@ -320,10 +340,32 @@ class CollegeDetailViewController: UIViewController, GADBannerViewDelegate{
                 bookmarkArray.remove(at: index)
             }
             print(bookmarkArray)
+            
+            db.collection("Users").document("\(userID)").collection("Bookmarks").document(myArray[myIndex] as! String).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            }
+            
+            
         } else {
             favoriteBarItem.image = #imageLiteral(resourceName: "unCheckedBookmark")
             bookmarkArray.append(myArray[myIndex] as! String)
             print(bookmarkArray)
+            
+            db.collection("Users").document("\(userID)").collection("Bookmarks").document(myArray[myIndex] as! String).setData([
+                "GPA": "0"
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+            
+            
         }
         }
     }
