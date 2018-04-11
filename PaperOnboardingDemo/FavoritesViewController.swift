@@ -54,12 +54,10 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         incomingFromBookmarks = false
-        print(myArrayShuffBookmarks)
-        print(myArrayShuffBookmarks.count)
-
-
         if let index = bookmarkArray.index(of: "") {
             bookmarkArray.remove(at: index)
+            tableView.delegate = self
+            tableView.dataSource = self
         }
         
         
@@ -100,17 +98,17 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let myArrayShuffBookmarks = bookmarkArray
+        print("VIEW APPEARED BOOKMARKS")
+        self.tableView.reloadData()
         tableView.reloadData()
-        print("View Appeared")
-        reloadtTableView()
-        print(myArrayShuffBookmarks.count)
+        DispatchQueue.main.async{
+            self.tableView.reloadData()
+        }        
         if myArrayShuffBookmarks.count == 0 {
             noBookmarksLabel.isHidden = false
         } else {
             noBookmarksLabel.isHidden = true
         }
-        viewDidLoad()
     }
     //    @available(iOS 11.0, *)
     //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -228,12 +226,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         incomingFromBookmarks = true
         myIndex = indexPath.row
         performSegue(withIdentifier: "segue2", sender: self)
-    }
-    
-    func reloadtTableView () {
-        DispatchQueue.main.async{
-            self.tableView.reloadData()
-        }
     }
 }
 
