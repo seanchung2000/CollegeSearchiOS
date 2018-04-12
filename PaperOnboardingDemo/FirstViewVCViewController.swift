@@ -55,7 +55,7 @@ class FirstViewVCViewController: UIViewController {
                     } else {
                         for document in querySnapshot!.documents {
                             if document.exists {
-                               bookmarkArray.append(document.documentID)
+                                bookmarkArray.append(document.documentID)
                                 print("BOOKMARKS: \(bookmarkArray)")
                             } else {
                                 //
