@@ -1,0 +1,5 @@
+language: swift
+xcode_workspace: College Search.xcworkspace
+xcode_scheme: College Search
+podfile: Podfile
+osx_image: xcode9.3
