@@ -27,6 +27,13 @@ class FirstViewVCViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /////////
+        
+        fatalError()
+
+        
+        
+        /////////
         SVProgressHUD.show(withStatus: "Loading Your Data")
         starting()
         
