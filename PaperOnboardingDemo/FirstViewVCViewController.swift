@@ -108,7 +108,6 @@ class FirstViewVCViewController: UIViewController {
                                                 .collection("SAT")
                                                 .getDocuments() { (querySnapshot, err) in
                                                     
-                                                    defer { self.satCollegesCompleted2() }
                                                     
                                                     if let err = err {
                                                         print("Error getting documents: \(err)")
@@ -128,15 +127,17 @@ class FirstViewVCViewController: UIViewController {
                                                                 
                                                             } else if userSatScore == nil {
                                                             
-                                                            } else if collegeSatScore! <= userSatScore! {
+                                                            } else if collegeSatScore! < userSatScore! {
                                                                 self.satColleges.append(collegeName)
                                                             } else {
                                                             }
                                                             
                                                         }
+                                                        defer { self.satCollegesCompleted2() }
+
                                                     }
                                             }
-                                            
+
                                             
                                             ///
                                         }
@@ -192,7 +193,6 @@ class FirstViewVCViewController: UIViewController {
                                                     .collection("GPA")
                                                     .getDocuments() { (querySnapshot, err) in
                                                         
-                                                        defer { self.gpaDocumentsCompleted2() }
                                                         
                                                         if let err = err {
                                                             print("Error getting documents: \(err)")
@@ -212,12 +212,14 @@ class FirstViewVCViewController: UIViewController {
                                                                     
                                                                 } else if userSatScore == nil {
                                                                     
-                                                                } else if collegeSatScore! <= userSatScore! {
+                                                                } else if collegeSatScore! < userSatScore! {
                                                                     self.gpaColleges.append(collegeName)
                                                                 } else {
                                                                 }
                                                                 
                                                             }
+                                                            defer { self.gpaDocumentsCompleted2() }
+
                                                         }
                                                 }
                                                 
