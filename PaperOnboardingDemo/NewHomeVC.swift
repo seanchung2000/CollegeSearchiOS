@@ -63,7 +63,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
-            navigationController?.navigationBar.topItem?.title = "Your Colleges"
+            navigationController?.navigationBar.topItem?.title = "Your Mom"
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
