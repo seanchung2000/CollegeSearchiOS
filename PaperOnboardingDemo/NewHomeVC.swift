@@ -18,7 +18,7 @@ var myIndex: Int = 0
 let myArrayShuff = myArray.shuffled()
 var locationArray: NSArray = ["1"]
 var bookmarkArray: Array = [""]
-
+var filteredmyArray = [String]()
 class CollegeTableViewCell: UITableViewCell {
     
     static let identifier = "CollegeTableViewCell"
@@ -34,32 +34,44 @@ class CollegeTableViewCell: UITableViewCell {
         imageView?.image = nil
         collegeCampusImage?.image = nil
     }
-    
+
 }
+
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var oopsLabel: UILabel!
     
     var imageCache = [String:UIImage]()
+    var searchController = UISearchController()
+    var resultsController = UITableViewController()
     
-    var filteredColleges = [myArray]
-  //  var isSearching = false
-   // let searchController = UISearchController(searchResultsController: nil)
+    
 
+
+//    func updateSearchResults(for searchController: UISearchController) {
+//        // let swiftArray: [String] = objCArray.flatMap({ $0 as? String })
+//        let stringArray: [String] = myArray.flatMap({ $0 as? String })
+//        print(stringArray)
+//        filteredmyArray = stringArray.filter({ (array:String) -> Bool in
+//            if stringArray.contains(searchController.searchBar.text!){
+//                return true
+//            } else {
+//                return false
+//            }
+//        })
+//        resultsController.tableView.reloadData()
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+   
         incomingFromBookmarks = false
         if let index = bookmarkArray.index(of: "") {
             bookmarkArray.remove(at: index)
         }
-      /*  if #available(iOS 11.0, *) {
-            navigationItem.searchController = searchController
-        } else {
-            // Fallback on earlier versions
-        }
-     //   searchController.delegate = self
-        searchController.returnKeyType = UIReturnKeyType.done*/
+        
+
         
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
@@ -96,6 +108,26 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = UIColor.blue
     }
 
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        
+//        let stringArray: [String] = myArray.flatMap({ $0 as? String })
+//        print(stringArray)
+        
+        var objCArray = NSMutableArray(array: myArray)
+        if let stringArray = objCArray as NSArray as? [String] {
+            filteredmyArray = stringArray.filter({ (array:String) -> Bool in
+                return stringArray.contains(searchText)
+            })
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if myArray.count == 0 {
@@ -104,33 +136,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             oopsLabel.isHidden = true
         }
     }
-    
-    @IBAction func loggedOut(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginPageController:loginPageController = storyboard.instantiateViewController(withIdentifier: "loginPageController") as! loginPageController
-            self.present(loginPageController, animated: true, completion: nil)
-            
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-    }
-    
-    @IBAction func scoresTapped(_ sender: Any) {
-        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ScoresViewController:ScoresViewController = storyboard.instantiateViewController(withIdentifier: "ScoresViewController") as! ScoresViewController
-        self.present(ScoresViewController, animated: true, completion: nil)
-        
-    }
-    
-    
-    @IBAction func feedbackTapped(_ sender: Any) {
-        Answers.logCustomEvent(withName: "Feedback Pressed",
-                               customAttributes: [:])
-        UIApplication.shared.open(URL(string: "https://interadaptive.com/feedback")! as URL, options: [:], completionHandler: nil)
-    }
+
 //    @available(iOS 11.0, *)
 //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        let bookmark = bookmarkAction(at: indexPath)
@@ -169,11 +175,17 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        }
 //        return action
 //    }
-   
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
+        if isFiltering() {
+            return filteredmyArray.count
+        } else {
+            return myArray.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
@@ -184,7 +196,70 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if cell == nil {
                  cell =  CollegeTableViewCell(style: .default, reuseIdentifier: CollegeTableViewCell.identifier) as? CollegeTableViewCell
             }
-    
+            if isFiltering() {
+                ///////
+                
+                
+                let schoolKey = "\(filteredmyArray[indexPath.row])"
+                cell.collegeName.text = schoolKey
+                //     cell.collegeLocation.text = "\(locationArray[indexPath.row])"
+                
+                // cell.textLabel?.font = UIFont(name:"Eveleth", size:20)
+                //cell.textLabel?.textColor = UIColor.white
+                //cell.backgroundColor = getRandomColor()
+                
+                
+                
+                let clearView = UIView()
+                clearView.backgroundColor = UIColor.clear // Whatever color you like
+                UITableViewCell.appearance().selectedBackgroundView = clearView
+                
+                
+                if let image = imageCache[schoolKey] {
+                    cell.collegeCampusImage?.image = image
+                } else {
+                    let imageName = "\(filteredmyArray[indexPath.row])2.png"
+                    let imageURL = Storage.storage().reference(forURL: "gs://college-search-2.appspot.com").child(imageName)
+                    
+                    imageURL.downloadURL(completion: { (url, error) in
+                        
+                        if error != nil {
+                            print(error?.localizedDescription)
+                            return
+                        }
+                        
+                        cell.dataTask = URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
+                            guard let strongSelf = self else { return }
+                            if error != nil {
+                                print(error)
+                                return
+                            }
+                            
+                            guard let imageData = UIImage(data: data!) else { return }
+                            
+                            DispatchQueue.main.async {
+                                cell.collegeCampusImage.layer.cornerRadius = 10
+                                cell.collegeCampusImage.clipsToBounds = true
+                                cell.collegeCampusImage.image = imageData
+                                cell.setNeedsLayout()
+                                strongSelf.imageCache[schoolKey] = imageData
+                            }
+                            
+                        })
+                        cell.dataTask?.resume()
+                        
+                    })
+                }
+                
+                
+                
+                return cell
+                
+                
+                
+                /////////
+                
+            }else {
             
         let schoolKey = "\(myArray[indexPath.row])"
             cell.collegeName.text = schoolKey
@@ -240,6 +315,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
             return cell
+            }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
