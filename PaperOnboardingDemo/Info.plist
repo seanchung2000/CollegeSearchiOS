@@ -82,25 +82,6 @@
 		<string>Nunito-Regular.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
 	</array>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeFavorite</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Your Bookmarks</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>projects.kunwar.CollegeSearch.yourBookmarks</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeSearch</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Your Colleges</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>projects.kunwar.CollegeSearch.yourColleges</string>
-		</dict>
-	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

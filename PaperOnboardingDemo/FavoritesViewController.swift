@@ -48,12 +48,10 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var imageCache = [String:UIImage]()
     
-    var refreshControl : UIRefreshControl = UIRefreshControl()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.refreshControl = refreshControl
         incomingFromBookmarks = false
         if let index = bookmarkArray.index(of: "") {
             bookmarkArray.remove(at: index)
@@ -61,7 +59,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.dataSource = self
             tableView.reloadData()
         }
-        refreshControl.addTarget(self, action: #selector(FavoritesViewController.refreshData), for: UIControlEvents.valueChanged)
 
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
@@ -96,35 +93,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
-    }
-    
-    func refreshData () {
-        let db = Firestore.firestore()
-        let userID: String = (Auth.auth().currentUser?.uid)!
-        
-        let bookmarkRef = db
-            .collection("Users").document("\(userID)")
-            .collection("Bookmarks")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        if document.exists {
-                            if bookmarkArray.contains(document.documentID as! String){
-                                print("Already in tableview")
-                            } else {
-                            bookmarkArray.append(document.documentID)
-                            }
-                            print("BOOKMARKS: \(bookmarkArray)")
-                        } else {
-                            //
-                        }
-                    }
-                }
-        }
-        tableView.reloadData()
-        refreshControl.endRefreshing()
     }
     
     override func viewWillAppear(_ animated: Bool) {

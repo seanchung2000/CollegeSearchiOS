@@ -39,6 +39,7 @@ class CollegeTableViewCell: UITableViewCell {
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var oopsLabel: UILabel!
     
     var imageCache = [String:UIImage]()
     
@@ -63,7 +64,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.barTintColor = UIColor(patternImage: UIImage(named: "Color2")!)
-            navigationController?.navigationBar.topItem?.title = "Your Mom"
+            navigationController?.navigationBar.topItem?.title = "Your Colleges"
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
@@ -95,7 +96,14 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = UIColor.blue
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if myArray.count == 0 {
+            oopsLabel.isHidden = false
+        } else {
+            oopsLabel.isHidden = true
+        }
+    }
     
     @IBAction func loggedOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()

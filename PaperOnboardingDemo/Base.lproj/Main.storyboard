@@ -1376,19 +1376,28 @@ of your classes.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLM-tR-hYb">
+                                <rect key="frame" x="48" y="200" width="300" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Oops! It looks like we might have lost an internet connection while trying to find you colleges. Try restarting the app so we can get you back up and running. </string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Z8-qH-qSD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <connections>
+                        <outlet property="oopsLabel" destination="xLM-tR-hYb" id="SAJ-XR-gD7"/>
                         <outlet property="tableView" destination="Vra-8P-Wfq" id="rMO-TP-Ijf"/>
                         <segue destination="P3v-qX-aEt" kind="show" identifier="segue" id="BbF-uH-Z7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPL-FF-5y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5757.6000000000004" y="467.73399014778329"/>
+            <point key="canvasLocation" x="5757.6000000000004" y="467.3163418290855"/>
         </scene>
         <!--College Detail View Controller-->
         <scene sceneID="L3c-yS-Tmv">
@@ -1399,7 +1408,7 @@ of your classes.</string>
                         <viewControllerLayoutGuide type="bottom" id="Vj0-dP-6Ow"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mG7-bj-WcT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1396"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiZ-gu-YGS">
@@ -3042,7 +3051,7 @@ can apply to all over the US.</string>
         <segue reference="c3v-IU-ua6"/>
         <segue reference="IaX-BT-ZmX"/>
         <segue reference="5Yd-w5-Kup"/>
-        <segue reference="5Gb-mn-CJd"/>
+        <segue reference="BbF-uH-Z7u"/>
         <segue reference="ZEF-Pv-TRn"/>
         <segue reference="faj-qp-mZo"/>
         <segue reference="DHU-y4-Fjd"/>

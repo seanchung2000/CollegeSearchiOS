@@ -81,9 +81,7 @@ class loginPageController: UIViewController, UITextFieldDelegate {
                     /*
                     self.presentLoggedInScreen()
                     print("success")*/
-                    Answers.logSignUp(withMethod: "Manual",
-                                                success: true,
-                                                customAttributes: [:])
+                    
                 })
         }
     }
