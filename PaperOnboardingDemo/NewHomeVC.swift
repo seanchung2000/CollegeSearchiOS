@@ -40,7 +40,6 @@ class CollegeTableViewCell: UITableViewCell {
 
 class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var oopsLabel: UILabel!
     
     var imageCache = [String:UIImage]()
     var searchController = UISearchController()
@@ -65,6 +64,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show(withStatus: "Loading Your Data")
         incomingFromBookmarks = false
         if let index = bookmarkArray.index(of: "") {
             bookmarkArray.remove(at: index)
@@ -94,6 +94,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
+        SVProgressHUD.dismiss()
     }
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil
@@ -117,11 +118,6 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         SVProgressHUD.show(withStatus: "Loading")
-        if myArray.count == 0 {
-            oopsLabel.isHidden = false
-        } else {
-            oopsLabel.isHidden = true
-        }
         SVProgressHUD.dismiss()
     }
 

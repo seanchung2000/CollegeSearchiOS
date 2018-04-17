@@ -1337,7 +1337,7 @@ of your classes.</string>
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="160"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="1xq-st-Wd4">
-                                                            <rect key="frame" x="9" y="41" width="311" height="33.5"/>
+                                                            <rect key="frame" x="8" y="41" width="311" height="33.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="311" id="I2I-Oa-5Ut"/>
                                                             </constraints>
@@ -1370,26 +1370,12 @@ of your classes.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLM-tR-hYb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <string key="text">Oops! It looks like we might have lost an internet connection while trying to find you colleges. Try restarting the app so we can get you back up and running. (Do wait for loading to complete before restarting the app)</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xLM-tR-hYb" firstAttribute="height" secondItem="jtO-9I-iVi" secondAttribute="height" id="eYJ-s2-iw5"/>
-                            <constraint firstItem="xLM-tR-hYb" firstAttribute="centerY" secondItem="jtO-9I-iVi" secondAttribute="centerY" id="flo-dB-kvs"/>
-                            <constraint firstItem="xLM-tR-hYb" firstAttribute="centerX" secondItem="jtO-9I-iVi" secondAttribute="centerX" id="tsh-Tp-G6R"/>
-                            <constraint firstItem="xLM-tR-hYb" firstAttribute="width" secondItem="jtO-9I-iVi" secondAttribute="width" id="tu9-Jw-BnW"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Z8-qH-qSD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <connections>
-                        <outlet property="oopsLabel" destination="xLM-tR-hYb" id="SAJ-XR-gD7"/>
                         <outlet property="tableView" destination="Vra-8P-Wfq" id="rMO-TP-Ijf"/>
                         <segue destination="P3v-qX-aEt" kind="show" identifier="segue" id="BbF-uH-Z7u"/>
                     </connections>
@@ -1922,7 +1908,7 @@ of your classes.</string>
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="160"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-nb-sFL">
-                                                            <rect key="frame" x="9" y="41" width="311" height="33.5"/>
+                                                            <rect key="frame" x="8" y="41" width="311" height="33.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="311" id="8ix-E9-AAo"/>
                                                             </constraints>

@@ -45,6 +45,7 @@ class FirstViewVCViewController: UIViewController {
     }
 
         func starting() {
+        SVProgressHUD.show(withStatus: "Loading Your Data")
         let db = Firestore.firestore()
         if Auth.auth().currentUser != nil {
         nextButton.isEnabled = false
@@ -176,7 +177,7 @@ class FirstViewVCViewController: UIViewController {
                                 var userGpaString = document.documentID
                                 userGpaString = userGpaString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
                                 userGpaString = userGpaString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
-                                var userGpaScore = Int(userGpaString)
+                                var userGpaScore = Double(userGpaString)
                                 print(userGpaScore)
                                 //
                                 //
@@ -204,22 +205,22 @@ class FirstViewVCViewController: UIViewController {
                                                         } else {
                                                             for document in querySnapshot!.documents {
                                                                 
-                                                                var collegeSatScoreString = document.documentID
+                                                                var collegeGpaString = document.documentID
                                                                 
-                                                                collegeSatScoreString = collegeSatScoreString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
-                                                                collegeSatScoreString = collegeSatScoreString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                                                collegeGpaString = collegeGpaString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                                                collegeGpaString = collegeGpaString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
                                                                 
-                                                                var collegeSatScore = Int(collegeSatScoreString)
+                                                                var collegeGpa = Double(collegeGpaString)
                                                                 
-                                                                if collegeSatScoreString == "Not Available" {
+                                                                if collegeGpaString == "Not Available" {
                                                                     print("Sat Score Is Not Avaliable")
-                                                                } else if collegeSatScore == nil {
+                                                                } else if collegeGpa == nil {
                                                                     
                                                                 } else if userGpaScore == nil {
                                                                     
-                                                                } else if collegeSatScore! < userGpaScore! {
-                                                                    var gpaSuperScore: Int = userGpaScore! - 1
-                                                                    if collegeSatScore! >= userGpaScore!{
+                                                                } else if collegeGpa! < userGpaScore! {
+                                                                    var gpaSuperScore = userGpaScore! - 1
+                                                                    if collegeGpa! >= userGpaScore!{
                                                                         self.gpaColleges.append(collegeName)
                                                                     }
                                                                 } else {
@@ -269,7 +270,7 @@ class FirstViewVCViewController: UIViewController {
         //if let controller = NewHomeVCTabBarController.viewControllers.first as? NewHomeVCTabBarController {
         //controller.myArray = self.unique2 as NSArray
         myArray = self.unique2
-        SVProgressHUD.dismiss()
+       // SVProgressHUD.dismiss()
 
         // }
     }
