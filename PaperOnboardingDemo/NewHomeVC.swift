@@ -65,7 +65,6 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
         incomingFromBookmarks = false
         if let index = bookmarkArray.index(of: "") {
             bookmarkArray.remove(at: index)
@@ -96,8 +95,6 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.blue
     }
-
-    
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil
         return searchController.searchBar.text?.isEmpty ?? true
@@ -119,11 +116,13 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        SVProgressHUD.show(withStatus: "Loading")
         if myArray.count == 0 {
             oopsLabel.isHidden = false
         } else {
             oopsLabel.isHidden = true
         }
+        SVProgressHUD.dismiss()
     }
 
 //    @available(iOS 11.0, *)

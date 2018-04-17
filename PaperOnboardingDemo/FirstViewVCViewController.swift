@@ -61,7 +61,7 @@ class FirstViewVCViewController: UIViewController {
                         for document in querySnapshot!.documents {
                             if document.exists {
                                 bookmarkArray.append(document.documentID)
-                                print("BOOKMARKS: \(bookmarkArray)")
+                               // print("BOOKMARKS: \(bookmarkArray)")
                             } else {
                                 //
                             }
@@ -128,7 +128,12 @@ class FirstViewVCViewController: UIViewController {
                                                             } else if userSatScore == nil {
                                                             
                                                             } else if collegeSatScore! < userSatScore! {
-                                                                self.satColleges.append(collegeName)
+                                                                var superScore = userSatScore! - 130
+                                                                print(userSatScore)
+                                                                print(superScore)
+                                                                if collegeSatScore! >= superScore {
+                                                                    self.satColleges.append(collegeName)
+                                                                }
                                                             } else {
                                                             }
                                                             
@@ -168,11 +173,11 @@ class FirstViewVCViewController: UIViewController {
                                 self.showHomePage()
                             } else{
                                 //
-                                var userSatScoreString = document.documentID
-                                userSatScoreString = userSatScoreString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
-                                userSatScoreString = userSatScoreString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
-                                var userSatScore = Int(userSatScoreString)
-                                print(userSatScore)
+                                var userGpaString = document.documentID
+                                userGpaString = userGpaString.replacingOccurrences(of: "Optional(\"", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                userGpaString = userGpaString.replacingOccurrences(of: "\")", with: "", options: NSString.CompareOptions.literal, range: nil)
+                                var userGpaScore = Int(userGpaString)
+                                print(userGpaScore)
                                 //
                                 //
                                 
@@ -210,10 +215,13 @@ class FirstViewVCViewController: UIViewController {
                                                                     print("Sat Score Is Not Avaliable")
                                                                 } else if collegeSatScore == nil {
                                                                     
-                                                                } else if userSatScore == nil {
+                                                                } else if userGpaScore == nil {
                                                                     
-                                                                } else if collegeSatScore! < userSatScore! {
-                                                                    self.gpaColleges.append(collegeName)
+                                                                } else if collegeSatScore! < userGpaScore! {
+                                                                    var gpaSuperScore: Int = userGpaScore! - 1
+                                                                    if collegeSatScore! >= userGpaScore!{
+                                                                        self.gpaColleges.append(collegeName)
+                                                                    }
                                                                 } else {
                                                                 }
                                                                 
