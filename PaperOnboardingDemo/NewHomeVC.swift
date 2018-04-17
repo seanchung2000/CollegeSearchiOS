@@ -87,18 +87,7 @@ class NewHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
            // UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "Color")!)
         }
-        
-        
-        if currentReachabilityStatus == .notReachable {
-            SVProgressHUD.show(withStatus: "Not Connected to Internet")
-            
-        } else if currentReachabilityStatus == .reachableViaWiFi{
-            SVProgressHUD.dismiss()
-        } else if currentReachabilityStatus == .reachableViaWWAN{
-            SVProgressHUD.dismiss()
-        } else {
-            print("Error")
-        }
+
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
